@@ -1,0 +1,16 @@
+/*selector universal "*"*/
+
+*{
+    padding: 0px auto; 
+    margin: 0px auto;
+}
+
+
+main section #welcomeimage{
+    position: relative;
+    width: 1280px;
+    height: 360px;
+    left: 0px;
+    top: 0px;  
+    opacity: 0.8;
+}
