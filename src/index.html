@@ -3,46 +3,71 @@
   <head>
     <meta charset="utf-8">
     <title>PokeChoose</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!--aquí va el encabezado de la página-->
     <header>
-      <!--aquí van los elementos que vinculan entre una pagína y otra-->
+      <!--aquí van los elementos que vinculan entre una pagína y otra-->  
+      <!--nav para desktop-->
       <nav> 
-        <a>
-          <img src="" id="logo" alt="logo PokeChoose"> 
-        </a>
-        <ul> 
-          <li><a id="tutorial" href="#">Cómo funciona</a></li>
-          <li><a id="search" href="#">Iniciar búsqueda</a></li>
-        </ul>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">
+            <img src="Image/LogoPokeChoose.png" id="logo" alt="logo PokeChoose"> 
+          </a>
+          <a  data-target="mobile-demo" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down"> 
+            <li><a class="tutorial" href="#">Cómo funciona</a></li>
+            <li><a class="search" href="#">Iniciar búsqueda</a></li>
+          </ul>
+        </div>       
       </nav>
+
+      <!--nav responsivo-->
+      <ul class="sidenav" id="mobile-demo" >
+        <li><a class="tutorial" href="#">Cómo funciona</a></li>
+        <li><a class="search" href="#">Iniciar búsqueda</a></li>
+      </ul>
+
     </header>
-    <main id="dinamicpage">
+    <!--La etiqueta main corresponde al contenido dinámico-->
+    <main id="dinamicpage">      
+      <section id="welcomeimage">
+        <h2 class="center-align">¿QUIÉRES SER EL MEJOR MAESTRO POKÉMON?</h2>          
+        <h3 class="center-align">Junto a PokeChoose podrás conseguirlo.</h3>
+        <div class="center-align"> 
+          <button id="start">Comenzar</button>
+        </div>     
+      </section>      
+      <h3>Curiosidades</h3>
       <section>
-        <img src="Image/welcomeimage.jpg" id="welcomeimage" alt="Imagen de bienvenida">
-        <h2>¿QUIERES SER EL MEJOR MAESTRO POKÉMON?</h2>
-        <h3>Junto a PokeChoose podrás conseguirlo</h3>
-        <button id="start">Comenzar</button>
-      </section>
-      <section>
-        <h3>Estadísticas</h3>
+          <h4>Estadistica</h4>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col l4 m6 s12">1</div>
+                  <div class="col l4 m6 s12">2</div>
+                  <div class="col l4 m6 s12">3</div>
+                  <div class="col l4 m6 s12">4</div>
+                  <div class="col l4 m6 s12">5</div>
+                  <div class="col l4 m6 s12">6</div>
+              </div>
+          </div>
       </section>
     </main>
-
-
    <!--aquí va el pie de página-->
     <footer>
-        <h3>Aquí va el footer</h3>
-    </footer>
-
-
-    
-    
-    
+      <h5>Aquí va el footer</h5>
+    </footer>  
     <script src="./data/pokemon/pokemon.js"></script> 
-    <script src="data.js"></script>
+    <script src="data.js"></script>    
     <script src="main.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>      
   </body>
 </html>
