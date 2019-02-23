@@ -6,22 +6,28 @@ document.getElementsByTagName('a')[0].addEventListener('click', () => {
         <h2 class="center-align">¿QUIÉRES SER EL MEJOR MAESTRO POKÉMON?</h2>          
         <h3 class="center-align">Junto a PokeChoose podrás conseguirlo.</h3>
         <div class="center-align"> 
-        <button id="start">Comenzar</button>
+            <button id="start">Comenzar</button>
         </div>     
-    </section>      
-        <h3>Curiosidades</h3>
-    <section>
-        <h4>Estadistica</h4>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col l4 m6 s12">1</div>
-                <div class="col l4 m6 s12">2</div>
-                <div class="col l4 m6 s12">3</div>
-                <div class="col l4 m6 s12">4</div>
-                <div class="col l4 m6 s12">5</div>
-                <div class="col l4 m6 s12">6</div>
-            </div>
+    </section>   
+    <h3>Estadistica</h3>
+    <!--Carrusel con contenido de materialize-->
+    <section class="carousel carousel-slider center">
+        <div class="carousel-item red white-text center">
+            <h2>First Panel</h2>
+            <p class="white-text">This is your first panel</p>
         </div>
+        <div class="carousel-item amber white-text center">
+            <h2>Second Panel</h2>
+            <p class="white-text">This is your second panel</p>
+        </div>
+        <div class="carousel-item green white-text center">
+            <h2>Third Panel</h2>
+            <p class="white-text">This is your third panel</p>
+        </div>
+        <div class="carousel-item blue white-text center">
+            <h2>Fourth Panel</h2>
+            <p class="white-text">This is your fourth panel</p>
+        </div>        
     </section>`
     document.getElementsByTagName('button')[0].addEventListener('click', () =>{
         document.getElementById('dinamicpage').innerHTML='';

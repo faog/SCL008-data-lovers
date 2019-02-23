@@ -1,7 +1,7 @@
 /*selector universal "*"*/
 
 *{
-    padding: 0px auto; 
+    padding: 0px; 
     margin: 0px auto;
 }
 
@@ -60,7 +60,9 @@ main section button{
     height: 45px;
     margin: 30px 100px;
     background: rgba(77, 77, 77, 0.4);
-    border: 1px solid rgba(77, 77, 77, 0.4) ;         
+    border: 1px solid rgba(77, 77, 77, 0.4) ;  
+    color: white;
+    font-size: 18px;       
     
 }
 

@@ -1,5 +1,16 @@
 //funciones complementarias a MaterializeCSS
 document.addEventListener('DOMContentLoaded', () =>{
-    let elems = document.querySelectorAll('.sidenav');
-    let instances = M.Sidenav.init(elems);
+    //Navbar
+    let elemsNabvar = document.querySelectorAll('.sidenav');
+    let instancesNavbar = M.Sidenav.init(elemsNabvar);
+     
+    //carrusel estadística
+    let elemsCarousel = document.querySelectorAll('.carousel');
+    let instancesCarousel = M.Carousel.init(elemsCarousel);
+
+    /*let instancesCarousel = M.Carousel.init({
+    fullWidth: true,
+    indicators: true
+    });*/
 });
+
