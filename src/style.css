@@ -1,10 +1,25 @@
+
 /*selector universal "*"*/
 
 *{
     padding: 0px; 
     margin: 0px auto;
 }
+/*Footer fijo */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
 
+  main {
+    flex: 1 0 auto;
+  }
+
+
+header, footer, main{
+    margin:0px;
+}
 nav{
     background-color:rgba(27, 31, 119, 0.95);
     position: fixed;
@@ -23,10 +38,10 @@ main #welcomeimage{
     background-image: url(Image/welcomeimage.jpg)
 }
 
-#logo{
-     
+#logo{ 
+
     height: 60px;   
-    padding-top: 10px;
+    padding-top: 10px;      
 }
 
 main section h2{   
@@ -55,7 +70,7 @@ main section h3{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);      
 }
 
-main section button{
+#btnstart{
     width: 190px;
     height: 45px;
     margin: 30px 100px;
@@ -75,4 +90,46 @@ main section button{
         font-size: 20px;
            
     }
+}
+/* @media (min-width: 992px){
+    .fullheight{
+        height: 80vh;
+       
+    }
+} */
+
+/*Página funcionamiento*/
+
+#dinamicpage section{
+    padding-top:60px;
+}
+
+/*Pagina de búsqueda*/
+
+#pokemonresult{
+    overflow-y: scroll;
+    height: 80vh;
+}
+
+@media (max-width: 992px){
+
+    #pokemonresult{
+        overflow-y: visible;
+        height: auto;
+    }
+   
+    .fullheight{
+        position: fixed;
+        background-color: white;
+    }
+    
+}
+
+#btnfilter, #btnshort{
+    width: 190px;
+    height: 45px;
+    background: rgba(77, 77, 77, 0.4);
+    border: 1px solid rgba(77, 77, 77, 0.4) ;  
+    color: white;
+    font-size: 18px;  
 }
