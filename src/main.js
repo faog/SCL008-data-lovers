@@ -60,7 +60,7 @@ function searchView(){
     document.getElementById('dinamicpage').innerHTML += 
     `
     <section class="row">     
-    <div class="col s12 m12 l3 fullheight">
+    <section class="col s12 m12 l3 sectionfilter">
       <ul class="collapsible">
         <li>
           <div class="collapsible-header">Filtrar</div>
@@ -95,15 +95,19 @@ function searchView(){
           </div>
         </li>
       </ul>       
-    </div>           
+    </section>           
 
     <section id="pokemonresult" class="col s12 m12 l9" >
+    <p>Resultados obtenidos</p>
+        <div class="row" id="allpokemon" >
+ 
+        </div>
       
     </section>
 
   </section>  
   `
-pokemonAll()
+    pokemonAll()
   let elemsFilter = document.querySelectorAll('.collapsible');
   M.Collapsible.init(elemsFilter);
 
@@ -127,11 +131,21 @@ Array.from(document.getElementsByClassName('tutorial')).forEach(element => {
 
 function pokemonAll(){
     const data= POKEMON.pokemon; 
-    for (let i=0; i<data.length; i++){
-       document.getElementById('pokemonresult').innerHTML+=`<p>${data[i].num} ${data[i].name} ${data[i].img}</p> `;
+         for (let i=0; i<data.length; i++){   
+            document.getElementById('allpokemon').innerHTML+=
+            `
+            <div id="pokemonbox" class="s12 m6 l4">
+            <p>${data[i].num}</p>
+            <p>${data[i].name}</p>
+            <img src="${data[i].img}" alt="${data[i].name}"
+
+            </div>  
+           
+                        
+           `
+        }
     
-    }
-       
+    
 
 }
 
