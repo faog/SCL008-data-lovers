@@ -51,6 +51,9 @@ function tutorialView(){
     </section>`
 }
 
+
+
+
 /*c)Pagina de busqueda*/
 function searchView(){
     document.getElementById('dinamicpage').innerHTML = '';
@@ -93,27 +96,14 @@ function searchView(){
         </li>
       </ul>       
     </div>           
-    
+
     <section id="pokemonresult" class="col s12 m12 l9" >
-      <h1>Resultado pokemon</h1>
-      <h1>Resultado pokemon</h1>
-      <h1>Resultado pokemon</h1>
-      <h1>Resultado pokemon</h1>
-      <h1>Resultado pokemon</h1>
-      <h1>Resultado pokemon</h1>
-      <h1>Resultado pokemon</h1>
-      <h1>Resultado pokemon</h1>
-      <h1>Resultado pokemon</h1>
-      <h1>Resultado pokemon</h1>
-      <h1>Resultado pokemon</h1>
-      <h1>Resultado pokemon</h1>
-      <h1>Resultado pokemon</h1>
-      <h1>Resultado pokemon</h1>    
+      
     </section>
 
   </section>  
   `
-
+pokemonAll()
   let elemsFilter = document.querySelectorAll('.collapsible');
   M.Collapsible.init(elemsFilter);
 
@@ -134,12 +124,26 @@ Array.from(document.getElementsByClassName('tutorial')).forEach(element => {
         tutorialView();
     })
 });
+
+function pokemonAll(){
+    const data= POKEMON.pokemon; 
+    for (let i=0; i<data.length; i++){
+       document.getElementById('pokemonresult').innerHTML+=`<p>${data[i].num} ${data[i].name} ${data[i].img}</p> `;
+    
+    }
+       
+
+}
+
+
 /*c) Página Busqueda*/
 Array.from(document.getElementsByClassName('search')).forEach(element => {
     element.addEventListener('click', () =>{
         searchView();
+        pokemonAll();
     })
 });
+
 
 
 
