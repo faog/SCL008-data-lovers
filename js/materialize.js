@@ -8,12 +8,13 @@ document.addEventListener('DOMContentLoaded', () =>{
     let elemsCarousel = document.querySelectorAll('.carousel');
     M.Carousel.init(elemsCarousel);
 
-    //aside búsqueda
-    var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems);
+    //barra filtrar y ordenar
+    let elemsFilter = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(elemsFilter);
 
-    var elemsSelect = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elemsSelect);
+    //Elemento seleccion
+    let elemsSelect = document.querySelectorAll('select');
+    M.FormSelect.init(elemsSelect);
 
     indexView();
 

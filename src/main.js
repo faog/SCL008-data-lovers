@@ -39,7 +39,7 @@ function indexView(){
     M.Carousel.init(elemsCarousel);
 
 }
-
+/*b)Pagina tutorial*/
 function tutorialView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
@@ -51,7 +51,7 @@ function tutorialView(){
     </section>`
 }
 
-
+/*c)Pagina de busqueda*/
 function searchView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
@@ -113,11 +113,13 @@ function searchView(){
 
   </section>  
   `
-  let elems = document.querySelectorAll('.collapsible');
-  M.Collapsible.init(elems);
+
+  let elemsFilter = document.querySelectorAll('.collapsible');
+  M.Collapsible.init(elemsFilter);
 
   let elemsSelect = document.querySelectorAll('select');
   M.FormSelect.init(elemsSelect);
+ 
 }
 
 
@@ -126,13 +128,13 @@ function searchView(){
 document.getElementsByTagName('a')[0].addEventListener('click', () => {
     indexView();
 })
-
+/*b)Página Tutorial*/
 Array.from(document.getElementsByClassName('tutorial')).forEach(element => {
     element.addEventListener('click', () =>{
         tutorialView();
     })
 });
-
+/*c) Página Busqueda*/
 Array.from(document.getElementsByClassName('search')).forEach(element => {
     element.addEventListener('click', () =>{
         searchView();
