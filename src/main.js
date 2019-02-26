@@ -41,6 +41,7 @@ function indexView(){
     M.Carousel.init(elemsCarousel);
 
 }
+
 /*b)Pagina tutorial*/
 function tutorialView(){
     document.getElementById('dinamicpage').innerHTML = '';
@@ -48,15 +49,10 @@ function tutorialView(){
     `<section id="tutorial">
         <h4>¿Qué es PokeChoose?</h4>
         <article>
-        <h2>PokeChoose nace como una enciclopedia virtual para que puedas escoger 
-        
-        </h2>
+        <h2>explicar las distintas funcionalidades de la página</h2>
         </article>
     </section>`
 }
-
-
-
 
 /*c)Pagina de busqueda*/
 function searchView(){
@@ -113,20 +109,12 @@ function searchView(){
         </li>
       </ul>       
     </section>           
-
     <section id="pokemonresult" class="col s12 m12 l9" >
-<<<<<<< HEAD
-    <h1>Resultados obtenidos</h1>
-        <div class="row" id="allpokemon" >
-=======
     <p>Resultados obtenidos</p>
         <div id="result" class="row">
->>>>>>> ccd931b8545d2b58ad9ad2e972e463c054f97542
  
-        </div>
-      
+        </div>      
     </section>
-
   </section>  
   `
     pokemonAll()
@@ -164,31 +152,6 @@ Array.from(document.getElementsByClassName('tutorial')).forEach(element => {
     })
 });
 
-<<<<<<< HEAD
-function pokemonAll(){
-    const data= POKEMON.pokemon; 
-         for (let i=0; i<data.length; i++){   
-            document.getElementById('allpokemon').innerHTML+=
-            `
-            <div id="pokemonbox" class="col s12 m6 l4">
-            <img src="${data[i].img}" alt="${data[i].name}">
-            <p>${data[i].num}</p>
-            <p>${data[i].name}</p>
-            
-
-            </div>  
-           
-                        
-           `
-        }
-    
-    
-
-}
-
-=======
->>>>>>> ccd931b8545d2b58ad9ad2e972e463c054f97542
-
 /*c) Página Busqueda*/
 Array.from(document.getElementsByClassName('search')).forEach(element => {
     element.addEventListener('click', () =>{
@@ -207,7 +170,6 @@ function showPokemonList(pokemons)
             <p>${element.num}</p>
             <p>${element.name}</p>
             <img src="${element.img}" alt="${element.name}"
-
         </div>`  
     });
 }
@@ -217,8 +179,3 @@ function pokemonAll(){
     showPokemonList(data);
 }
 
-function showPokemonWeakness(pokemons)
-{
-    document.getElementById()
-
-}
