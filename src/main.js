@@ -45,10 +45,10 @@ function indexView(){
 function tutorialView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
-    `<section >
-        <h4>breve introducción de que es PokeChoose, indicando que son 151 pokemon de kanto (quizás agregar un mapa)</h1>
+    `<section id="tutorial">
+        <h4>¿Qué es PokeChoose?</h4>
         <article>
-        <h4>explicar las distintas funcionalidades de la página</h1>
+        <h2>explicar las distintas funcionalidades de la página</h2>
         </article>
     </section>`
 }
@@ -116,10 +116,8 @@ function searchView(){
     <p>Resultados obtenidos</p>
         <div id="result" class="row">
  
-        </div>
-      
+        </div>      
     </section>
-
   </section>  
   `
     pokemonAll()
@@ -156,7 +154,6 @@ Array.from(document.getElementsByClassName('tutorial')).forEach(element => {
         tutorialView();
     })
 });
-
 
 /*c) Página Busqueda*/
 Array.from(document.getElementsByClassName('search')).forEach(element => {
