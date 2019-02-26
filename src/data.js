@@ -4,12 +4,25 @@ window.data = {
     let filterType = data.filter(element => {
       return element.type.includes(condition);      
     })
-    return filterType;      
+    return filterType; 
 
-    /*let filterCandy = data.filter(element => {
+    /*if (condition===data.condition){
+      let filterType = data.filter(element => {
+        return element.type.includes(condition);      
+      })
+      return filterType; 
+
+    }else if(condition==='weaknesses'){
+      let filterWeakness = data.filter(element => {
+        return element.weaknesses.includes(condition);      
+      })
+      return filterWeakness; 
+    }
+        
+    let filterCandy = data.filter(element => {
       return element.candy_count===condition;      
     })
-    return filterCandy;   */
+    return filterCandy; */
   },
   sortData:(data, sortBy, sortOrder) =>{
     let sortedData = data.sort((a,b) =>{

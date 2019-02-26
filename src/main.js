@@ -177,7 +177,8 @@ function searchView(){
 
   let elemsSelect = document.querySelectorAll('select');
   M.FormSelect.init(elemsSelect);
- /*III. Filtrar*/
+  
+    /*III. Filtrar*/
 
     /*a) Filtro por tipo de pokemon*/
     document.getElementById('type').addEventListener('change',()=>{
@@ -193,11 +194,11 @@ function searchView(){
     /*b) Filtro por debilidad de pokemon*/
     
     document.getElementById('weakness').addEventListener('change',()=>{
-        let conditionWeakness=document.getElementById('weakness').value; 
-        if(conditionWeakness==='all'){
+        let condition=document.getElementById('weakness').value; 
+        if(condition==='all'){
             pokemonAll();
         }else {
-            let result=window.data.filterData(data,conditionWeakness);
+            let result=window.data.filterData(data,condition);
             showPokemonList(result);
         }
     });
@@ -205,11 +206,11 @@ function searchView(){
     /*c) Filtro por cantidad de candys*/
     
     document.getElementById('candycount').addEventListener('change',()=>{
-        let conditionCandy=document.getElementById('candycount').value; 
-        if(conditionCandy==='all'){
+        let condition=document.getElementById('candycount').value; 
+        if(condition==='all'){
             pokemonAll();
         }else {
-            let result=window.data.filterData(data,conditionCandy);
+            let result=window.data.filterData(data,condition);
             showPokemonList(result);
         }
     });
@@ -217,15 +218,17 @@ function searchView(){
     /*d) Filtro por distancia para incubar huevos*/
     
     document.getElementById('eggs').addEventListener('change',()=>{
-        let conditionEggs=document.getElementById('eggs').value; 
-        if(conditionEggs==='all'){
+        let condition=document.getElementById('eggs').value; 
+        if(condition==='all'){
             pokemonAll();
         }else {
-            let result=window.data.filterData(data,conditionEggs);
+            let result=window.data.filterData(data,condition);
             showPokemonList(result);
         }
     });
+
     
+    /*IV. Ordenar*/
 
     /*1) Ordenar por nombre */
     document.getElementById('namesort').addEventListener('change',()=>{
@@ -235,6 +238,7 @@ function searchView(){
     });
 
     /*2) Ordenar por numero */
+
     document.getElementById('numsort').addEventListener('change',()=>{
         let sortOrder =document.getElementById('numsort').value;
         let result =window.data.sortData(data,'num',sortOrder);
@@ -259,11 +263,14 @@ function searchView(){
 
 
 /*II.Manejo del DOM */
+
 /*a)Página de inicio*/
 document.getElementsByTagName('a')[0].addEventListener('click', () => {
     indexView();
 })
+
 /*b)Página Tutorial*/
+
 Array.from(document.getElementsByClassName('tutorial')).forEach(element => {
     element.addEventListener('click', () =>{
         tutorialView();
