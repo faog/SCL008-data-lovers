@@ -117,23 +117,44 @@ function searchView(){
                 <option value="100">100</option>
                 <option value="400">400</option>
                </select>
+            <label>Distancia de huevos para encubar</label>
+               <select id="eggs" class="browser-default">
+                <option value="all" actived>Todos</option>
+                <option value="2">2 km</option>
+                <option value="5">5 km</option>
+                <option value="7">7 km</option>
+                <option value="10">10 km</option>
+                <option value="Not in Eggs">Not in Eggs</option>
+               </select>
           </div>
         </li>
         <li>
           <div class="collapsible-header">Ordenar</div>
           <div class="collapsible-body">
-          <label>Nombre</label>
-          <select class="browser-default" id="namesort">
-            <option actived>Escoja una opcion</option>                
-            <option value="asc">A-Z</option>
-            <option value="desc">Z-A</option>            
-           </select>  
-           <label>Numero</label>
-          <select class="browser-default" id="numsort">
-            <option actived>Escoja una opcion</option>                
-            <option value="asc">Ascendente</option>
-            <option value="desc">Descendente</option>            
-           </select>  
+            <label>Nombre</label>
+               <select class="browser-default" id="namesort">
+                <option actived>Escoja una opcion</option>                
+                <option value="asc">A-Z</option>
+                <option value="desc">Z-A</option>            
+               </select>  
+            <label>Numero</label>
+               <select class="browser-default" id="numsort">
+                <option actived>Escoja una opcion</option>                
+                <option value="asc">Ascendente</option>
+                <option value="desc">Descendente</option>            
+               </select>  
+            <label>Posibilidad de Engendros (%)</label>
+               <select class="browser-default" id="spwanchancesort">
+                <option actived>Escoja una opcion</option>                
+                <option value="asc">Ascendente</option>
+                <option value="desc">Descendente</option>            
+               </select>  
+            <label>Promedio de Engendros</label>
+               <select class="browser-default" id="spwansort">
+                <option actived>Escoja una opcion</option>                
+                <option value="asc">Ascendente</option>
+                <option value="desc">Descendente</option>            
+               </select>  
           </div>
         </li>
       </ul>       
@@ -176,38 +197,64 @@ function searchView(){
         if(conditionWeakness==='all'){
             pokemonAll();
         }else {
-            let result=window.data.filterData(data,condition);
+            let result=window.data.filterData(data,conditionWeakness);
             showPokemonList(result);
         }
     });
 
-        /*c) Filtro por cantidad de candys*/
+    /*c) Filtro por cantidad de candys*/
     
-        document.getElementById('candycount').addEventListener('change',()=>{
-            let conditionCandy=document.getElementById('candycount').value; 
-            if(conditionCandy==='all'){
-                pokemonAll();
-            }else {
-                let result=window.data.filterData(data,condition);
-                showPokemonList(result);
-            }
-        });
+    document.getElementById('candycount').addEventListener('change',()=>{
+        let conditionCandy=document.getElementById('candycount').value; 
+        if(conditionCandy==='all'){
+            pokemonAll();
+        }else {
+            let result=window.data.filterData(data,conditionCandy);
+            showPokemonList(result);
+        }
+    });
+
+    /*d) Filtro por distancia para incubar huevos*/
+    
+    document.getElementById('eggs').addEventListener('change',()=>{
+        let conditionEggs=document.getElementById('eggs').value; 
+        if(conditionEggs==='all'){
+            pokemonAll();
+        }else {
+            let result=window.data.filterData(data,conditionEggs);
+            showPokemonList(result);
+        }
+    });
     
 
-    /*Ordenar por nombre */
+    /*1) Ordenar por nombre */
     document.getElementById('namesort').addEventListener('change',()=>{
         let sortOrder =document.getElementById('namesort').value;
         let result =window.data.sortData(data,'name',sortOrder);
         showPokemonList(result);
     });
 
-    /*Ordenar por numero */
+    /*2) Ordenar por numero */
     document.getElementById('numsort').addEventListener('change',()=>{
         let sortOrder =document.getElementById('numsort').value;
         let result =window.data.sortData(data,'num',sortOrder);
         showPokemonList(result);
     });
 
+    /*3) Ordenar por posibilidad de engendro */
+
+    /*document.getElementById('spwanchancesort'). addEventListener('change', ()=> {
+        let sortOrder =document.getElementById('spwanchancesort').value; 
+        let result =window.data.sortData(data,'spawn_chance',sortOrder);
+        showPokemonList(result);
+    });*/
+
+    /*4) Ordenar por numero promedio de engendros */
+    /*document.getElementById('spwansort').addEventListener('change',()=>{
+        let sortOrder =document.getElementById('spwansort').value;
+        let result =window.data.sortData(data,'avg_spawns',sortOrder);
+        showPokemonList(result);
+    });*/
 }
 
 

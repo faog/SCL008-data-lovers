@@ -6,10 +6,10 @@ window.data = {
     })
     return filterType;      
 
-    let filterCandy = data.filter(element => {
+    /*let filterCandy = data.filter(element => {
       return element.candy_count===condition;      
     })
-    return filterCandy;   
+    return filterCandy;   */
   },
   sortData:(data, sortBy, sortOrder) =>{
     let sortedData = data.sort((a,b) =>{
