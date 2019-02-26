@@ -87,12 +87,27 @@ function searchView(){
                 <option value="Flying">Volador</option>
                </select>   
             <label>Debilidad</label>
-            <select class="browser-default">
-                <option actived>Todos</option>                
-                <option>Agua</option>
-                <option>Fuego</option>
-                <option>Planta</option>
-            </select>     
+                <select id="weakness" class="browser-default">
+                <option value="all" actived>Todos</option>  
+                <option value="Steel">Acero</option>
+                <option value="Water">Agua</option>
+                <option value="Dragon">Dragon</option>
+                <option value="Electric">Eléctrico</option>
+                <option value="Ghost">Fantasma</option>
+                <option value="Fire">Fuego</option>
+                <option value="Fairy">Hada</option>
+                <option value="Ice">Hielo</option>
+                <option value="Bug">Insecto</option>
+                <option value="Normal">Normal</option>
+                <option value="Fighting">Luchador</option>
+                <option value="Dark">Oscuro</option>
+                <option value="Grass">Planta</option>
+                <option value="Psychic">Psíquico</option>
+                <option value="Rock">Roca</option>  
+                <option value="Ground">Suelo</option>
+                <option value="Poison">Veneno</option>
+                <option value="Flying">Volador</option>
+               </select>     
           </div>
         </li>
         <li>
@@ -139,6 +154,21 @@ function searchView(){
         showPokemonList(result);
     }
 });
+    
+    /*b) Filtro por debilidad de pokemon*/
+    
+    document.getElementById('weakness').addEventListener('change',()=>{
+        let conditionWeakness=document.getElementById('weakness').value; 
+    if(conditionWeakness==='all'){
+        pokemonAll();
+    }
+    else {
+        let result=window.data.filterData(data,condition);
+        showPokemonList(result);
+    }
+});
+    
+
     /*Ordenar por nombre */
     document.getElementById('namesort').addEventListener('change',()=>{
         let sortOrder =document.getElementById('namesort').value;
@@ -177,10 +207,10 @@ function showPokemonList(pokemons)
     pokemons.forEach(element => {
         document.getElementById('result').innerHTML +=
         `<div id="pokemonbox" class="col s12 m6 l4">
+            <img src="${element.img}" alt="${element.name}"
             <p>${element.num}</p>
             <p>${element.name}</p>
-            <img src="${element.img}" alt="${element.name}"
-
+            
         </div>`  
     });
 }
