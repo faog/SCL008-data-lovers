@@ -41,6 +41,7 @@ function indexView(){
     M.Carousel.init(elemsCarousel);
 
 }
+
 /*b)Pagina tutorial*/
 function tutorialView(){
     document.getElementById('dinamicpage').innerHTML = '';
@@ -52,9 +53,6 @@ function tutorialView(){
         </article>
     </section>`
 }
-
-
-
 
 /*c)Pagina de busqueda*/
 function searchView(){
@@ -101,16 +99,16 @@ function searchView(){
           <div class="collapsible-header">Ordenar</div>
           <div class="collapsible-body">
           <label>Nombre</label>
-          <select class="browser-default" id="namesort">
+          <select class="browser-default">
             <option actived>Escoja una opcion</option>                
-            <option value="asc">A-Z</option>
-            <option value="desc">Z-A</option>            
+            <option>A-Z</option>
+            <option>Z-A</option>            
            </select>   
+        <button id="btnshort">Ordenar</button>   
           </div>
         </li>
       </ul>       
     </section>           
-
     <section id="pokemonresult" class="col s12 m12 l9" >
     <p>Resultados obtenidos</p>
         <div id="result" class="row">
@@ -139,13 +137,6 @@ document.getElementById('type').addEventListener('change',()=>{
         showPokemonList(result);
     }
 });
-/*Ordenar por nombre */
-document.getElementById('namesort').addEventListener('change',()=>{
-    let sortOrder =document.getElementById('namesort').value;
-    let result =window.data.sortData(data,'name',sortOrder);
-    showPokemonList(result);
-});
-
 }
 
 
@@ -179,7 +170,6 @@ function showPokemonList(pokemons)
             <p>${element.num}</p>
             <p>${element.name}</p>
             <img src="${element.img}" alt="${element.name}"
-
         </div>`  
     });
 }
@@ -188,3 +178,4 @@ function showPokemonList(pokemons)
 function pokemonAll(){
     showPokemonList(data);
 }
+
