@@ -1,7 +1,9 @@
-/* global M*/
+/* global M,POKEMON*/
+const data= POKEMON.pokemon; 
 
 /*I.Declaración de vistas*/
 /*a)Pagina de inicio*/
+
 function indexView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
@@ -66,11 +68,25 @@ function searchView(){
           <div class="collapsible-header">Filtrar</div>
           <div class="collapsible-body">
             <label>Tipo</label>
-              <select class="browser-default">
-                <option actived>Todos</option>                
-                <option>Agua</option>
-                <option>Fuego</option>
-                <option>Planta</option>
+              <select id="type" class="browser-default">
+                <option value="all" actived>Todos</option>  
+                <option value="Steel">Acero</option>
+                <option value="Water">Agua</option>
+                <option value="Dragon">Dragon</option>
+                <option value="Electric">Eléctrico</option>
+                <option value="Ghost">Fantasma</option>
+                <option value="Fire">Fuego</option>
+                <option value="Fairy">Hada</option>
+                <option value="Ice">Hielo</option>
+                <option value="Bug">Insecto</option>
+                <option value="Normal">Normal</option>
+                <option value="Dark">Oscuro</option>
+                <option value="Grass">Planta</option>
+                <option value="Psychic">Psíquico</option>
+                <option value="Rock">Roca</option>  
+                <option value="Ground">Suelo</option>
+                <option value="Poison">Veneno</option>
+                <option value="Flying">Volador</option>
                </select>   
             <label>Debilidad</label>
             <select class="browser-default">
@@ -78,8 +94,7 @@ function searchView(){
                 <option>Agua</option>
                 <option>Fuego</option>
                 <option>Planta</option>
-            </select> 
-            <button id="btnfilter">Filtar</button>          
+            </select>     
           </div>
         </li>
         <li>
@@ -98,22 +113,33 @@ function searchView(){
     </section>           
 
     <section id="pokemonresult" class="col s12 m12 l9" >
-    <h1>Resultados obtenidos</h1>
-        <div class="row" id="allpokemon" >
+    <p>Resultados obtenidos</p>
+        <div id="result" class="row">
  
-        </div>
-      
+        </div>      
     </section>
-
   </section>  
   `
     pokemonAll()
+    
   let elemsFilter = document.querySelectorAll('.collapsible');
   M.Collapsible.init(elemsFilter);
 
   let elemsSelect = document.querySelectorAll('select');
   M.FormSelect.init(elemsSelect);
- 
+ /*III. Filtrar*/
+
+/*a) Filtro por tipo de pokemon*/
+document.getElementById('type').addEventListener('change',()=>{
+    let condition =document.getElementById('type').value;
+    if(condition==='all'){
+        pokemonAll();
+    }
+    else {
+        let result =window.data.filterData(data, condition);
+        showPokemonList(result);
+    }
+});
 }
 
 
@@ -129,36 +155,30 @@ Array.from(document.getElementsByClassName('tutorial')).forEach(element => {
     })
 });
 
-function pokemonAll(){
-    const data= POKEMON.pokemon; 
-         for (let i=0; i<data.length; i++){   
-            document.getElementById('allpokemon').innerHTML+=
-            `
-            <div id="pokemonbox" class="col s12 m6 l4">
-            <img src="${data[i].img}" alt="${data[i].name}">
-            <p>${data[i].num}</p>
-            <p>${data[i].name}</p>
-            
-
-            </div>  
-           
-                        
-           `
-        }
-    
-    
-
-}
-
-
 /*c) Página Busqueda*/
 Array.from(document.getElementsByClassName('search')).forEach(element => {
     element.addEventListener('click', () =>{
         searchView();
-        pokemonAll();
+       
     })
 });
 
+/*Dibuja la lista de pokemon dependiendo del arreglo de pokemones recibido */
+function showPokemonList(pokemons)
+{
+    document.getElementById('result').innerHTML='';
+    pokemons.forEach(element => {
+        document.getElementById('result').innerHTML +=
+        `<div id="pokemonbox" class="col s12 m6 l4">
+            <p>${element.num}</p>
+            <p>${element.name}</p>
+            <img src="${element.img}" alt="${element.name}"
 
+        </div>`  
+    });
+}
 
-
+/*Dibuja todos los pokemon*/
+function pokemonAll(){
+    showPokemonList(data);
+}
