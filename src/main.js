@@ -1,4 +1,4 @@
-/* global M,POKEMON*/
+/* global M*/
 const data= POKEMON.pokemon; 
 
 /*I.Declaración de vistas*/
@@ -108,6 +108,15 @@ function searchView(){
                 <option value="Poison">Veneno</option>
                 <option value="Flying">Volador</option>
                </select>     
+            <label>Cantidad de Candy</label>
+               <select id="candycount" class="browser-default">
+                <option value="all" actived>Todos</option>
+                <option value="12">12</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="400">400</option>
+               </select>
           </div>
         </li>
         <li>
@@ -118,7 +127,13 @@ function searchView(){
             <option actived>Escoja una opcion</option>                
             <option value="asc">A-Z</option>
             <option value="desc">Z-A</option>            
-           </select>   
+           </select>  
+           <label>Numero</label>
+          <select class="browser-default" id="numsort">
+            <option actived>Escoja una opcion</option>                
+            <option value="asc">Ascendente</option>
+            <option value="desc">Descendente</option>            
+           </select>  
           </div>
         </li>
       </ul>       
@@ -146,33 +161,50 @@ function searchView(){
     /*a) Filtro por tipo de pokemon*/
     document.getElementById('type').addEventListener('change',()=>{
         let condition =document.getElementById('type').value;
-    if(condition==='all'){
-        pokemonAll();
-    }
-    else {
-        let result =window.data.filterData(data, condition);
-        showPokemonList(result);
-    }
-});
+        if(condition==='all'){
+            pokemonAll();
+        }else {
+            let result =window.data.filterData(data, condition);
+            showPokemonList(result);
+        }
+    });
     
     /*b) Filtro por debilidad de pokemon*/
     
     document.getElementById('weakness').addEventListener('change',()=>{
         let conditionWeakness=document.getElementById('weakness').value; 
-    if(conditionWeakness==='all'){
-        pokemonAll();
-    }
-    else {
-        let result=window.data.filterData(data,condition);
-        showPokemonList(result);
-    }
-});
+        if(conditionWeakness==='all'){
+            pokemonAll();
+        }else {
+            let result=window.data.filterData(data,condition);
+            showPokemonList(result);
+        }
+    });
+
+        /*c) Filtro por cantidad de candys*/
+    
+        document.getElementById('candycount').addEventListener('change',()=>{
+            let conditionCandy=document.getElementById('candycount').value; 
+            if(conditionCandy==='all'){
+                pokemonAll();
+            }else {
+                let result=window.data.filterData(data,condition);
+                showPokemonList(result);
+            }
+        });
     
 
     /*Ordenar por nombre */
     document.getElementById('namesort').addEventListener('change',()=>{
         let sortOrder =document.getElementById('namesort').value;
         let result =window.data.sortData(data,'name',sortOrder);
+        showPokemonList(result);
+    });
+
+    /*Ordenar por numero */
+    document.getElementById('numsort').addEventListener('change',()=>{
+        let sortOrder =document.getElementById('numsort').value;
+        let result =window.data.sortData(data,'num',sortOrder);
         showPokemonList(result);
     });
 
