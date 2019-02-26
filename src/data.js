@@ -1,10 +1,15 @@
 /* Manejo de data */
 window.data = {
   filterData: (data, condition) =>{
-    let typeFilter = data.filter(element => {
-      return element.type.includes(condition);
+    let filterType = data.filter(element => {
+      return element.type.includes(condition);      
     })
-    return typeFilter;
+    return filterType;      
+
+    let filterCandy = data.filter(element => {
+      return element.candy_count===condition;      
+    })
+    return filterCandy;   
   },
   sortData:(data, sortBy, sortOrder) =>{
     let sortedData = data.sort((a,b) =>{
