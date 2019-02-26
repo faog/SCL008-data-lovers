@@ -41,15 +41,14 @@ function indexView(){
     M.Carousel.init(elemsCarousel);
 
 }
-
 /*b)Pagina tutorial*/
 function tutorialView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
-    `<section id="tutorial">
-        <h4>¿Qué es PokeChoose?</h4>
+    `<section >
+        <h4>breve introducción de que es PokeChoose, indicando que son 151 pokemon de kanto (quizás agregar un mapa)</h1>
         <article>
-        <h2>explicar las distintas funcionalidades de la página</h2>
+        <h4>explicar las distintas funcionalidades de la página</h1>
         </article>
     </section>`
 }
@@ -78,6 +77,7 @@ function searchView(){
                 <option value="Ice">Hielo</option>
                 <option value="Bug">Insecto</option>
                 <option value="Normal">Normal</option>
+                <option value="Fighting">Luchador</option>
                 <option value="Dark">Oscuro</option>
                 <option value="Grass">Planta</option>
                 <option value="Psychic">Psíquico</option>
@@ -99,22 +99,24 @@ function searchView(){
           <div class="collapsible-header">Ordenar</div>
           <div class="collapsible-body">
           <label>Nombre</label>
-          <select class="browser-default">
+          <select class="browser-default" id="namesort">
             <option actived>Escoja una opcion</option>                
-            <option>A-Z</option>
-            <option>Z-A</option>            
+            <option value="asc">A-Z</option>
+            <option value="desc">Z-A</option>            
            </select>   
-        <button id="btnshort">Ordenar</button>   
           </div>
         </li>
       </ul>       
     </section>           
+
     <section id="pokemonresult" class="col s12 m12 l9" >
     <p>Resultados obtenidos</p>
         <div id="result" class="row">
  
-        </div>      
+        </div>
+      
     </section>
+
   </section>  
   `
     pokemonAll()
@@ -126,9 +128,9 @@ function searchView(){
   M.FormSelect.init(elemsSelect);
  /*III. Filtrar*/
 
-/*a) Filtro por tipo de pokemon*/
-document.getElementById('type').addEventListener('change',()=>{
-    let condition =document.getElementById('type').value;
+    /*a) Filtro por tipo de pokemon*/
+    document.getElementById('type').addEventListener('change',()=>{
+        let condition =document.getElementById('type').value;
     if(condition==='all'){
         pokemonAll();
     }
@@ -137,6 +139,13 @@ document.getElementById('type').addEventListener('change',()=>{
         showPokemonList(result);
     }
 });
+    /*Ordenar por nombre */
+    document.getElementById('namesort').addEventListener('change',()=>{
+        let sortOrder =document.getElementById('namesort').value;
+        let result =window.data.sortData(data,'name',sortOrder);
+        showPokemonList(result);
+    });
+
 }
 
 
@@ -151,6 +160,7 @@ Array.from(document.getElementsByClassName('tutorial')).forEach(element => {
         tutorialView();
     })
 });
+
 
 /*c) Página Busqueda*/
 Array.from(document.getElementsByClassName('search')).forEach(element => {
@@ -170,6 +180,7 @@ function showPokemonList(pokemons)
             <p>${element.num}</p>
             <p>${element.name}</p>
             <img src="${element.img}" alt="${element.name}"
+
         </div>`  
     });
 }
@@ -178,4 +189,3 @@ function showPokemonList(pokemons)
 function pokemonAll(){
     showPokemonList(data);
 }
-
