@@ -43,10 +43,10 @@ function indexView(){
 function tutorialView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
-    `<section >
-        <h4>breve introducción de que es PokeChoose, indicando que son 151 pokemon de kanto (quizás agregar un mapa)</h1>
+    `<section id="tutorial">
+        <h4>¿Qué es PokeChoose?</h4>
         <article>
-        <h4>explicar las distintas funcionalidades de la página</h1>
+        <h2>explicar las distintas funcionalidades de la página</h2>
         </article>
     </section>`
 }
@@ -98,7 +98,7 @@ function searchView(){
     </section>           
 
     <section id="pokemonresult" class="col s12 m12 l9" >
-    <p>Resultados obtenidos</p>
+    <h1>Resultados obtenidos</h1>
         <div class="row" id="allpokemon" >
  
         </div>
@@ -134,10 +134,11 @@ function pokemonAll(){
          for (let i=0; i<data.length; i++){   
             document.getElementById('allpokemon').innerHTML+=
             `
-            <div id="pokemonbox" class="s12 m6 l4">
+            <div id="pokemonbox" class="col s12 m6 l4">
+            <img src="${data[i].img}" alt="${data[i].name}">
             <p>${data[i].num}</p>
             <p>${data[i].name}</p>
-            <img src="${data[i].img}" alt="${data[i].name}"
+            
 
             </div>  
            
