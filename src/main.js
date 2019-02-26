@@ -1,7 +1,9 @@
-/* global M*/
+/* global M,POKEMON*/
+const data= POKEMON.pokemon; 
 
 /*I.Declaración de vistas*/
 /*a)Pagina de inicio*/
+
 function indexView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
@@ -127,7 +129,19 @@ function searchView(){
 
   let elemsSelect = document.querySelectorAll('select');
   M.FormSelect.init(elemsSelect);
- 
+ /*III. Filtrar*/
+
+/*a) Filtro por tipo de pokemon*/
+document.getElementById('type').addEventListener('change',()=>{
+    let condition =document.getElementById('type').value;
+    if(condition==='all'){
+        pokemonAll();
+    }
+    else {
+        let result =window.data.filterData(data, condition);
+        showPokemonList(result);
+    }
+});
 }
 
 
@@ -143,18 +157,6 @@ Array.from(document.getElementsByClassName('tutorial')).forEach(element => {
     })
 });
 
-function pokemonAll(){
-    const data= POKEMON.pokemon; 
-        for (let i=0; i<data.length; i++){   
-            document.getElementById('result').innerHTML+=
-            `<div id="pokemonbox" class="s12 m6 l4">
-            <p>${data[i].num}</p>
-            <p>${data[i].name}</p>
-            <img src="${data[i].img}" alt="${data[i].name}"
-            </div>`
-        }  
-}
-
 
 /*c) Página Busqueda*/
 Array.from(document.getElementsByClassName('search')).forEach(element => {
@@ -164,26 +166,22 @@ Array.from(document.getElementsByClassName('search')).forEach(element => {
     })
 });
 
-/*III. Filtrar*/
-
-/*a) Filtro por tipo de pokemon*/
-document.getElementById('type').addEventListener('change',()=>{
-    let condition =document.getElementById('type').value;
-    let result =window.filterData(data, condition);
-
+/*Dibuja la lista de pokemon dependiendo del arreglo de pokemones recibido */
+function showPokemonList(pokemons)
+{
     document.getElementById('result').innerHTML='';
-
-    result.forEach(element => {
+    pokemons.forEach(element => {
         document.getElementById('result').innerHTML +=
-        `<div id="pokemonbox" class="s12 m6 l4">
+        `<div id="pokemonbox" class="col s12 m6 l4">
             <p>${element.num}</p>
             <p>${element.name}</p>
             <img src="${element.img}" alt="${element.name}"
 
         </div>`  
-    })
+    });
+}
 
-
-
-});
-
+/*Dibuja todos los pokemon*/
+function pokemonAll(){
+    showPokemonList(data);
+}
