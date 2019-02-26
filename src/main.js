@@ -101,12 +101,11 @@ function searchView(){
           <div class="collapsible-header">Ordenar</div>
           <div class="collapsible-body">
           <label>Nombre</label>
-          <select class="browser-default">
+          <select class="browser-default" id="namesort">
             <option actived>Escoja una opcion</option>                
-            <option>A-Z</option>
-            <option>Z-A</option>            
+            <option value="asc">A-Z</option>
+            <option value="desc">Z-A</option>            
            </select>   
-        <button id="btnshort">Ordenar</button>   
           </div>
         </li>
       </ul>       
@@ -140,6 +139,13 @@ document.getElementById('type').addEventListener('change',()=>{
         showPokemonList(result);
     }
 });
+/*Ordenar por nombre */
+document.getElementById('namesort').addEventListener('change',()=>{
+    let sortOrder =document.getElementById('namesort').value;
+    let result =window.data.sortData(data,'name',sortOrder);
+    showPokemonList(result);
+});
+
 }
 
 
