@@ -37,3 +37,5 @@ window.data = {
 
   }*/
 };
+
+window.filterData = filterData;

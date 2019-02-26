@@ -1,4 +1,4 @@
-/* global M*/
+/* global M, POKEMON*/
 const data= POKEMON.pokemon; 
 
 /*I.Declaración de vistas*/
@@ -227,7 +227,7 @@ function searchView(){
         }
     });
 
-    
+
     /*IV. Ordenar*/
 
     /*1) Ordenar por nombre */
@@ -293,7 +293,7 @@ function showPokemonList(pokemons)
     pokemons.forEach(element => {
         document.getElementById('result').innerHTML +=
         `<div id="pokemonbox" class="col s12 m6 l4">
-            <img src="${element.img}" alt="${element.name}"
+            <img src="${element.img}" alt="${element.name}">
             <p>${element.num}</p>
             <p>${element.name}</p>
             
@@ -305,3 +305,5 @@ function showPokemonList(pokemons)
 function pokemonAll(){
     showPokemonList(data);
 }
+
+window.onload = showPokemonList(data);
