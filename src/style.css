@@ -149,3 +149,25 @@ main section h3{
     font-size: 18px;  
 }
 
+footer{
+    background-color:rgba(27, 31, 119, 0.95);
+    padding: 0px 100px;
+    height: 40px;
+    
+    
+}
+footer p{
+    padding-top: 10px;
+    font-size: 10px;
+    color: white;
+    text-align: left;
+    text-indent: -6em
+}
+
+#tutorialone{
+    padding-top: 10px;
+    font-size: 20px;
+    color: black;
+    text-align: left justify;
+    /*text-indent: -2em*/
+}

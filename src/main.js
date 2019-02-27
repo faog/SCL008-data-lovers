@@ -46,9 +46,20 @@ function tutorialView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
     `<section >
-        <h4>breve introducción de que es PokeChoose, indicando que son 151 pokemon de kanto (quizás agregar un mapa)</h1>
-        <article>
-        <h4>explicar las distintas funcionalidades de la página</h1>
+        <h3>¿Qué es PokeChoose?
+        </h3>
+        <article id="tutorialone">
+         <p>PokeChoose es una entretenida enciclopedia virtual pensada en aquellos jugadores de Pokémon Go que necesiten conocer en profundidad el mundo Pokémon de la Región de Kanto. 
+         Podrás escoger entre todos   151 tipos de Pokémon cuál es la que más te sirve para enfrentarlo en una batalla, ¡y así convertirte en el mejor entrenador!
+         </p>
+         <img src="Image/-1523353928418.jpg" id="kanto" alt="Región de Kanto">
+        </article>
+
+        <article id="tutorialtwo">
+         <p>Primero, para encontrar al Pokémon que buscas ¡debes seleccionar tu filtro!  Por su tipo, debilidad, cantidad de dulces que necesita  o la distancia que necesitarás recorrer para conseguir los huevos que te ayuden a mejorar tu Pokémon
+         </p>
+         <p>O bien, si prefieres ordenarlos alfabéticamente, por su número, o por el promedio de engendros que tendrán tus pokemones
+         </p>
         </article>
     </section>`
 }
