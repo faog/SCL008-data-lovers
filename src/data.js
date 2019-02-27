@@ -1,28 +1,9 @@
 /* Manejo de data */
 window.data = {
   filterData: (data, condition) =>{
-    let filterType = data.filter(element => {
-      return element.type.includes(condition);      
-    })
-    return filterType; 
-
-    /*if (condition===data.condition){
-      let filterType = data.filter(element => {
-        return element.type.includes(condition);      
-      })
-      return filterType; 
-
-    }else if(condition==='weaknesses'){
-      let filterWeakness = data.filter(element => {
-        return element.weaknesses.includes(condition);      
-      })
-      return filterWeakness; 
-    }
-        
-    let filterCandy = data.filter(element => {
-      return element.candy_count===condition;      
-    })
-    return filterCandy; */
+    let filterData = data.filter(condition);
+    return filterData;   
+    
   },
   sortData:(data, sortBy, sortOrder) =>{
     let sortedData = data.sort((a,b) =>{
@@ -38,4 +19,3 @@ window.data = {
   }*/
 };
 
-window.filterData = filterData;

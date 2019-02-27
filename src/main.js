@@ -192,12 +192,16 @@ function searchView(){
     /*III. Filtrar*/
 
     /*a) Filtro por tipo de pokemon*/
+
     document.getElementById('type').addEventListener('change',()=>{
         let condition =document.getElementById('type').value;
         if(condition==='all'){
             pokemonAll();
         }else {
-            let result =window.data.filterData(data, condition);
+            let result = window.data.filterData(data, (element)=>{
+                return element.type.includes(condition);
+            });
+
             showPokemonList(result);
         }
     });
