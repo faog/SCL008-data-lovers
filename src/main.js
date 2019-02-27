@@ -213,7 +213,10 @@ function searchView(){
         if(condition==='all'){
             pokemonAll();
         }else {
-            let result=window.data.filterData(data,condition);
+            let result = window.data.filterData(data, (element)=>{
+                return element.weaknesses.includes(condition);
+            });
+
             showPokemonList(result);
         }
     });
