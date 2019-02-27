@@ -228,7 +228,13 @@ function searchView(){
         if(condition==='all'){
             pokemonAll();
         }else {
-            let result=window.data.filterData(data,condition);
+            let result=window.data.filterData(data,(element)=>{
+                if (condition==="notcandy"){
+                    return element.candy_count===undefined;
+                }else{
+                    return element.candy_count=== parseInt(condition);
+                }
+            });
             showPokemonList(result);
         }
     });

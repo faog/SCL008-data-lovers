@@ -19,7 +19,13 @@ describe('data', ()=> {
       {
         num: "005", name: 'Charmeleon', type: "Fire",
         candy_count: 100, egg: "Not in Eggs", weaknesses: "Water"
+      },
+      {
+        num: "009", name: 'Blastoise', type: "Water",
+        egg: "Not in Eggs", weaknesses: "Electric"
       }
+
+
     ]
   
     it('debería ser una función', () => {
@@ -51,7 +57,7 @@ describe('data', ()=> {
       [{num: "001", name: 'Bulbasaur',type: "Grass",
         candy_count: "25", egg: "2 km", weaknesses:"Fire"}])
     }) 
-
+    /*Test 4 filtro por debilidad*/
     it('debería retornar el objeto Charmeleon al filtrar por debilidad Water', () => {
       assert.deepEqual(window.data.filterData(data, (element)=>{
         return element.weaknesses.includes('Water');
@@ -59,7 +65,23 @@ describe('data', ()=> {
       [{num: "005", name: 'Charmeleon', type: "Fire",
         candy_count: 100, egg: "Not in Eggs", weaknesses: "Water"}])
     })
-  
+    /*Test 5 filtro por cantidad de candys*/
+    it('debería retornar el objeto Bulbasaur al filtrar por 25 candys', () => {
+      assert.deepEqual(window.data.filterData(data, (element)=>{
+        return element.candy_count===('25');
+      }),
+      [{num: "001", name: 'Bulbasaur',type: "Grass",
+        candy_count: "25", egg: "2 km", weaknesses:"Fire"}])
+    }) 
+
+    /*Test 6 filtro por cantidad de candys*/
+    it('debería retornar el objeto Charmeleon al filtrar por undefined', () => {
+      assert.deepEqual(window.data.filterData(data, (element)=>{
+        return element.candy_count===undefined;
+      }),
+      [{num: "009", name: 'Blastoise', type: "Water",
+      egg: "Not in Eggs", weaknesses: "Electric"}])
+    })   
   })
 
 })
