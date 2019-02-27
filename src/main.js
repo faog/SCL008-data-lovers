@@ -127,6 +127,8 @@ function searchView(){
                 <option value="50">50</option>
                 <option value="100">100</option>
                 <option value="400">400</option>
+                <option value="400">400</option>
+                <option value="notcandy">Sin candy</option>
                </select>
             <label>Distancia de huevos para encubar</label>
                <select id="eggs" class="browser-default">
