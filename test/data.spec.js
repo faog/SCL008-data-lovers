@@ -142,7 +142,7 @@ describe('data', ()=> {
       )
     })
 
-    /*Test 11 Ordenar por número de mayor a menor*/
+    /*Test 11 Ordenar por número de menor a mayor*/
     it('debería retornar los objetos Oddish, Wartortle y Fearow ordenados como Wartortle, Fearow, Oddish', () => {
       assert.deepEqual(window.data.sortData(dataSort, 'num', ('asc')),
         [{num: "008", name: 'Wartortle', height: "0.99 m",weight: "22.5 kg"},
@@ -151,7 +151,7 @@ describe('data', ()=> {
       )
     })
 
-    /*Test 12 Ordenar por número de menor a mayor*/
+    /*Test 12 Ordenar por número de mayor a menor*/
     it('debería retornar los objetos Oddish, Wartortle y Fearow ordenados como Oddish, Fearow, Wartortle', () => {
       assert.deepEqual(window.data.sortData(dataSort, 'num', ('desc')),
         [{num: "043", name: 'Oddish', height: "0.51 m",weight: "5.4 kg"},
@@ -162,7 +162,7 @@ describe('data', ()=> {
 
     /*Test 13 Ordenar por peso de menor a mayor*/
 
-    /*Test 14 Orenar por peso de mayor a menor*/
+    /*Test 14 Ordenar por peso de mayor a menor*/
 
     /*Test 15 Ordenar por altura de menor a mayor*/
     it('debería retornar los objetos Oddish, Wartortle y Fearow ordenados como Oddish, Wartortle y Fearow', () => {
