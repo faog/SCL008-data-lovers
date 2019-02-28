@@ -10,7 +10,7 @@ describe('data', ()=> {
 
   describe('data.filterData', () => {
 
-    const data = [
+    const dataFilter = [
       {
         num: "001", name: 'Bulbasaur',type: "Grass",
         candy_count: "25", egg: "2 km", weaknesses:"Fire"
@@ -31,9 +31,10 @@ describe('data', ()=> {
     it('debería ser una función', () => {
       assert.equal(typeof window.data.filterData, 'function');
     });
+
     /*Test 1 filtro por tipo*/
     it('debería retornar el objeto Bulbasaur al filtrar por tipo Grass', () => {
-      assert.deepEqual(window.data.filterData(data, (element)=>{
+      assert.deepEqual(window.data.filterData(dataFilter, (element)=>{
         return element.type.includes("Grass");
       }),
       [{num: "001", name: 'Bulbasaur', type: "Grass", candy_count: "25", 
@@ -42,7 +43,7 @@ describe('data', ()=> {
 
     /*Test 2 filtro por tipo*/
     it('debería retornar el objeto Charmeleon al filtrar por tipo Fire', () => {
-      assert.deepEqual(window.data.filterData(data, (element)=>{
+      assert.deepEqual(window.data.filterData(dataFilter, (element)=>{
         return element.type.includes("Fire");
       }),
       [{ num: "005", name: 'Charmeleon', type: "Fire",
@@ -51,7 +52,7 @@ describe('data', ()=> {
 
     /*Test 3 filtro por debilidad*/
     it('debería retornar el objeto Bulbasaur al filtrar por debilidad Fire', () => {
-      assert.deepEqual(window.data.filterData(data, (element)=>{
+      assert.deepEqual(window.data.filterData(dataFilter, (element)=>{
         return element.weaknesses.includes('Fire');
       }),
       [{num: "001", name: 'Bulbasaur',type: "Grass",
@@ -59,7 +60,7 @@ describe('data', ()=> {
     }) 
     /*Test 4 filtro por debilidad*/
     it('debería retornar el objeto Charmeleon al filtrar por debilidad Water', () => {
-      assert.deepEqual(window.data.filterData(data, (element)=>{
+      assert.deepEqual(window.data.filterData(dataFilter, (element)=>{
         return element.weaknesses.includes('Water');
       }),
       [{num: "005", name: 'Charmeleon', type: "Fire",
@@ -67,7 +68,7 @@ describe('data', ()=> {
     })
     /*Test 5 filtro por cantidad de candys*/
     it('debería retornar el objeto Bulbasaur al filtrar por 25 candys', () => {
-      assert.deepEqual(window.data.filterData(data, (element)=>{
+      assert.deepEqual(window.data.filterData(dataFilter, (element)=>{
         return element.candy_count===('25');
       }),
       [{num: "001", name: 'Bulbasaur',type: "Grass",
@@ -76,7 +77,7 @@ describe('data', ()=> {
 
     /*Test 6 filtro por cantidad de candys*/
     it('debería retornar el objeto Charmeleon al filtrar por undefined', () => {
-      assert.deepEqual(window.data.filterData(data, (element)=>{
+      assert.deepEqual(window.data.filterData(dataFilter, (element)=>{
         return element.candy_count===undefined;
       }),
       [{num: "009", name: 'Blastoise', type: "Water",
@@ -85,7 +86,7 @@ describe('data', ()=> {
     
     /*Test 7 filtro por distancia en km para conseguir huevos*/
     it('debería retornar el objeto Bulbasaur al filtrar por 2 km', () => {
-      assert.deepEqual(window.data.filterData(data, (element)=> {
+      assert.deepEqual(window.data.filterData(dataFilter, (element)=> {
         return element.egg===('2 km');
       }),
       [{num: "001", name: 'Bulbasaur',type: "Grass",
@@ -94,7 +95,7 @@ describe('data', ()=> {
 
     /*Test 8 filtro por distancia en km para conseguir huevos*/
     it ('debería retornar los objetos Charmeleon y Blastoise al filtrar por Not in Eggs', () => {
-      assert.deepEqual(window.data.filterData(data, (element)=> {
+      assert.deepEqual(window.data.filterData(dataFilter, (element)=> {
         return element.egg===('Not in Eggs');
       }),
       [{num: "005", name: 'Charmeleon', type: "Fire",
@@ -104,18 +105,44 @@ describe('data', ()=> {
       )
     })
   }),
-  describe ('sortData',()=>{
-    const data = [
+  
+  describe ('data.sortData',()=>{
+    
+    const dataSort = [
       {
-        num: "001", name: 'Bulbasaur', height: "0.71 m",weight: "6.9 kg"   
+        num: "043", name: 'Oddish', height: "0.51 m",weight: "5.4 kg" 
       },
       {
-        num: "005", name: 'Charmeleon', height: "1.09 m",weight: "19.0 kg"  
+        num: "008", name: 'Wartortle', height: "0.99 m",weight: "22.5 kg"   
       },
       {
-        num: "009", name: 'Blastoise', height: "1.60 m",weight: "85.5 kg" 
-      }
+        num: "022", name: 'Fearow', height: "1.19 m",weight: "38.0 kg"  
+      },
     ]
+
+    it('debería ser una función', () => {
+      assert.equal(typeof window.data.sortData, 'function');
+    });
+
+    /*Test 9 Ordenar nombres A-Z"*/
+    it('debería retornar los objetos Oddish, Wartortle y Fearow ordenados como  Fearow, Oddish y Wartortle', () => {
+      assert.deepEqual(window.data.sortData(dataSort, 'name', ('asc')),
+        [{num: "022", name: 'Fearow', height: "1.19 m",weight: "38.0 kg"},
+        {num: "043", name: 'Oddish', height: "0.51 m",weight: "5.4 kg"},
+        {num: "008", name: 'Wartortle', height: "0.99 m",weight: "22.5 kg"}]         
+      )
+    })
+
+    /*Test 10 Ordenar nombres Z-A"*/
+    it('debería retornar los objetos Oddish, Wartortle y Fearow  ordenados como Wartortle, Oddish y Fearow', () => {
+      assert.deepEqual(window.data.sortData(dataSort, 'name', ('desc')),
+        [{num: "008", name: 'Wartortle', height: "0.99 m",weight: "22.5 kg"},
+        {num: "043", name: 'Oddish', height: "0.51 m",weight: "5.4 kg"},
+        {num: "022", name: 'Fearow', height: "1.19 m",weight: "38.0 kg"}
+        ]         
+      )
+    })
+
 
   })
 
