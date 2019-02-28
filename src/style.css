@@ -165,9 +165,27 @@ footer p{
 }
 
 #tutorialone{
-    padding-top: 10px;
+    /*padding-top: 10px;*/
     font-size: 20px;
     color: black;
     text-align: left justify;
-    /*text-indent: -2em*/
+    /*text-indent: 2em*/
+}
+
+#tutorialtwo{
+    /*padding-top: 10px;*/
+    font-size: 20px;
+    color: black;
+    text-align: left justify;
+    /*text-indent: 2em*/
+}
+
+#introduction{
+    float:left; 
+    margin:10px;
+}
+
+#kantoregion{
+    float:right; 
+    margin:10px;
 }

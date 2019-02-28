@@ -48,19 +48,25 @@ function tutorialView(){
     `<section >
         <h3>¿Qué es PokeChoose?
         </h3>
-        <article id="tutorialone">
-         <p>PokeChoose es una entretenida enciclopedia virtual pensada en aquellos jugadores de Pokémon Go que necesiten conocer en profundidad el mundo Pokémon de la Región de Kanto. 
+        <div id="tutorialone">
+         <p id="introduction">PokeChoose es una entretenida enciclopedia virtual pensada en aquellos jugadores de Pokémon Go que necesiten conocer en profundidad el mundo Pokémon de la Región de Kanto. 
          Podrás escoger entre todos   151 tipos de Pokémon cuál es la que más te sirve para enfrentarlo en una batalla, ¡y así convertirte en el mejor entrenador!
          </p>
-         <img src="Image/-1523353928418.jpg" id="kanto" alt="Región de Kanto">
-        </article>
+         <img  id="kantoregion" src="Image/-1523353928418.jpg" id="kanto" alt="Región de Kanto">
+        </div>
 
-        <article id="tutorialtwo">
-         <p>Primero, para encontrar al Pokémon que buscas ¡debes seleccionar tu filtro!  Por su tipo, debilidad, cantidad de dulces que necesita  o la distancia que necesitarás recorrer para conseguir los huevos que te ayuden a mejorar tu Pokémon
+        <div id="tutorialtwo">
+         <ul>
+          <li>Primero, lo primero: para encontrar al Pokémon que buscas ¡debes seleccionar tu filtro! 
+          </li>
+          <li>Por su tipo, debilidad, cantidad de dulces que necesita  o la distancia que necesitarás recorrer para conseguir los huevos que te ayuden a mejorar tu Pokémon
+          </li>
+          <li>O bien, si prefieres ordenarlos alfabéticamente, por su número, cuál es su peso o su tamaño 
+          </li>
+         </ul>
+         <p>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito
          </p>
-         <p>O bien, si prefieres ordenarlos alfabéticamente, por su número, o por el promedio de engendros que tendrán tus pokemones
-         </p>
-        </article>
+        </div>
     </section>`
 }
 
@@ -127,16 +133,14 @@ function searchView(){
                 <option value="50">50</option>
                 <option value="100">100</option>
                 <option value="400">400</option>
-                <option value="400">400</option>
                 <option value="notcandy">Sin candy</option>
                </select>
             <label>Distancia de huevos para encubar</label>
                <select id="eggs" class="browser-default">
                 <option value="all" actived>Todos</option>
-                <option value="2">2 km</option>
-                <option value="5">5 km</option>
-                <option value="7">7 km</option>
-                <option value="10">10 km</option>
+                <option value="2 km">2 km</option>
+                <option value="5 km">5 km</option>
+                <option value="10 km">10 km</option>
                 <option value="Not in Eggs">Not in Eggs</option>
                </select>
           </div>
@@ -248,7 +252,9 @@ function searchView(){
         if(condition==='all'){
             pokemonAll();
         }else {
-            let result=window.data.filterData(data,condition);
+            let result=window.data.filterData(data,(element)=>{
+                return element.egg===(condition)
+            });
             showPokemonList(result);
         }
     });
