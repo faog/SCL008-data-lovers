@@ -124,7 +124,7 @@ describe('data', ()=> {
       assert.equal(typeof window.data.sortData, 'function');
     });
 
-    /*Test 9 Ordenar nombres A-Z"*/
+    /*Test 9 Ordenar nombres A-Z*/
     it('debería retornar los objetos Oddish, Wartortle y Fearow ordenados como  Fearow, Oddish y Wartortle', () => {
       assert.deepEqual(window.data.sortData(dataSort, 'name', ('asc')),
         [{num: "022", name: 'Fearow', height: "1.19 m",weight: "38.0 kg"},
@@ -133,17 +133,35 @@ describe('data', ()=> {
       )
     })
 
-    /*Test 10 Ordenar nombres Z-A"*/
+    /*Test 10 Ordenar nombres Z-A*/
     it('debería retornar los objetos Oddish, Wartortle y Fearow  ordenados como Wartortle, Oddish y Fearow', () => {
       assert.deepEqual(window.data.sortData(dataSort, 'name', ('desc')),
         [{num: "008", name: 'Wartortle', height: "0.99 m",weight: "22.5 kg"},
         {num: "043", name: 'Oddish', height: "0.51 m",weight: "5.4 kg"},
-        {num: "022", name: 'Fearow', height: "1.19 m",weight: "38.0 kg"}
-        ]         
+        {num: "022", name: 'Fearow', height: "1.19 m",weight: "38.0 kg"}]         
       )
     })
 
+    /*Test 11 Ordenar por número de mayor a menor*/
+    it('debería retornar los objetos Oddish, Wartortle y Fearow ordenados como Wartortle, Fearow, Oddish', () => {
+      assert.deepEqual(window.data.sortData(dataSort, 'num', ('asc')),
+        [{num: "008", name: 'Wartortle', height: "0.99 m",weight: "22.5 kg"},
+        {num: "022", name: 'Fearow', height: "1.19 m",weight: "38.0 kg"},
+        {num: "043", name: 'Oddish', height: "0.51 m",weight: "5.4 kg"}]
+      )
+    })
 
+    /*Test 12 Ordenar por número de menor a mayor*/
+    it('debería retornar los objetos Oddish, Wartortle y Fearow ordenados como Oddish, Fearow, Wartortle', () => {
+      assert.deepEqual(window.data.sortData(dataSort, 'num', ('desc')),
+        [{num: "043", name: 'Oddish', height: "0.51 m",weight: "5.4 kg"},
+        {num: "022", name: 'Fearow', height: "1.19 m",weight: "38.0 kg"},
+        {num: "008", name: 'Wartortle', height: "0.99 m",weight: "22.5 kg"}]
+      )
+    })
+    
+    
+     
   })
 
 })
