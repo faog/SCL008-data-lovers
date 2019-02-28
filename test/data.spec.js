@@ -87,7 +87,7 @@ describe('data', ()=> {
     it('debería retornar el objeto Bulbasaur al filtrar por 2 km', () => {
       assert.deepEqual(window.data.filterData(data, (element)=> {
         return element.egg===('2 km');
-      })
+      }),
       [{num: "001", name: 'Bulbasaur',type: "Grass",
         candy_count: "25", egg: "2 km", weaknesses:"Fire"}])
     })
@@ -96,9 +96,12 @@ describe('data', ()=> {
     it ('debería retornar Charmeleon al filtrar por Not in Eggs', () => {
       assert.deepEqual(window.data.filterData(data, (element)=> {
         return element.egg===('Not in Eggs');
-      })
+      }),
       [{num: "005", name: 'Charmeleon', type: "Fire",
-      candy_count: 100, egg: "Not in Eggs", weaknesses: "Water"}])
+      candy_count: 100, egg: "Not in Eggs", weaknesses: "Water"},
+      {num: "009", name: 'Blastoise', type: "Water",
+      egg: "Not in Eggs", weaknesses: "Electric"}]
+      )
     })
   })
 
