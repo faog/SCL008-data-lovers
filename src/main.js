@@ -173,13 +173,13 @@ function searchView(){
                 <option value="desc">Descendente</option>            
                </select>  
             <label>Peso</label>
-               <select class="browser-default" id="weights">
+               <select class="browser-default" id="weightsort">
                 <option selected>Escoja una opcion</option>                
                 <option value="asc">Ascendente</option>
                 <option value="desc">Descendente</option>            
                </select>  
             <label>Tamaño</label>
-               <select class="browser-default" id="heights">
+               <select class="browser-default" id="heightsort">
                 <option selected>Escoja una opcion</option>                
                 <option value="asc">Ascendente</option>
                 <option value="desc">Descendente</option>            
@@ -291,30 +291,19 @@ function searchView(){
 
     /*3) Ordenar por peso */
 
-    document.getElementById('weights').addEventListener('change', ()=>{
-        let sortOrder =document.getElementById('weights').value;
+    document.getElementById('weightsort').addEventListener('change', ()=>{
+        let sortOrder =document.getElementById('weightsort').value;
         let result =window.data.sortData(data, 'weight', sortOrder);
         showPokemonList(result);
     });
 
-    /*4) Ordenar por tamaño 
+    /*4) Ordenar por altura*/
 
-    document.getElementById('heights').addEventListener('change', ()  )*/
-
-    /*3) Ordenar por posibilidad de engendro */
-
-    /*document.getElementById('spwanchancesort'). addEventListener('change', ()=> {
-        let sortOrder =document.getElementById('spwanchancesort').value; 
-        let result =window.data.sortData(data,'spawn_chance',sortOrder);
+    document.getElementById('heightsort').addEventListener('change',()=>{
+        let sortOrder =document.getElementById('heightsort').value;
+        let result =window.data.sortData(data,'height',sortOrder);
         showPokemonList(result);
-    });*/
-
-    /*4) Ordenar por numero promedio de engendros */
-    /*document.getElementById('spwansort').addEventListener('change',()=>{
-        let sortOrder =document.getElementById('spwansort').value;
-        let result =window.data.sortData(data,'avg_spawns',sortOrder);
-        showPokemonList(result);
-    });*/
+    });    
 }
 
 
