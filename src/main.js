@@ -172,14 +172,14 @@ function searchView(){
                 <option value="asc">Ascendente</option>
                 <option value="desc">Descendente</option>            
                </select>  
-            <label>Posibilidad de Engendros (%)</label>
-               <select class="browser-default" id="spwanchancesort">
+            <label>Peso</label>
+               <select class="browser-default" id="weights">
                 <option selected>Escoja una opcion</option>                
                 <option value="asc">Ascendente</option>
                 <option value="desc">Descendente</option>            
                </select>  
-            <label>Promedio de Engendros</label>
-               <select class="browser-default" id="spwansort">
+            <label>Tamaño</label>
+               <select class="browser-default" id="heights">
                 <option selected>Escoja una opcion</option>                
                 <option value="asc">Ascendente</option>
                 <option value="desc">Descendente</option>            
@@ -288,6 +288,18 @@ function searchView(){
         let result =window.data.sortData(data,'num',sortOrder);
         showPokemonList(result);
     });
+
+    /*3) Ordenar por peso */
+
+    document.getElementById('weights').addEventListener('change', ()=>{
+        let sortOrder =document.getElementById('weights').value;
+        let result =window.data.sortData(data, 'weight', sortOrder);
+        showPokemonList(result);
+    });
+
+    /*4) Ordenar por tamaño 
+
+    document.getElementById('heights').addEventListener('change', ()  )*/
 
     /*3) Ordenar por posibilidad de engendro */
 
