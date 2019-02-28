@@ -93,7 +93,7 @@ describe('data', ()=> {
     })
 
     /*Test 8 filtro por distancia en km para conseguir huevos*/
-    it ('debería retornar Charmeleon al filtrar por Not in Eggs', () => {
+    it ('debería retornar los objetos Charmeleon y Blastoise al filtrar por Not in Eggs', () => {
       assert.deepEqual(window.data.filterData(data, (element)=> {
         return element.egg===('Not in Eggs');
       }),
