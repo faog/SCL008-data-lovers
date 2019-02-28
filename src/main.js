@@ -45,28 +45,40 @@ function indexView(){
 function tutorialView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
-    `<section >
-        <h3>¿Qué es PokeChoose?
-        </h3>
-        <div id="tutorialone">
-         <p id="introduction">PokeChoose es una entretenida enciclopedia virtual pensada en aquellos jugadores de Pokémon Go que necesiten conocer en profundidad el mundo Pokémon de la Región de Kanto. 
-         Podrás escoger entre todos   151 tipos de Pokémon cuál es la que más te sirve para enfrentarlo en una batalla, ¡y así convertirte en el mejor entrenador!
-         </p>
-         <img  id="kantoregion" src="Image/-1523353928418.jpg" id="kanto" alt="Región de Kanto">
-        </div>
+    `<section id="onetutorial" class="row" >       
+        <h3 id= "titleonetutorial">¿Cómo funciona?</h3>        
+        <article class="col s12 m12 l8">          
+            <p>PokeChoose es una entretenida enciclopedia virtual pensada en aquellos jugadores de 
+            Pokémon Go que necesiten conocer en profundidad el mundo Pokémon de la Región de Kanto.<p> 
+        </article> 
+        <picture class="col s12 m12 l4">
+            <img src="Image/pokeballtutorial.png" id="goldpokeball" alt="Pokebola dorada">        
+        </picture>
+    </section> 
 
-        <div id="tutorialtwo">
-         <ul>
-          <li>Primero, lo primero: para encontrar al Pokémon que buscas ¡debes seleccionar tu filtro! 
-          </li>
-          <li>Por su tipo, debilidad, cantidad de dulces que necesita  o la distancia que necesitarás recorrer para conseguir los huevos que te ayuden a mejorar tu Pokémon
-          </li>
-          <li>O bien, si prefieres ordenarlos alfabéticamente, por su número, cuál es su peso o su tamaño 
-          </li>
-         </ul>
-         <p>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito
-         </p>
-        </div>
+    <section id="twotutorial" class="row"> 
+        <article class="col s12 m12 l6">
+            <p>Podrás escoger entre los 151 tipos de Pokémon cuál es la que más 
+            te sirve para enfrentarlo en una batalla, ¡y así convertirte en el mejor entrenador!<p>
+        </article>
+        <picture class="col s12 m12 l6">
+            <img src="Image/pokemontutorial.png" id="startedpokemon" alt="Pokemon inicio">        
+        </picture>       
+    </section> 
+
+    <section id="threetutorial" class="row"> 
+        <article class="col s12 m12 l12">
+            <ul>
+            <li>Primero, lo primero: para encontrar al Pokémon que buscas ¡debes seleccionar tu filtro! 
+            </li>
+            <li>Por su tipo, debilidad, cantidad de dulces que necesita  o la distancia que necesitarás recorrer para conseguir los huevos que te ayuden a mejorar tu Pokémon
+            </li>
+            <li>O bien, si prefieres ordenarlos alfabéticamente, por su número, cuál es su peso o su tamaño 
+            </li>
+            </ul>
+            <p>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito
+            </p>
+        </article >
     </section>`
 }
 
@@ -83,7 +95,7 @@ function searchView(){
           <div class="collapsible-body">
             <label>Tipo</label>
               <select id="type" class="browser-default">
-                <option value="all" actived>Todos</option>  
+                <option value="all" selected>Todos</option>  
                 <option value="Steel">Acero</option>
                 <option value="Water">Agua</option>
                 <option value="Dragon">Dragon</option>
@@ -105,7 +117,7 @@ function searchView(){
                </select>   
             <label>Debilidad</label>
                 <select id="weakness" class="browser-default">
-                <option value="all" actived>Todos</option>  
+                <option value="all" selected>Todos</option>  
                 <option value="Steel">Acero</option>
                 <option value="Water">Agua</option>
                 <option value="Dragon">Dragon</option>
@@ -127,7 +139,7 @@ function searchView(){
                </select>     
             <label>Cantidad de Candy</label>
                <select id="candycount" class="browser-default">
-                <option value="all" actived>Todos</option>
+                <option value="all" selected>Todos</option>
                 <option value="12">12</option>
                 <option value="25">25</option>
                 <option value="50">50</option>
@@ -137,7 +149,7 @@ function searchView(){
                </select>
             <label>Distancia de huevos para encubar</label>
                <select id="eggs" class="browser-default">
-                <option value="all" actived>Todos</option>
+                <option value="all" selected>Todos</option>
                 <option value="2 km">2 km</option>
                 <option value="5 km">5 km</option>
                 <option value="10 km">10 km</option>
@@ -150,25 +162,25 @@ function searchView(){
           <div class="collapsible-body">
             <label>Nombre</label>
                <select class="browser-default" id="namesort">
-                <option actived>Escoja una opcion</option>                
+                <option selected>Escoja una opcion</option>                
                 <option value="asc">A-Z</option>
                 <option value="desc">Z-A</option>            
                </select>  
             <label>Numero</label>
                <select class="browser-default" id="numsort">
-                <option actived>Escoja una opcion</option>                
+                <option selected>Escoja una opcion</option>                
                 <option value="asc">Ascendente</option>
                 <option value="desc">Descendente</option>            
                </select>  
             <label>Posibilidad de Engendros (%)</label>
                <select class="browser-default" id="spwanchancesort">
-                <option actived>Escoja una opcion</option>                
+                <option selected>Escoja una opcion</option>                
                 <option value="asc">Ascendente</option>
                 <option value="desc">Descendente</option>            
                </select>  
             <label>Promedio de Engendros</label>
                <select class="browser-default" id="spwansort">
-                <option actived>Escoja una opcion</option>                
+                <option selected>Escoja una opcion</option>                
                 <option value="asc">Ascendente</option>
                 <option value="desc">Descendente</option>            
                </select>  
@@ -338,4 +350,3 @@ function pokemonAll(){
     showPokemonList(data);
 }
 
-window.onload = showPokemonList(data);

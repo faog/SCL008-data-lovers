@@ -4,6 +4,7 @@
 *{
     padding: 0px; 
     margin: 0px auto;
+    font-family: sans-serif;
 }
 /*Footer fijo */
 body {
@@ -12,9 +13,9 @@ body {
     flex-direction: column;
 }
 
-  main {
-    flex: 1 0 auto;
-  }
+main {
+flex: 1 0 auto;
+}
 
 
 header, footer, main{
@@ -36,21 +37,6 @@ main #welcomeimage{
     height: 450px;
     opacity: 0.8;  
     background-image: url(Image/welcomeimage.jpg)
-}
-
-#tutorial{
-    background-image: 
-    /*linear-gradient(
-        rgba(25, 209, 231, 0.5),
-        rgba(243, 17, 224, 0.5) 
-    ),*/
-    url(Image/-1523353928418.jpg) no-repeat center center fixed; 
-    background-size: cover;
-    
-    /*height: 480px;
-    width: 720px;*/
-    
-   
 }
 
 #logo{ 
@@ -164,28 +150,42 @@ footer p{
     text-indent: -6em
 }
 
-#tutorialone{
-    /*padding-top: 10px;*/
-    font-size: 20px;
-    color: black;
-    text-align: left justify;
-    /*text-indent: 2em*/
+/*Tutorial*/
+
+#titleonetutorial{
+    font-size:34px;
+    color:white;
+    padding-top: 80px;
+    text-align: left;
+   
+    
 }
 
-#tutorialtwo{
-    /*padding-top: 10px;*/
-    font-size: 20px;
-    color: black;
-    text-align: left justify;
-    /*text-indent: 2em*/
+#onetutorial{
+    padding: 0px 100px;
+    background-color: rgba(27, 31, 119, 0.95);
+    height: 600px;
+    
 }
 
-#introduction{
-    float:left; 
-    margin:10px;
+#onetutorial article p{
+    font-size:22px;
+    color:white;
+    padding-top: 20px;    
+    padding-right: 10px;
 }
 
-#kantoregion{
-    float:right; 
-    margin:10px;
+#goldpokeball{
+    height: 300px;
+    width: 300px;
+    top:80px;
 }
+
+#startedpokemon{
+    height: 300px;
+    width: 600px;
+}
+
+
+
+
