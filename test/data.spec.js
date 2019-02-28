@@ -103,6 +103,20 @@ describe('data', ()=> {
       egg: "Not in Eggs", weaknesses: "Electric"}]
       )
     })
+  }),
+  describe ('sortData',()=>{
+    const data = [
+      {
+        num: "001", name: 'Bulbasaur', height: "0.71 m",weight: "6.9 kg"   
+      },
+      {
+        num: "005", name: 'Charmeleon', height: "1.09 m",weight: "19.0 kg"  
+      },
+      {
+        num: "009", name: 'Blastoise', height: "1.60 m",weight: "85.5 kg" 
+      }
+    ]
+
   })
 
 })
