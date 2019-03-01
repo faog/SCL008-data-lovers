@@ -225,7 +225,6 @@ main #searchview{
 }
 
 /*Responsivo*/
-
 /*a) Responsivo html fijo */
 
 @media (max-width:992px){
@@ -308,4 +307,5 @@ main #searchview{
     }
     
 }
+
 
