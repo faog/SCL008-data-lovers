@@ -228,6 +228,7 @@ main #searchview{
 /*a) Responsivo html fijo */
 
 @media (max-width: 992px){
+    
     nav{
         height: 180px;
     }
