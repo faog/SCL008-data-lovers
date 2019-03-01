@@ -48,7 +48,7 @@ function tutorialView(){
     document.getElementById('dinamicpage').innerHTML += 
     `
     <section id="onetutorial" class="row" >       
-        <h2>¿Qué es PokeChoose?</h2>        
+        <h3>¿Qué es PokeChoose?</h3>        
         <article class="col s12 m12 l8"> 
             <h4>PokeChoose es una entretenida enciclopedia virtual pensada en aquellos jugadores de 
             Pokémon Go que necesiten conocer en profundidad el mundo Pokémon de la Región de Kanto.</h4> 
@@ -59,7 +59,7 @@ function tutorialView(){
     </section> 
 
     <section id="twotutorial" class="row"> 
-        <h2>¡Conocelos a todos!</h2>
+        <h3>¡Conocelos a todos!</h3>
         <article class="col s12 m12 l6">
             <h4>Podrás escoger entre los 151 tipos de Pokémon de la región de Kanto,  cuál es la que más 
             te sirve para enfrentarlo en una batalla, ¡y así convertirte en el mejor entrenador!</h4>
@@ -70,7 +70,7 @@ function tutorialView(){
     </section> 
 
     <section id="threetutorial" class="row"> 
-        <h2>¿Cómo funciona PokeChoose?</h2>
+        <h3>¿Cómo funciona PokeChoose?</h3>
         <article class="col s12 m12 l12">
             <h4>Debes ingresar a la opcion "Iniciar búsqueda" y seguir los siguientes pasos:</h4>
             <ul>
@@ -80,7 +80,7 @@ function tutorialView(){
                 <li>O bien, si prefieres ordenarlos alfabéticamente, por su número, cuál es su peso o su tamaño</li>
             </ul>
             <h4>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito.</h4>
-        </article >
+        </article>
     </section>`
 }
 
