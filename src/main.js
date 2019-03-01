@@ -7,8 +7,9 @@ const data= POKEMON.pokemon;
 function indexView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
-    `<section id="welcomeimage">
-        <h1 class="center-align">¿QUIÉRES SER EL MEJOR MAESTRO POKÉMON?</h1>          
+    `
+    <section id="welcomeimage">
+        <h2 class="center-align">¿QUIÉRES SER EL MEJOR MAESTRO POKÉMON?</h2>          
         <h3 class="center-align">Junto a PokeChoose podrás conseguirlo</h3>
         <div class="center-align"> 
             <button id="btnstart">Comenzar</button>
@@ -39,28 +40,29 @@ function indexView(){
     })
     let elemsCarousel = document.querySelectorAll('.carousel');
     M.Carousel.init(elemsCarousel);
-
 }
+
 /*b)Pagina tutorial*/
 function tutorialView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
-    `<section id="onetutorial" class="row" >       
-        <h2 id= "titleonetutorial">¿Cómo funciona?</h3>        
-        <article class="col s12 m12 l8">          
-            <p>PokeChoose es una entretenida enciclopedia virtual pensada en aquellos jugadores de 
-            Pokémon Go que necesiten conocer en profundidad el mundo Pokémon de la Región de Kanto.<p> 
+    `
+    <section id="onetutorial" class="row" >       
+        <h2>¿Qué es PokeChoose?</h2>        
+        <article class="col s12 m12 l8"> 
+            <h4>PokeChoose es una entretenida enciclopedia virtual pensada en aquellos jugadores de 
+            Pokémon Go que necesiten conocer en profundidad el mundo Pokémon de la Región de Kanto.</h4> 
         </article> 
         <picture id="goldpokeball" class="col s12 m12 l4">
             <img src="Image/pokeballtutorial.png"  alt="Pokebola dorada">        
         </picture>       
     </section> 
 
-
     <section id="twotutorial" class="row"> 
+        <h2>¡Conocelos a todos!</h2>
         <article class="col s12 m12 l6">
-            <p>Podrás escoger entre los 151 tipos de Pokémon cuál es la que más 
-            te sirve para enfrentarlo en una batalla, ¡y así convertirte en el mejor entrenador!<p>
+            <h4>Podrás escoger entre los 151 tipos de Pokémon de la región de Kanto,  cuál es la que más 
+            te sirve para enfrentarlo en una batalla, ¡y así convertirte en el mejor entrenador!</h4>
         </article>
         <picture class="col s12 m12 l6">
             <img src="Image/pokemontutorial.png" id="startedpokemon" alt="Pokemon inicio">        
@@ -68,15 +70,16 @@ function tutorialView(){
     </section> 
 
     <section id="threetutorial" class="row"> 
+        <h2>¿Cómo funciona PokeChoose?</h2>
         <article class="col s12 m12 l12">
+            <h4>Debes ingresar a la opcion "Iniciar búsqueda" y seguir los siguientes pasos:</h4>
             <ul>
                 <li>Primero, lo primero: para encontrar al Pokémon que buscas ¡debes seleccionar tu filtro!</li>
                 <li>Por su tipo, debilidad, cantidad de dulces que necesita  o la distancia que necesitarás 
                 recorrer para conseguir los huevos que te ayuden a mejorar tu Pokémon</li>
                 <li>O bien, si prefieres ordenarlos alfabéticamente, por su número, cuál es su peso o su tamaño</li>
             </ul>
-
-            <p>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito.</p>
+            <h4>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito.</h4>
         </article >
     </section>`
 }
@@ -86,8 +89,10 @@ function searchView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
     `
-    <section id="searchview" class="row">     
+    <section id="searchview" class="row"> 
+    <h4>Buscador</h4>    
     <section class="col s12 m12 l4" id="sectionfilter">
+     <h6>Seleccione una opción</h6>
       <ul class="collapsible">
         <li>
           <div class="collapsible-header">Filtrar</div>
@@ -161,25 +166,25 @@ function searchView(){
           <div class="collapsible-body">
             <label>Nombre</label>
                <select class="browser-default" id="namesort">
-                <option selected>Escoja una opcion</option>                
+                <option selected>Escoja una opción</option>                
                 <option value="asc">A-Z</option>
                 <option value="desc">Z-A</option>            
                </select>  
-            <label>Numero</label>
+            <label>Número</label>
                <select class="browser-default" id="numsort">
-                <option selected>Escoja una opcion</option>                
+                <option selected>Escoja una opción</option>                
                 <option value="asc">Ascendente</option>
                 <option value="desc">Descendente</option>            
                </select>  
             <label>Peso</label>
                <select class="browser-default" id="weightsort">
-                <option selected>Escoja una opcion</option>                
+                <option selected>Escoja una opción</option>                
                 <option value="asc">Ascendente</option>
                 <option value="desc">Descendente</option>            
                </select>  
             <label>Tamaño</label>
                <select class="browser-default" id="heightsort">
-                <option selected>Escoja una opcion</option>                
+                <option selected>Escoja una opción</option>                
                 <option value="asc">Ascendente</option>
                 <option value="desc">Descendente</option>            
                </select>  
@@ -189,11 +194,12 @@ function searchView(){
     </section>           
 
     <section id="pokemonresult" class="col s12 m12 l8" >
-    <p>Resultados obtenidos</p>
-        <div id="result" class="row">
- 
-        </div>
-      
+    <h3>Pokemón región de Kanto</h3>
+    <h6>selecciona un pokemon y descubre sus caracteristicas</h6>
+        <figure id="searchresult" class="row">
+        
+
+        </figure>
     </section>
 
   </section>  
@@ -333,15 +339,14 @@ Array.from(document.getElementsByClassName('search')).forEach(element => {
 /*Dibuja la lista de pokemon dependiendo del arreglo de pokemones recibido */
 function showPokemonList(pokemons)
 {
-    document.getElementById('result').innerHTML='';
+    document.getElementById('searchresult').innerHTML='';
     pokemons.forEach(element => {
-        document.getElementById('result').innerHTML +=
-        `<div id="pokemonbox" class="col s12 m6 l4">
+        document.getElementById('searchresult').innerHTML +=
+        `<article id="pokemonbox" class="col s12 m6 l4">
             <img src="${element.img}" alt="${element.name}">
-            <p>${element.num}</p>
-            <p>${element.name}</p>
-            
-        </div>`  
+            <h6>${element.num}</h6>
+            <h6>${element.name}</h6>            
+        </article>`  
     });
 }
 

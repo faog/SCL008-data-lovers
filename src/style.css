@@ -64,7 +64,7 @@ main #welcomeimage{
     background-image: url(Image/welcomeimage.jpg)
 }
 
-main section h1{   
+main section h2{   
     margin-top:0px;
     padding-top:150px; 
     font-weight: bold;   
@@ -101,7 +101,15 @@ main section h3{
 
 /*b)Página tutorial*/
 
-#titleonetutorial{
+
+
+#onetutorial{   
+    padding: 10px 100px;
+    background-color: rgba(27, 31, 119, 0.95);
+    height: 600px;    
+}
+
+#onetutorial h2{
     margin:0px;
     font-size:34px;
     color:white;
@@ -110,18 +118,11 @@ main section h3{
     padding-left:10px;
 }
 
-#onetutorial{   
-    padding: 10px 100px;
-    background-color: rgba(27, 31, 119, 0.95);
-    height: 600px;    
-}
-
-#onetutorial article p{
+#onetutorial article h4{
     padding-top: 80px;
     font-size:22px;
     color:white;   
-    padding-right: 20px   
-   
+    padding-right: 20px;
 }
 
 #goldpokeball{
@@ -136,15 +137,22 @@ main section h3{
 
 #twotutorial{   
     padding: 0px 100px;
-    height: 300px;    
+    height: 360px;    
 }
 
-#twotutorial article p{
-    padding-top: 80px;
+#twotutorial h2{
+    padding-top:20px;
+    font-size:34px;
+    color:#212F3C;
+    text-align: left; 
+    padding-left:10px;
+}
+
+#twotutorial article h4{
+    margin-top:60px;
     font-size:22px;
     color:#212F3C;
-    padding-right: 20px 
-   
+    padding-right: 20px;     
 }
 
 #startedpokemon{
@@ -155,18 +163,26 @@ main section h3{
 #threetutorial{   
     padding: 0px 100px;     
     background-color: #F4F6F7;
-    height: 300px;
+    height: 400px;
     margin-bottom: 0px;
 }
 
+#threetutorial h2{
+    padding-top:50px;
+    font-size:34px;
+    color:#212F3C;
+    text-align: left; 
+    padding-left:10px;
+}
+
+#threetutorial article h4{
+    color:#212F3C;
+    font-size:18px;
+}
+
 #threetutorial article ul li {
-    padding-top:30px;
     font-size:18px;
     color:#212F3C;  
-}
-#threetutorial article p {
-    font-size:18px;
-    color:#212F3C;
 }
 
 
@@ -260,7 +276,7 @@ main #searchview{
         height: 1200px;
     }   
     
-    #welcomeimage h1 {          
+    #welcomeimage h2 {          
         padding-top:450px;          
         font-size: 60px;
            
