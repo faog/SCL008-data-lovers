@@ -8,7 +8,7 @@ function indexView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
     `<section id="welcomeimage">
-        <h1 class="center-align">¿QUIÉRES SER EL MEJOR MAESTRO POKÉMON?</h2>          
+        <h1 class="center-align">¿QUIÉRES SER EL MEJOR MAESTRO POKÉMON?</h1>          
         <h3 class="center-align">Junto a PokeChoose podrás conseguirlo</h3>
         <div class="center-align"> 
             <button id="btnstart">Comenzar</button>
