@@ -1,11 +1,12 @@
-
 /*selector universal "*"*/
-
 *{
     padding: 0px; 
     margin: 0px auto;
     font-family: sans-serif;
 }
+
+/*1)ESTILOS SECCIONES FIJAS*/
+
 /*Footer fijo */
 body {
     display: flex;
@@ -14,13 +15,14 @@ body {
 }
 
 main {
-flex: 1 0 auto;
+    flex: 1 0 auto;
 }
-
 
 header, footer, main{
     margin:0px;
 }
+
+/*a) Estilos barra navegación*/
 nav{
     background-color:rgba(27, 31, 119, 0.95);
     position: fixed;
@@ -40,47 +42,191 @@ main #welcomeimage{
 }
 
 #logo{ 
-
     height: 60px;   
     padding-top: 10px;      
 }
 
-main section h2{   
-    margin-top:0px;
-    padding-top:150px;
-    font-family: Freehand;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 36px;
-    text-align: center;
-    letter-spacing: 0.1em;    
-    color: #FFFFFF;    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8); 
+/*b) Estilos de Footer*/
+footer{
+    background-color:rgba(27, 31, 119, 0.95);
+    padding: 0px 100px;
+    height: 40px;  
 }
 
-main section h3{
-    font-family: Inder;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 28px;
-    text-align: center;
-    letter-spacing: 0.1em;    
+footer p{
+    padding-top: 10px;
+    font-size: 14px;
+    color: white;
+    text-align: left;    
+}
+
+/*2)ESTILOS SECCIONES DINÁMICAS*/
+
+/*a)Página de inicio*/
+
+main section h1{   
+    margin-top:0px;
+    padding-top:150px; 
+    font-weight: bold;   
+    font-size: 36px;
+    text-align: center;      
     color: #FFFFFF;    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);      
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 1); 
+}
+
+main section h3{     
+    font-size: 28px;
+    text-align: center;     
+    color: #FFFFFF;    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);      
 }
 
 #btnstart{
     width: 190px;
     height: 45px;
     margin: 30px 100px;
-    background: rgba(77, 77, 77, 0.4);
-    border: 1px solid rgba(77, 77, 77, 0.4) ;  
+    background: rgba(77, 77, 77, 0.8);
+    border: 1px solid rgba(77, 77, 77, 0.8) ;  
     color: white;
-    font-size: 18px;       
+    font-size: 18px;  
+    cursor: pointer;
+}
+
+#btnstart:hover{
+    background: rgba(27, 31, 119);
+    border: 1px solid rgba(27, 31, 119);     
+    font-weight: bold;  
+   
+}
+
+/*b)Página tutorial*/
+
+#titleonetutorial{
+    margin:0px;
+    font-size:34px;
+    color:white;
+    padding-top: 120px;
+    text-align: left; 
+    padding-left:10px;
+}
+
+#onetutorial{   
+    padding: 10px 100px;
+    background-color: rgba(27, 31, 119, 0.95);
+    height: 600px;    
+}
+
+#onetutorial article p{
+    padding-top: 80px;
+    font-size:22px;
+    color:white;   
+    padding-right: 20px   
+   
+}
+
+#goldpokeball{
+    text-align: center;
     
 }
+#goldpokeball img{
+    height: 300px;
+    width: 300px;  
+    
+}
+
+#twotutorial{   
+    padding: 0px 100px;
+    height: 300px;    
+}
+
+#twotutorial article p{
+    padding-top: 80px;
+    font-size:22px;
+    color:#212F3C;
+    padding-right: 20px 
+   
+}
+
+#startedpokemon{
+    height: 300px;
+    width: 550px;
+}
+
+#threetutorial{   
+    padding: 0px 100px;     
+    background-color: #F4F6F7;
+    height: 300px;
+    margin-bottom: 0px;
+}
+
+#threetutorial article ul li {
+    padding-top:30px;
+    font-size:18px;
+    color:#212F3C;  
+}
+#threetutorial article p {
+    font-size:18px;
+    color:#212F3C;
+}
+
+
+/*Pagina de búsqueda*/
+
+main #searchview{
+    padding-top:80px;
+}
+
+#sectionfilter{
+    padding-top:30px;
+    padding-left: 100px;
+    
+}
+
+#pokemonresult{
+    overflow-y: scroll;
+    height: 80vh;
+    padding: 0px 100px;
+    
+}
+
+#pokemonbox{
+    padding-top:20px;
+    text-align: center;
+    border:white 20px solid;
+    border-radius: 30px;
+    background-color: #F4F6F7;   
+    
+    
+}
+#pokemonbox img{
+    text-align: center;
+    height: 120px;
+    width: 120px;  
+}
+
+#pokemonbox{
+    font-size:18px;
+    color:#212F3C;   
+}
+
+.collapsible-header{
+    font-size:18px;
+    color:#212F3C;
+}
+
+.collapsible-body label{
+    font-size:16px;
+    
+}
+
+.browser-default {
+    font-size:16px;
+    color:#212F3C;
+}
+
+/*Responsivo*/
+/*Tutorial*/
+
 
 @media (max-width: 992px){
     main section h2{
@@ -92,26 +238,8 @@ main section h3{
            
     }
 }
-/* @media (min-width: 992px){
-    .fullheight{
-        height: 80vh;
-       
-    }
-} */
 
-/*Página funcionamiento*/
-
-#dinamicpage section{
-    padding-top:60px;
-}
-
-/*Pagina de búsqueda*/
-
-#pokemonresult{
-    overflow-y: scroll;
-    height: 80vh;
-}
-
+/*Responsivo Página búsqueda*/
 @media (max-width: 992px){
 
     #pokemonresult{
@@ -125,67 +253,4 @@ main section h3{
     }
     
 }
-
-#btnfilter, #btnshort{
-    width: 190px;
-    height: 45px;
-    background: rgba(77, 77, 77, 0.4);
-    border: 1px solid rgba(77, 77, 77, 0.4) ;  
-    color: white;
-    font-size: 18px;  
-}
-
-footer{
-    background-color:rgba(27, 31, 119, 0.95);
-    padding: 0px 100px;
-    height: 40px;
-    
-    
-}
-footer p{
-    padding-top: 10px;
-    font-size: 10px;
-    color: white;
-    text-align: left;
-    text-indent: -6em
-}
-
-/*Tutorial*/
-
-#titleonetutorial{
-    font-size:34px;
-    color:white;
-    padding-top: 80px;
-    text-align: left;
-   
-    
-}
-
-#onetutorial{
-    padding: 0px 100px;
-    background-color: rgba(27, 31, 119, 0.95);
-    height: 600px;
-    
-}
-
-#onetutorial article p{
-    font-size:22px;
-    color:white;
-    padding-top: 20px;    
-    padding-right: 10px;
-}
-
-#goldpokeball{
-    height: 300px;
-    width: 300px;
-    top:80px;
-}
-
-#startedpokemon{
-    height: 300px;
-    width: 600px;
-}
-
-
-
 

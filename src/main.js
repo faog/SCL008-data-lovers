@@ -8,8 +8,8 @@ function indexView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
     `<section id="welcomeimage">
-        <h2 class="center-align">¿QUIÉRES SER EL MEJOR MAESTRO POKÉMON?</h2>          
-        <h3 class="center-align">Junto a PokeChoose podrás conseguirlo.</h3>
+        <h1 class="center-align">¿QUIÉRES SER EL MEJOR MAESTRO POKÉMON?</h2>          
+        <h3 class="center-align">Junto a PokeChoose podrás conseguirlo</h3>
         <div class="center-align"> 
             <button id="btnstart">Comenzar</button>
         </div>     
@@ -46,15 +46,16 @@ function tutorialView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
     `<section id="onetutorial" class="row" >       
-        <h3 id= "titleonetutorial">¿Cómo funciona?</h3>        
+        <h2 id= "titleonetutorial">¿Cómo funciona?</h3>        
         <article class="col s12 m12 l8">          
             <p>PokeChoose es una entretenida enciclopedia virtual pensada en aquellos jugadores de 
             Pokémon Go que necesiten conocer en profundidad el mundo Pokémon de la Región de Kanto.<p> 
         </article> 
-        <picture class="col s12 m12 l4">
-            <img src="Image/pokeballtutorial.png" id="goldpokeball" alt="Pokebola dorada">        
-        </picture>
+        <picture id="goldpokeball" class="col s12 m12 l4">
+            <img src="Image/pokeballtutorial.png"  alt="Pokebola dorada">        
+        </picture>       
     </section> 
+
 
     <section id="twotutorial" class="row"> 
         <article class="col s12 m12 l6">
@@ -69,15 +70,13 @@ function tutorialView(){
     <section id="threetutorial" class="row"> 
         <article class="col s12 m12 l12">
             <ul>
-            <li>Primero, lo primero: para encontrar al Pokémon que buscas ¡debes seleccionar tu filtro! 
-            </li>
-            <li>Por su tipo, debilidad, cantidad de dulces que necesita  o la distancia que necesitarás recorrer para conseguir los huevos que te ayuden a mejorar tu Pokémon
-            </li>
-            <li>O bien, si prefieres ordenarlos alfabéticamente, por su número, cuál es su peso o su tamaño 
-            </li>
+                <li>Primero, lo primero: para encontrar al Pokémon que buscas ¡debes seleccionar tu filtro!</li>
+                <li>Por su tipo, debilidad, cantidad de dulces que necesita  o la distancia que necesitarás 
+                recorrer para conseguir los huevos que te ayuden a mejorar tu Pokémon</li>
+                <li>O bien, si prefieres ordenarlos alfabéticamente, por su número, cuál es su peso o su tamaño</li>
             </ul>
-            <p>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito
-            </p>
+
+            <p>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito.</p>
         </article >
     </section>`
 }
@@ -87,8 +86,8 @@ function searchView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
     `
-    <section class="row">     
-    <section class="col s12 m12 l3 sectionfilter">
+    <section id="searchview" class="row">     
+    <section class="col s12 m12 l4" id="sectionfilter">
       <ul class="collapsible">
         <li>
           <div class="collapsible-header">Filtrar</div>
@@ -189,7 +188,7 @@ function searchView(){
       </ul>       
     </section>           
 
-    <section id="pokemonresult" class="col s12 m12 l9" >
+    <section id="pokemonresult" class="col s12 m12 l8" >
     <p>Resultados obtenidos</p>
         <div id="result" class="row">
  
@@ -201,11 +200,11 @@ function searchView(){
   `
     pokemonAll()
     
-  let elemsFilter = document.querySelectorAll('.collapsible');
-  M.Collapsible.init(elemsFilter);
+    let elemsFilter = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(elemsFilter);
 
-  let elemsSelect = document.querySelectorAll('select');
-  M.FormSelect.init(elemsSelect);
+    let elemsSelect = document.querySelectorAll('select');
+    M.FormSelect.init(elemsSelect);
   
     /*III. Filtrar*/
 
