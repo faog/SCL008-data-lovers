@@ -80,7 +80,7 @@ function tutorialView(){
                 <li>O bien, si prefieres ordenarlos alfabéticamente, por su número, cuál es su peso o su tamaño</li>
             </ul>
             <h4>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito.</h4>
-        </article>
+        </article >
     </section>`
 }
 
@@ -343,11 +343,25 @@ function showPokemonList(pokemons)
     pokemons.forEach(element => {
         document.getElementById('searchresult').innerHTML +=
         `<article id="pokemonbox" class="col s12 m6 l4">
+            <a href="#modal${element.num}" class="modal-trigger">
             <img src="${element.img}" alt="${element.name}">
             <h6>${element.num}</h6>
-            <h6>${element.name}</h6>            
+            <h6>${element.name}</h6>
+            </a>  
+            <div id="modal${element.num}" class="modal">
+                <div class="modal-content">
+                    <h6>${element.num}</h6>
+                    <h6>${element.name}</h6>
+                </div>
+                <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                </div>
+            </div>
         </article>`  
     });
+    //Modales
+    let elemsModal = document.querySelectorAll('.modal');
+    M.Modal.init(elemsModal);
 }
 
 /*Dibuja todos los pokemon*/
