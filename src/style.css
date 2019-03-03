@@ -214,8 +214,8 @@ main #searchview{
 }
 #pokemonbox img{
     text-align: center;
-    height: 120px;
-    width: 120px;  
+    height: 150px;
+    width: 150px;  
 }
 
 #pokemonbox{
@@ -237,6 +237,20 @@ main #searchview{
     font-size:16px;
     color:#212F3C;
 }
+
+/*Modal*/
+
+.modal .modal-footer{
+    height: 0px;
+}
+
+.modal{
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    max-height: 100%;
+}
+
 
 /*Responsivo*/
 /*a) Responsivo html fijo */

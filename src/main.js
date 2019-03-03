@@ -90,120 +90,119 @@ function searchView(){
     document.getElementById('dinamicpage').innerHTML += 
     `
     <section id="searchview" class="row"> 
-    <h4>Buscador</h4>    
-    <section class="col s12 m12 l4" id="sectionfilter">
-     <h6>Seleccione una opción</h6>
-      <ul class="collapsible">
-        <li>
-          <div class="collapsible-header">Filtrar</div>
-          <div class="collapsible-body">
-            <label>Tipo</label>
-              <select id="type" class="browser-default">
-                <option value="all" selected>Todos</option>  
-                <option value="Steel">Acero</option>
-                <option value="Water">Agua</option>
-                <option value="Dragon">Dragon</option>
-                <option value="Electric">Eléctrico</option>
-                <option value="Ghost">Fantasma</option>
-                <option value="Fire">Fuego</option>
-                <option value="Fairy">Hada</option>
-                <option value="Ice">Hielo</option>
-                <option value="Bug">Insecto</option>
-                <option value="Normal">Normal</option>
-                <option value="Fighting">Luchador</option>
-                <option value="Dark">Oscuro</option>
-                <option value="Grass">Planta</option>
-                <option value="Psychic">Psíquico</option>
-                <option value="Rock">Roca</option>  
-                <option value="Ground">Suelo</option>
-                <option value="Poison">Veneno</option>
-                <option value="Flying">Volador</option>
-               </select>   
-            <label>Debilidad</label>
-                <select id="weakness" class="browser-default">
-                <option value="all" selected>Todos</option>  
-                <option value="Steel">Acero</option>
-                <option value="Water">Agua</option>
-                <option value="Dragon">Dragon</option>
-                <option value="Electric">Eléctrico</option>
-                <option value="Ghost">Fantasma</option>
-                <option value="Fire">Fuego</option>
-                <option value="Fairy">Hada</option>
-                <option value="Ice">Hielo</option>
-                <option value="Bug">Insecto</option>
-                <option value="Normal">Normal</option>
-                <option value="Fighting">Luchador</option>
-                <option value="Dark">Oscuro</option>
-                <option value="Grass">Planta</option>
-                <option value="Psychic">Psíquico</option>
-                <option value="Rock">Roca</option>  
-                <option value="Ground">Suelo</option>
-                <option value="Poison">Veneno</option>
-                <option value="Flying">Volador</option>
-               </select>     
-            <label>Cantidad de Candy</label>
-               <select id="candycount" class="browser-default">
-                <option value="all" selected>Todos</option>
-                <option value="12">12</option>
-                <option value="25">25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-                <option value="400">400</option>
-                <option value="notcandy">Sin candy</option>
-               </select>
-            <label>Distancia de huevos para encubar</label>
-               <select id="eggs" class="browser-default">
-                <option value="all" selected>Todos</option>
-                <option value="2 km">2 km</option>
-                <option value="5 km">5 km</option>
-                <option value="10 km">10 km</option>
-                <option value="Not in Eggs">Not in Eggs</option>
-               </select>
-          </div>
-        </li>
-        <li>
-          <div class="collapsible-header">Ordenar</div>
-          <div class="collapsible-body">
-            <label>Nombre</label>
-               <select class="browser-default" id="namesort">
-                <option selected>Escoja una opción</option>                
-                <option value="asc">A-Z</option>
-                <option value="desc">Z-A</option>            
-               </select>  
-            <label>Número</label>
-               <select class="browser-default" id="numsort">
-                <option selected>Escoja una opción</option>                
-                <option value="asc">Ascendente</option>
-                <option value="desc">Descendente</option>            
-               </select>  
-            <label>Peso</label>
-               <select class="browser-default" id="weightsort">
-                <option selected>Escoja una opción</option>                
-                <option value="asc">Ascendente</option>
-                <option value="desc">Descendente</option>            
-               </select>  
-            <label>Tamaño</label>
-               <select class="browser-default" id="heightsort">
-                <option selected>Escoja una opción</option>                
-                <option value="asc">Ascendente</option>
-                <option value="desc">Descendente</option>            
-               </select>  
-          </div>
-        </li>
-      </ul>       
-    </section>           
-
-    <section id="pokemonresult" class="col s12 m12 l8" >
-    <h3>Pokemón región de Kanto</h3>
-    <h6>selecciona un pokemon y descubre sus caracteristicas</h6>
-        <figure id="searchresult" class="row">
+    <h3>Pokemón región de Kanto</h3>  
+        <section class="col s12 m12 l4" id="sectionfilter">
+            <h6>Seleccione una opción</h6>
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header">Filtrar</div>
+                    <div class="collapsible-body">
+                        <label>Tipo</label>
+                        <select id="type" class="browser-default">
+                            <option value="all" selected>Todos</option>  
+                            <option value="Steel">Acero</option>
+                            <option value="Water">Agua</option>
+                            <option value="Dragon">Dragon</option>
+                            <option value="Electric">Eléctrico</option>
+                            <option value="Ghost">Fantasma</option>
+                            <option value="Fire">Fuego</option>
+                            <option value="Fairy">Hada</option>
+                            <option value="Ice">Hielo</option>
+                            <option value="Bug">Insecto</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Fighting">Luchador</option>
+                            <option value="Dark">Oscuro</option>
+                            <option value="Grass">Planta</option>
+                            <option value="Psychic">Psíquico</option>
+                            <option value="Rock">Roca</option>  
+                            <option value="Ground">Suelo</option>
+                            <option value="Poison">Veneno</option>
+                            <option value="Flying">Volador</option>
+                        </select>   
+                        <label>Debilidad</label>
+                            <select id="weakness" class="browser-default">
+                            <option value="all" selected>Todos</option>  
+                            <option value="Steel">Acero</option>
+                            <option value="Water">Agua</option>
+                            <option value="Dragon">Dragon</option>
+                            <option value="Electric">Eléctrico</option>
+                            <option value="Ghost">Fantasma</option>
+                            <option value="Fire">Fuego</option>
+                            <option value="Fairy">Hada</option>
+                            <option value="Ice">Hielo</option>
+                            <option value="Bug">Insecto</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Fighting">Luchador</option>
+                            <option value="Dark">Oscuro</option>
+                            <option value="Grass">Planta</option>
+                            <option value="Psychic">Psíquico</option>
+                            <option value="Rock">Roca</option>  
+                            <option value="Ground">Suelo</option>
+                            <option value="Poison">Veneno</option>
+                            <option value="Flying">Volador</option>
+                        </select>     
+                        <label>Cantidad de Candy</label>
+                        <select id="candycount" class="browser-default">
+                            <option value="all" selected>Todos</option>
+                            <option value="12">12</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="400">400</option>
+                            <option value="notcandy">Sin candy</option>
+                        </select>
+                        <label>Distancia de huevos para encubar</label>
+                        <select id="eggs" class="browser-default">
+                            <option value="all" selected>Todos</option>
+                            <option value="2 km">2 km</option>
+                            <option value="5 km">5 km</option>
+                            <option value="10 km">10 km</option>
+                            <option value="Not in Eggs">Not in Eggs</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">Ordenar</div>
+                    <div class="collapsible-body">
+                        <label>Nombre</label>
+                        <select class="browser-default" id="namesort">
+                            <option selected>Escoja una opción</option>                
+                            <option value="asc">A-Z</option>
+                            <option value="desc">Z-A</option>            
+                        </select>  
+                        <label>Número</label>
+                        <select class="browser-default" id="numsort">
+                            <option selected>Escoja una opción</option>                
+                            <option value="asc">Ascendente</option>
+                            <option value="desc">Descendente</option>            
+                        </select>  
+                        <label>Peso</label>
+                        <select class="browser-default" id="weightsort">
+                            <option selected>Escoja una opción</option>                
+                            <option value="asc">Ascendente</option>
+                            <option value="desc">Descendente</option>            
+                        </select>  
+                        <label>Tamaño</label>
+                        <select class="browser-default" id="heightsort">
+                            <option selected>Escoja una opción</option>                
+                            <option value="asc">Ascendente</option>
+                            <option value="desc">Descendente</option>            
+                        </select>  
+                    </div>
+                </li>
+            </ul>       
+        </section>           
         
+        <h6>selecciona un pokemon y descubre sus caracteristicas</h6>    
+        <section id="pokemonresult" class="col s12 m12 l8" >
+           
+            <figure id="searchresult" class="row">
+            
 
-        </figure>
-    </section>
-
-  </section>  
-  `
+            </figure>
+        </section>
+    </section>  
+    `
     pokemonAll()
     
     let elemsFilter = document.querySelectorAll('.collapsible');
@@ -341,23 +340,76 @@ function showPokemonList(pokemons)
 {
     document.getElementById('searchresult').innerHTML='';
     pokemons.forEach(element => {
+        //Pre-Evoluciones
+        let preEvolutions = "";
+        if(element.prev_evolution){
+            element.prev_evolution.forEach(pre => {
+                preEvolutions += `<a href="#modal${pre.num}" class="modal-trigger modal-close">${pre.name}&nbsp;</a>`
+            })
+        }
+        else {
+            preEvolutions += "Ninguna";
+        }
+        //Evoluciones siguientes
+        let nextEvolutions = "";
+        if(element.next_evolution){
+            element.next_evolution.forEach(next => {
+                nextEvolutions += `<a href="#modal${next.num}" class="modal-trigger modal-close">${next.name}&nbsp;</a>`
+            })
+        }
+        else {
+            nextEvolutions += "Ninguna";
+        }
+
         document.getElementById('searchresult').innerHTML +=
-        `<article id="pokemonbox" class="col s12 m6 l4">
+        `
+        <div id="pokemonbox" class="col s12 m6 l4">
+            <!--Llamada al modal -->
             <a href="#modal${element.num}" class="modal-trigger">
-            <img src="${element.img}" alt="${element.name}">
-            <h6>${element.num}</h6>
-            <h6>${element.name}</h6>
+                <!--Información visible antes de elegir el modal-->
+                <img src="${element.img}" alt="${element.name}">
+                <h6>${element.num}</h6>
+                <h6>${element.name}</h6>
             </a>  
             <div id="modal${element.num}" class="modal">
-                <div class="modal-content">
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-blue btn-flat">X</a>
+                </div>
+                <div class="modal-content row">
+                <!--Información de la ficha de pokemon-->                    
                     <h6>${element.num}</h6>
                     <h6>${element.name}</h6>
+                    <div class="col s12 m12 l12">
+                        <img class="modalimg" src="${element.img}" alt="${element.name}">
+                    </div>
+                    <div>
+                    <div class="col s4 m4 l4">${element.type}</div>
+                    <div class="col s4 m4 l4">${element.weight}</div>
+                    <div class="col s4 m4 l4">${element.height}</div>
+
+                    <div class="col s4 m4 l4">Tipo</div>
+                    <div class="col s4 m4 l4">Peso</div>
+                    <div class="col s4 m4 l4">Altura</div>
+                    
+                    <div>${element.weaknesses}</div>
+                    <div>Debilidades</div>
+                   
+                    <div class="col s6 m6 l6">${element.candy_count?element.candy_count:"Sin candys"}</div>
+                    <div class="col s6 m6 l6">${element.egg}</div>
+                    <div class="col s6 m6 l6">Cantidad de candys</div>
+                    <div class="col s6 m6 l6">Km huevos</div>
+
+                    <div class="col s6 m6 l6">${preEvolutions}</div>
+                    <div class="col s6 m6 l6">${nextEvolutions}</div>
+                    <div class="col s6 m6 l6">Evoluciones previas</div>
+                    <div class="col s6 m6 l6">Evoluciones posteriores</div>
+                    </div>
+
                 </div>
-                <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                </div>
+
             </div>
-        </article>`  
+        </div>`
+          
     });
     //Modales
     let elemsModal = document.querySelectorAll('.modal');
