@@ -190,8 +190,20 @@ main #searchview{
     padding-top:80px;
 }
 
+#searchview h4{
+    font-size:22px;
+    text-align:justify; 
+    margin-left:100px;
+}
+
+#searchview h5{
+    font-size:16px;
+    text-align:justify; 
+    margin-left:100px;
+}
+
 #sectionfilter{
-    padding-top:30px;
+    padding-top:10px;
     padding-left: 100px;
     
 }
@@ -199,9 +211,19 @@ main #searchview{
 #pokemonresult{
     overflow-y: scroll;
     height: 80vh;
-    padding: 0px 100px;
-    
+    padding: 0px 100px; 
 }
+
+#pokemonresult h3{
+    margin-left:20px; 
+    text-align: center;
+    margin-top:-7px; 
+}
+
+#pokemonresult h5{
+    margin-left:20px; 
+    text-align: center;
+} 
 
 #pokemonbox{
     padding-top:20px;
@@ -280,6 +302,17 @@ main #searchview{
         margin-top:50px;     
     }
 
+    footer p{
+        padding: 0px 100px;
+        height: 40px;  
+    }    
+
+    footer p{
+        padding-top: 10px;
+        font-size: 13px;
+        text-align: center;    
+    }
+
       
 }
 
@@ -288,13 +321,12 @@ main #searchview{
 @media (max-width: 992px){
     
     main #welcomeimage{
-        height: 1200px;
+        height: 1400px;
     }   
     
     #welcomeimage h2 {          
-        padding-top:450px;          
-        font-size: 60px;
-           
+        padding-top:600px;          
+        font-size: 40px;          
     }
 
     #welcomeimage h3{
@@ -311,22 +343,144 @@ main #searchview{
     }
 }
 
+/*Responsivo página ¿Cómo funciona?*/
+@media (max-width: 992px){
+    
+    #onetutorial{   
+        padding: 10px 100px;
+        height: 700px;    
+    }
+
+
+    #onetutorial h3{
+        font-size:36px;
+        padding-top: 240px;
+    }
+
+    #onetutorial article h4{
+        padding-top: 20px;
+        font-size:32px;
+        text-align:justify;
+    }
+
+    #goldpokeball img{
+        height: 170px;
+        width: 170px; 
+        padding-top:50px; 
+    }  
+    
+    #twotutorial{   
+        padding: 10px 100px;
+        height: 540px;    
+    }
+
+    #twotutorial h3{
+        padding-top:20px;
+        font-size:32px;
+    }
+
+    #twotutorial article h4{
+        margin-top:20px;
+        font-size:30px;
+        text-align:justify;     
+    }
+
+    #startedpokemon{
+        height: 250px;
+        width: 550px;
+        margin-left:120px;  
+    }
+
+    #treetutorial {
+        padding: 10px 100px;     
+        height: 2000px;
+    }
+
+    #threetutorial h3{
+        padding-top:60px;
+        font-size:30px;
+    }
+
+    #threetutorial article h4{
+        font-size:22px;
+        text-align:justify; 
+    }
+
+    #threetutorial article ul li {
+        font-size:22px;
+        text-align:justify;         
+    }
+}
+
+
 
 
 /*Responsivo Página búsqueda*/
 @media (max-width: 992px){
 
+     #sectionfilter{
+        position: fixed;
+        background-color: white;
+        padding: 0 120px;
+        
+    }
+
+    #searchview{
+        margin-top: 120px;
+    }
+
+    #searchview h4{
+        font-size:36px;
+        text-align:justify; 
+        margin-left:120px;
+    }
+
+    #searchview h5{
+        font-size:28px;
+        text-align:justify; 
+        margin-left:5px;
+    }
+
+    .collapsible-header{
+        font-size:28px;
+    }
+    
+    .collapsible-body label{
+        font-size:26px;  
+    }
+
     #pokemonresult{
         overflow-y: visible;
         height: auto;
     }
-   
-    #sectionfilter{
-        position: fixed;
-        background-color: white;
-        padding: 0 120px;
+
+    #pokemonresult h3{
+        margin-top:240px; 
+    }
+    
+    #pokemonresult h5{
+        text-align: center;      
+    } 
+
+    #pokemonbox{     
+        height:400px;
+        width:400px;
+    } 
+
+    #pokemonbox img{
+        text-align: center;
+        height: 220px;
+        width: 220px;  
+    }
+
+    #pokemonbox h6{
+        font-size:30px;
     }
     
 }
+
+
+
+
 
 

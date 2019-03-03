@@ -92,7 +92,8 @@ function searchView(){
     <section id="searchview" class="row"> 
     <h3>Pokemón región de Kanto</h3>  
         <section class="col s12 m12 l4" id="sectionfilter">
-            <h6>Seleccione una opción</h6>
+        <h4>¡Este es tu buscador!</h4>  
+            <h6>Selecciona una opción</h6>
             <ul class="collapsible">
                 <li>
                     <div class="collapsible-header">Filtrar</div>
@@ -193,7 +194,7 @@ function searchView(){
             </ul>       
         </section>           
         
-        <h6>selecciona un pokemon y descubre sus caracteristicas</h6>    
+        <h5>Escoge un pokémon y descubre sus caracteristicas</h5>    
         <section id="pokemonresult" class="col s12 m12 l8" >
            
             <figure id="searchresult" class="row">
