@@ -90,9 +90,9 @@ function searchView(){
     document.getElementById('dinamicpage').innerHTML += 
     `
     <section id="searchview" class="row"> 
-    <h4>Buscador</h4>    
+    <h4>¡Este es tu buscador!</h4>    
     <section class="col s12 m12 l4" id="sectionfilter">
-     <h6>Seleccione una opción</h6>
+     <h5>Seleccione una opción</h5>
       <ul class="collapsible">
         <li>
           <div class="collapsible-header">Filtrar</div>
@@ -195,7 +195,7 @@ function searchView(){
 
     <section id="pokemonresult" class="col s12 m12 l8" >
     <h3>Pokemón región de Kanto</h3>
-    <h6>selecciona un pokemon y descubre sus caracteristicas</h6>
+    <h5>Escoge un pokémon y descubre sus caracteristicas</h5>
         <figure id="searchresult" class="row">
         
 
