@@ -185,27 +185,31 @@ main #welcomeimage{
 
 
 /*Pagina de búsqueda*/
-
 main #searchview{
-    padding-top:80px;
+    padding-top:60px;
+    color:#212F3C;  
 }
 
-#searchview h4{
+#searchview h3{
+    font-size:34px;  
+    margin-left:100px;
+    color:#212F3C;  
+}
+
+#sectionfilter h5{
+    font-size:18px;   
+    color:#212F3C;
+    margin-top: 5px;       
+}
+
+#resulttitle{
     font-size:22px;
-    text-align:justify; 
-    margin-left:100px;
-}
-
-#searchview h5{
-    font-size:16px;
-    text-align:justify; 
-    margin-left:100px;
+    color:#212F3C;
+    margin-top:5px;
 }
 
 #sectionfilter{
-    padding-top:10px;
-    padding-left: 100px;
-    
+    padding-left: 100px;    
 }
 
 #pokemonresult{
@@ -231,16 +235,15 @@ main #searchview{
     border:white 20px solid;
     border-radius: 30px;
     background-color: #F4F6F7;   
-    
-    
-}
-#pokemonbox img{
-    text-align: center;
-    height: 150px;
-    width: 150px;  
 }
 
-#pokemonbox{
+#pokemonbox img{
+    text-align: center;
+    height: 120px;
+    width: 120px;  
+}
+
+#pokemonbox a{
     font-size:18px;
     color:#212F3C;   
 }
@@ -267,12 +270,37 @@ main #searchview{
 }
 
 .modal{
-    height: 500px;
+    height: 700px;
     width: 500px;
     overflow: hidden;
     max-height: 100%;
+    background-color: white;
+}
+.modal.open{
+    border-radius: 20px;
 }
 
+.elementtitle{
+    font-size:16px;
+    color:#212F3C;
+    padding-top: 10px;
+}
+
+.elementdata{
+    font-size:20px;
+    color:#212F3C;
+    padding-bottom: 10px;
+}
+
+.btnevolutions{
+    width: 100px;
+    height: 45px;
+    background: rgba(77, 77, 77, 0.8);
+    border: 1px solid rgba(77, 77, 77, 0.8) ;  
+    color: white;
+    font-size: 18px;  
+    cursor: pointer;
+}
 
 /*Responsivo*/
 /*a) Responsivo html fijo */
@@ -312,7 +340,6 @@ main #searchview{
         font-size: 13px;
         text-align: center;    
     }
-
       
 }
 
@@ -343,7 +370,7 @@ main #searchview{
     }
 }
 
-/*Responsivo página ¿Cómo funciona?*/
+/*Responsivo página ¿Qué es PokeChoose?*/
 @media (max-width: 992px){
     
     #onetutorial{   
@@ -412,35 +439,36 @@ main #searchview{
     }
 }
 
-
-
-
 /*Responsivo Página búsqueda*/
 @media (max-width: 992px){
 
-     #sectionfilter{
+    main #searchview{
+        padding-top:180px;
+         
+    }
+
+    #searchview h3{
+       position: fixed;
+       z-index: 100;
+      
+    }
+    
+    #sectionfilter{
         position: fixed;
+        padding-left:120px;
+        padding-right:120px;
+        padding-top: 100px;
         background-color: white;
-        padding: 0 120px;
-        
+  
     }
+    
 
-    #searchview{
-        margin-top: 120px;
+    #sectionfilter h5{
+        position: fixed;
+        display: none;   
+     
     }
-
-    #searchview h4{
-        font-size:36px;
-        text-align:justify; 
-        margin-left:120px;
-    }
-
-    #searchview h5{
-        font-size:28px;
-        text-align:justify; 
-        margin-left:5px;
-    }
-
+    
     .collapsible-header{
         font-size:28px;
     }
@@ -452,6 +480,7 @@ main #searchview{
     #pokemonresult{
         overflow-y: visible;
         height: auto;
+        padding-top: 300px;
     }
 
     #pokemonresult h3{

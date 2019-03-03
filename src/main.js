@@ -92,8 +92,7 @@ function searchView(){
     <section id="searchview" class="row"> 
     <h3>Pokemón región de Kanto</h3>  
         <section class="col s12 m12 l4" id="sectionfilter">
-        <h4>¡Este es tu buscador!</h4>  
-            <h6>Selecciona una opción</h6>
+        <h5>¡Este es tu buscador! Selecciona una opción</h5>
             <ul class="collapsible">
                 <li>
                     <div class="collapsible-header">Filtrar</div>
@@ -194,9 +193,8 @@ function searchView(){
             </ul>       
         </section>           
         
-        <h5>Escoge un pokémon y descubre sus caracteristicas</h5>    
-        <section id="pokemonresult" class="col s12 m12 l8" >
-           
+        <section id="pokemonresult" class="col s12 m12 l8" >      
+            <h4 id="resulttitle">Escoge un pokémon y ¡descubre sus caracteristicas!</h4>         
             <figure id="searchresult" class="row">
             
 
@@ -311,7 +309,6 @@ function searchView(){
     });    
 }
 
-
 /*II.Manejo del DOM */
 
 /*a)Página de inicio*/
@@ -345,7 +342,7 @@ function showPokemonList(pokemons)
         let preEvolutions = "";
         if(element.prev_evolution){
             element.prev_evolution.forEach(pre => {
-                preEvolutions += `<a href="#modal${pre.num}" class="modal-trigger modal-close">${pre.name}&nbsp;</a>`
+                preEvolutions += `<p>${pre.name}</p>`
             })
         }
         else {
@@ -355,7 +352,7 @@ function showPokemonList(pokemons)
         let nextEvolutions = "";
         if(element.next_evolution){
             element.next_evolution.forEach(next => {
-                nextEvolutions += `<a href="#modal${next.num}" class="modal-trigger modal-close">${next.name}&nbsp;</a>`
+                nextEvolutions += `<p>${next.name}</p>`
             })
         }
         else {
@@ -374,36 +371,38 @@ function showPokemonList(pokemons)
             </a>  
             <div id="modal${element.num}" class="modal">
                 <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-blue btn-flat">X</a>
+                    <a href="#!" class="modal-close waves-effect btn-flat">X</a>
                 </div>
-                <div class="modal-content row">
-                <!--Información de la ficha de pokemon-->                    
+                <!--Información de la ficha de pokemon (modal)-->
+                <div class="modal-content row">                                    
                     <h6>${element.num}</h6>
                     <h6>${element.name}</h6>
                     <div class="col s12 m12 l12">
                         <img class="modalimg" src="${element.img}" alt="${element.name}">
                     </div>
+
                     <div>
-                    <div class="col s4 m4 l4">${element.type}</div>
-                    <div class="col s4 m4 l4">${element.weight}</div>
-                    <div class="col s4 m4 l4">${element.height}</div>
+                        <div class="col s4 m4 l4 elementtitle">Tipo</div>
+                        <div class="col s4 m4 l4 elementtitle">Peso</div>
+                        <div class="col s4 m4 l4 elementtitle">Altura</div>
+                        <div class="col s4 m4 l4 elementdata">${element.type}</div>
+                        <div class="col s4 m4 l4 elementdata">${element.weight}</div>
+                        <div class="col s4 m4 l4 elementdata">${element.height}</div>
+                        
+                        <div class="elementtitle">Debilidades</div>
+                        <div class="elementdata">${element.weaknesses}</div>
 
-                    <div class="col s4 m4 l4">Tipo</div>
-                    <div class="col s4 m4 l4">Peso</div>
-                    <div class="col s4 m4 l4">Altura</div>
-                    
-                    <div>${element.weaknesses}</div>
-                    <div>Debilidades</div>
-                   
-                    <div class="col s6 m6 l6">${element.candy_count?element.candy_count:"Sin candys"}</div>
-                    <div class="col s6 m6 l6">${element.egg}</div>
-                    <div class="col s6 m6 l6">Cantidad de candys</div>
-                    <div class="col s6 m6 l6">Km huevos</div>
+                        <div class="col s6 m6 l6 elementtitle">Cantidad de candys</div>
+                        <div class="col s6 m6 l6 elementtitle">Km huevos</div>
+                        <div class="col s6 m6 l6 elementdata">${element.candy_count?element.candy_count:"Sin candys"}</div>
+                        <div class="col s6 m6 l6 elementdata">${element.egg}</div>
 
-                    <div class="col s6 m6 l6">${preEvolutions}</div>
-                    <div class="col s6 m6 l6">${nextEvolutions}</div>
-                    <div class="col s6 m6 l6">Evoluciones previas</div>
-                    <div class="col s6 m6 l6">Evoluciones posteriores</div>
+                        <div class="elementdata">Ver evoluciones</div>
+                        <div class="col s6 m6 l6 elementtitle">Previa</div>
+                        <div class="col s6 m6 l6 elementtitle">Posterior</div>
+                        <div class="col s6 m6 l6 ">${preEvolutions}</div>
+                        <div class="col s6 m6 l6 ">${nextEvolutions}</div>
+                      
                     </div>
 
                 </div>
