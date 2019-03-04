@@ -73,13 +73,28 @@ function tutorialView(){
         <h3>¿Cómo funciona PokeChoose?</h3>
         <article class="col s12 m12 l12">
             <h4>Debes ingresar a la opcion "Iniciar búsqueda" y seguir los siguientes pasos:</h4>
-            <ul>
-                <li>Primero, lo primero: para encontrar al Pokémon que buscas ¡debes seleccionar tu filtro!</li>
-                <li>Por su tipo, debilidad, cantidad de dulces que necesita  o la distancia que necesitarás 
-                recorrer para conseguir los huevos que te ayuden a mejorar tu Pokémon</li>
-                <li>O bien, si prefieres ordenarlos alfabéticamente, por su número, cuál es su peso o su tamaño</li>
-            </ul>
-            <h4>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito.</h4>
+                <p class="col s12 m12 l6">Primero, lo primero: para encontrar al Pokémon que buscas ¡debes seleccionar tu filtro!
+                </p>
+                  <picture class="col s12 m12 l6">
+                     <img src="Image/tutorial001.png" id="tutorialsearch1" alt="Página de búsqueda">        
+                  </picture>       
+                <p class="col s12 m12 l6">Si quisieras encontrar a los pokémon por tipo, sólo debes dar click en filtrar por tipo y seleccionar el que estás buscando, en este caso buscamos por tipo "Electric"
+                </p>
+                  <picture class="col s12 m12 l6">
+                     <img src="Image/tutorial002.png" id="tutorialsearch2" alt="Selección de filtro "Pokémon de tipo Electric"">        
+                  </picture>    
+                <p class="col s12 m12 l6">Ahora la páguina te mostrará todos los pokémon que sean de tipo "Electric" 
+                </p>  
+                  <picture class="col s12 m12 l6">
+                     <img src="Image/tutorial003.png" id="tutorialsearch3" alt="Pokémon de tipo "Electric"">        
+                  </picture> 
+                <p class="col s12 m12 l6">Y si quisieras conocer las características de algún pokémon en específico sólo debes darle click en la foto del que deseas mirar y podrás ver su ficha en detalle
+                </p>
+                  <picture class="col s12 m12 l6">
+                     <img src="Image/tutorial004.png" id="tutorialsearch4" alt="Ficha de Pikachu">        
+                  </picture>
+                <p>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito. Podrás filtrar por tipo, debilidad, cantidad de candys, distancia en km para encontrar sus huevos, o bien ordenar alfabéticamente, según su número, peso o altura
+                </p>
         </article >
     </section>`
 }
