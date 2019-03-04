@@ -104,7 +104,7 @@ main #welcomeimage{
 #onetutorial{   
     padding: 10px 100px;
     background-color: rgba(27, 31, 119, 0.95);
-    height: 600px;    
+    height: 500px;    
 }
 
 #onetutorial h3{
@@ -114,16 +114,20 @@ main #welcomeimage{
     padding-top: 120px;
     text-align: left; 
     padding-left:10px;
+    line-height:80px;
+    font-weight: bold;
 }
 
 #onetutorial article h4{
-    padding-top: 80px;
+    margin-top:10px;
     font-size:22px;
     color:white;   
     padding-right: 20px;
+    line-height:40px;
 }
 
 #goldpokeball{
+    margin-top:-90px;
     text-align: center;
     
 }
@@ -135,7 +139,7 @@ main #welcomeimage{
 
 #twotutorial{   
     padding: 0px 100px;
-    height: 360px;    
+    height: 350px;    
 }
 
 #twotutorial h3{
@@ -144,43 +148,147 @@ main #welcomeimage{
     color:#212F3C;
     text-align: left; 
     padding-left:10px;
+    line-height:80px;
+    font-weight: bold;
 }
 
 #twotutorial article h4{
-    margin-top:60px;
+    margin-top:10px;
     font-size:22px;
     color:#212F3C;
-    padding-right: 20px;     
+    padding-right: 20px; 
+    line-height:40px;    
 }
 
 #startedpokemon{
     height: 300px;
     width: 550px;
+    margin-top:-90px;
 }
 
-#threetutorial{   
-    padding: 0px 100px;     
-    background-color: #F4F6F7;
-    height: 400px;
+#threetutorial{  
+    padding: 0px 100px;
+    background-color: #EBF5FB;
+    height: 200px;
     margin-bottom: 0px;
 }
 
 #threetutorial h3{
-    padding-top:50px;
+    padding-top:20px;
     font-size:34px;
     color:#212F3C;
     text-align: left; 
-    padding-left:10px;
+    line-height:80px;
+    font-weight: bold;
+    
 }
 
-#threetutorial article h4{
+#threetutorial h4{
+    margin-top:1px;
+    font-size:22px;
     color:#212F3C;
-    font-size:18px;
+    text-align: left; 
+    padding-right: 20px; 
+    line-height:40px; 
+   
 }
 
-#threetutorial article ul li {
-    font-size:18px;
-    color:#212F3C;  
+#instructionone{
+    background-color: #EBF5FB; 
+    height:350px;
+    padding-left:100px; 
+    margin-bottom: 0px;
+    
+}
+
+#instructionone h4{
+    margin-top: 100px;
+    font-size:22px;
+    line-height:40px; 
+ 
+}
+
+#instructiontwo{
+    background-color: #D6EAF8; 
+    height:340px;
+    padding-left:100px;
+    margin-bottom: 0px;
+}
+
+#instructiontwo h4{
+    margin-top: 100px;
+    font-size:22px;
+    line-height:40px; 
+ 
+}
+
+#instructionthree{
+    background-color: #EBF5FB; 
+    height:340px;
+    padding-left:100px;
+    margin-bottom: 0px;
+}
+
+#instructionthree h4{
+    margin-top: 100px;
+    font-size:22px;
+    line-height:40px; 
+ 
+}
+
+#instructionfour{
+    background-color: #D6EAF8; 
+    height:340px;
+    padding-left:100px;
+    margin-bottom: 0px;
+}
+
+#instructionfour h4{
+    margin-top:0px;
+    padding-top: 100px;
+    font-size:22px;
+    line-height:40px; 
+}
+
+#instructionfive{
+    background-color: #D6EAF8; 
+    height:120px;
+    padding-left:100px;
+    margin-bottom: 0px;
+}
+
+#instructionfive h4{
+    margin-top:0px;
+    padding-top: 3px;
+    font-size:22px;
+    line-height:40px;
+    margin-right: 35px; 
+}
+
+#tutorialsearchone{
+    height: 300px;
+    width: 550px;
+    padding-top:20px;
+}
+
+
+
+#tutorialsearchtwo{
+    height: 300px;
+    width: 550px;
+    padding-top:40px;
+}
+
+#tutorialsearchthree{
+    height: 300px;
+    width: 550px;
+    padding-top:40px;
+}
+
+#tutorialsearchfour{
+    height: 300px;
+    width: 550px;
+    padding-top:40px;
 }
 
 
@@ -376,7 +484,6 @@ main #searchview{
 @media (max-width: 992px){
     
     #onetutorial{   
-        padding: 10px 100px;
         height: 1250px;    
     }
 
@@ -396,14 +503,13 @@ main #searchview{
     }
 
     #goldpokeball img{
-        height: 400px;
-        width: 400px; 
-        padding-top:10px; 
+        height: 450px;
+        width: 450px; 
+        padding-top:145px; 
     }  
-    
+
     #twotutorial{   
-        padding: 10px 100px;
-        height: 920px; 
+        height: 950px; 
     }
 
     #twotutorial h3{
@@ -424,32 +530,115 @@ main #searchview{
         height: 300px;
         width: 650px;
         margin-left:80px;  
+        margin-top: 50px;
     }
 
     #threetutorial {
         padding: 10px 100px;     
-        height: 1600px;
+        height: 500px;
     }
 
     #threetutorial h3{
-        padding-top:60px;
+        padding-top:20px;
         font-size:58px;
-        line-height:80px;
-        font-weight: bold;
     }
 
-    #threetutorial article h4{
+    #threetutorial h4{
+        margin-top:20px;
         font-size:48px;
-        text-align:left;
-        line-height:70px; 
+        text-align:left;     
+        line-height:70px;
     }
 
-    #threetutorial article ul li {
-        font-size:48px;
-        text-align:left;
-        line-height:70px;        
+    #instructionone{
+        height:800px;
     }
-}
+
+    #instructionone h4{
+        margin-top: 8px;
+        font-size:48px;
+        text-align:left;     
+        line-height:70px;
+    }
+
+    #instructiontwo{
+        height:980px;
+    }
+    
+    #instructiontwo h4{
+        margin-top: 40px;
+        font-size:48px;
+        text-align:left;     
+        line-height:70px;
+    }
+
+    #instructionthree{
+        height:750px;
+    }
+    
+    #instructionthree h4{
+        margin-top: 40px;
+        font-size:48px;
+        text-align:left;     
+        line-height:70px;
+    }
+
+    #instructionfour{
+        height:950px;
+        margin-bottom: 0px;
+    }
+    
+    #instructionfour h4{
+        padding-top:40px;
+        font-size:48px;
+        text-align:left;     
+        line-height:70px;
+        margin-right:20px;
+    }
+
+    #instructionfive{
+        height:650px;
+        margin-bottom: 0px;
+        margin-top:0px;
+    }
+    
+    #instructionfive h4{
+        padding-top: 30px;
+        font-size:48px;
+        text-align:left;     
+        line-height:70px;
+        margin-right:35px;
+    }
+
+    
+    #tutorialsearchone{
+        text-align: center;
+        margin-left:20px;
+        height: 500px;
+        width: 750px;
+    }
+    
+    #tutorialsearchtwo{
+        text-align: center;
+        margin-left:20px;
+        height: 500px;
+        width: 750px;
+    }
+
+    #tutorialsearchthree{
+        text-align: center;
+        margin-left:20px;
+        height: 500px;
+        width: 750px;
+    }
+
+    #tutorialsearchfour{
+        text-align: center;
+        margin-left:20px;
+        height: 500px;
+        width: 750px;
+    }
+   }
 
 /*Responsivo Página búsqueda*/
 @media (max-width: 992px){
