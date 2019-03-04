@@ -99,47 +99,48 @@ function searchView(){
                     <div class="collapsible-body">
                         <label>Tipo</label>
                         <select id="type" class="browser-default">
-                            <option value="all" selected>Todos</option>  
-                            <option value="Steel">Acero</option>
-                            <option value="Water">Agua</option>
-                            <option value="Dragon">Dragon</option>
-                            <option value="Electric">Eléctrico</option>
-                            <option value="Ghost">Fantasma</option>
-                            <option value="Fire">Fuego</option>
-                            <option value="Fairy">Hada</option>
-                            <option value="Ice">Hielo</option>
-                            <option value="Bug">Insecto</option>
+                            <option value="all" selected>Todos</option>
+                            <option value="Bug">Bug</option>
+                            <option value="Dark">Dark</option>
+                            <option value="Dragon">Dragon</option>                            
+                            <option value="Electric">Electric</option>
+                            <option value="Fairy">Fairy</option>
+                            <option value="Fighting">Fighting</option>
+                            <option value="Fire">Fire</option>
+                            <option value="Flying">Flying</option>
+                            <option value="Ghost">Ghost</option>
+                            <option value="Grass">Grass</option>
+                            <option value="Ground">Ground</option>
+                            <option value="Ice">Ice</option>
                             <option value="Normal">Normal</option>
-                            <option value="Fighting">Luchador</option>
-                            <option value="Dark">Oscuro</option>
-                            <option value="Grass">Planta</option>
-                            <option value="Psychic">Psíquico</option>
-                            <option value="Rock">Roca</option>  
-                            <option value="Ground">Suelo</option>
-                            <option value="Poison">Veneno</option>
-                            <option value="Flying">Volador</option>
+                            <option value="Poison">Poison</option>
+                            <option value="Psychic">Psychic</option>                            
+                            <option value="Rock">Rock</option> 
+                            <option value="Steel">Steel</option>
+                            <option value="Water">Water</option>
                         </select>   
                         <label>Debilidad</label>
-                            <select id="weakness" class="browser-default">
-                            <option value="all" selected>Todos</option>  
-                            <option value="Steel">Acero</option>
-                            <option value="Water">Agua</option>
-                            <option value="Dragon">Dragon</option>
-                            <option value="Electric">Eléctrico</option>
-                            <option value="Ghost">Fantasma</option>
-                            <option value="Fire">Fuego</option>
-                            <option value="Fairy">Hada</option>
-                            <option value="Ice">Hielo</option>
-                            <option value="Bug">Insecto</option>
+                            <select id="weakness" class="browser-default">                             
+                            <option value="all" selected>Todos</option>
+                            <option value="Bug">Bug</option>
+                            <option value="Dark">Dark</option>
+                            <option value="Dragon">Dragon</option>                            
+                            <option value="Electric">Electric</option>
+                            <option value="Fairy">Fairy</option>
+                            <option value="Fighting">Fighting</option>
+                            <option value="Fire">Fire</option>
+                            <option value="Flying">Flying</option>
+                            <option value="Ghost">Ghost</option>
+                            <option value="Grass">Grass</option>
+                            <option value="Ground">Ground</option>
+                            <option value="Ice">Ice</option>
                             <option value="Normal">Normal</option>
-                            <option value="Fighting">Luchador</option>
-                            <option value="Dark">Oscuro</option>
-                            <option value="Grass">Planta</option>
-                            <option value="Psychic">Psíquico</option>
-                            <option value="Rock">Roca</option>  
-                            <option value="Ground">Suelo</option>
-                            <option value="Poison">Veneno</option>
-                            <option value="Flying">Volador</option>
+                            <option value="Poison">Poison</option>
+                            <option value="Psychic">Psychic</option>                            
+                            <option value="Rock">Rock</option> 
+                            <option value="Steel">Steel</option>
+                            <option value="Water">Water</option>
+                            
                         </select>     
                         <label>Cantidad de Candy</label>
                         <select id="candycount" class="browser-default">
