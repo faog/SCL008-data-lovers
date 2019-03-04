@@ -40,7 +40,7 @@ nav{
 footer{
     background-color:rgba(27, 31, 119, 0.95);
     padding: 0px 100px;
-    height: 40px;  
+    height: 80px;  
 }
 
 footer p{
@@ -326,19 +326,19 @@ main #searchview{
         width: 700px;
     }
     .sidenav li a{
-        font-size:26px;
+        font-size:40px;
         margin-top:50px;     
     }
 
-    footer p{
+    footer{
         padding: 0px 100px;
-        height: 40px;  
+        height: 100px;  
     }    
 
     footer p{
         padding-top: 10px;
-        font-size: 13px;
-        text-align: center;    
+        font-size: 26px;
+        text-align: left;    
     }
       
 }
@@ -352,8 +352,9 @@ main #searchview{
     }   
     
     #welcomeimage h2 {          
-        padding-top:600px;          
-        font-size: 40px;          
+        padding-top:500px;          
+        font-size: 64px;   
+        line-height:100px;        
     }
 
     #welcomeimage h3{
@@ -375,67 +376,77 @@ main #searchview{
     
     #onetutorial{   
         padding: 10px 100px;
-        height: 700px;    
+        height: 1250px;    
     }
 
 
     #onetutorial h3{
-        font-size:36px;
+        font-size:58px;
         padding-top: 240px;
+        line-height:80px;
+        font-weight: bold;
     }
 
     #onetutorial article h4{
         padding-top: 20px;
-        font-size:32px;
-        text-align:justify;
+        font-size:48px;
+        text-align:left;
+        line-height:70px;
     }
 
     #goldpokeball img{
-        height: 170px;
-        width: 170px; 
-        padding-top:50px; 
+        height: 400px;
+        width: 400px; 
+        padding-top:10px; 
     }  
     
     #twotutorial{   
         padding: 10px 100px;
-        height: 540px;    
+        height: 920px; 
     }
 
     #twotutorial h3{
         padding-top:20px;
-        font-size:32px;
+        font-size:58px;
+        line-height:80px;
+        font-weight: bold;
     }
 
     #twotutorial article h4{
         margin-top:20px;
-        font-size:30px;
-        text-align:justify;     
+        font-size:48px;
+        text-align:left;     
+        line-height:70px;
     }
 
     #startedpokemon{
-        height: 250px;
-        width: 550px;
-        margin-left:120px;  
+        height: 300px;
+        width: 650px;
+        margin-left:80px;  
     }
 
-    #treetutorial {
+    #threetutorial {
         padding: 10px 100px;     
-        height: 2000px;
+        height: 1600px;
     }
 
     #threetutorial h3{
         padding-top:60px;
-        font-size:30px;
+        font-size:58px;
+        line-height:80px;
+        font-weight: bold;
     }
 
     #threetutorial article h4{
-        font-size:22px;
-        text-align:justify; 
+        font-size:48px;
+        text-align:left;
+        line-height:70px; 
     }
 
     #threetutorial article ul li {
-        font-size:22px;
-        text-align:justify;         
+        font-size:48px;
+        text-align:left;
+        line-height:70px;        
     }
 }
 

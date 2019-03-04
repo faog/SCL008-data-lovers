@@ -9,7 +9,7 @@ function indexView(){
     document.getElementById('dinamicpage').innerHTML += 
     `
     <section id="welcomeimage">
-        <h2 class="center-align">¿QUIÉRES SER EL MEJOR MAESTRO POKÉMON?</h2>          
+        <h2 class="center-align">¿QUIERES SER EL MEJOR MAESTRO POKÉMON?</h2>          
         <h3 class="center-align">Junto a PokeChoose podrás conseguirlo</h3>
         <div class="center-align"> 
             <button id="btnstart">Comenzar</button>
@@ -59,7 +59,7 @@ function tutorialView(){
     </section> 
 
     <section id="twotutorial" class="row"> 
-        <h3>¡Conocelos a todos!</h3>
+        <h3>¡Conócelos a todos!</h3>
         <article class="col s12 m12 l6">
             <h4>Podrás escoger entre los 151 tipos de Pokémon de la región de Kanto,  cuál es la que más 
             te sirve para enfrentarlo en una batalla, ¡y así convertirte en el mejor entrenador!</h4>
