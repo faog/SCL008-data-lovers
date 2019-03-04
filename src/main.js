@@ -90,7 +90,7 @@ function searchView(){
     document.getElementById('dinamicpage').innerHTML += 
     `
     <section id="searchview" class="row"> 
-    <h3>Pokemón región de Kanto</h3>  
+    <h3>Pokémon región de Kanto</h3>  
         <section class="col s12 m12 l4" id="sectionfilter">
         <h5>¡Este es tu buscador! Selecciona una opción</h5>
             <ul class="collapsible">
@@ -139,8 +139,7 @@ function searchView(){
                             <option value="Psychic">Psychic</option>                            
                             <option value="Rock">Rock</option> 
                             <option value="Steel">Steel</option>
-                            <option value="Water">Water</option>
-                            
+                            <option value="Water">Water</option>                            
                         </select>     
                         <label>Cantidad de Candy</label>
                         <select id="candycount" class="browser-default">
@@ -376,36 +375,37 @@ function showPokemonList(pokemons)
                 </div>
                 <!--Información de la ficha de pokemon (modal)-->
                 <div class="modal-content row">                                    
-                    <h6>${element.num}</h6>
-                    <h6>${element.name}</h6>
+                    <h6 class="elementdatatitle">${element.num}</h6>
+                    <h6 class="elementdatatitle">${element.name}</h6>
                     <div class="col s12 m12 l12">
                         <img class="modalimg" src="${element.img}" alt="${element.name}">
                     </div>
 
-                    <div>
-                        <div class="col s4 m4 l4 elementtitle">Tipo</div>
-                        <div class="col s4 m4 l4 elementtitle">Peso</div>
-                        <div class="col s4 m4 l4 elementtitle">Altura</div>
-                        <div class="col s4 m4 l4 elementdata">${element.type}</div>
-                        <div class="col s4 m4 l4 elementdata">${element.weight}</div>
-                        <div class="col s4 m4 l4 elementdata">${element.height}</div>
-                        
-                        <div class="elementtitle">Debilidades</div>
-                        <div class="elementdata">${element.weaknesses}</div>
-
-                        <div class="col s6 m6 l6 elementtitle">Cantidad de candys</div>
-                        <div class="col s6 m6 l6 elementtitle">Km huevos</div>
-                        <div class="col s6 m6 l6 elementdata">${element.candy_count?element.candy_count:"Sin candys"}</div>
-                        <div class="col s6 m6 l6 elementdata">${element.egg}</div>
-
-                        <div class="elementdata">Ver evoluciones</div>
-                        <div class="col s6 m6 l6 elementtitle">Previa</div>
-                        <div class="col s6 m6 l6 elementtitle">Posterior</div>
-                        <div class="col s6 m6 l6 ">${preEvolutions}</div>
-                        <div class="col s6 m6 l6 ">${nextEvolutions}</div>
+                    <div class="row">
+                        <h6 class="col s4 m4 l4 elementtitle">Tipo</h6>
+                        <h6 class="col s4 m4 l4 elementtitle">Peso</h6>
+                        <h6 class="col s4 m4 l4 elementtitle">Altura</h6>
+                        <h6 class="col s4 m4 l4 elementdata">${element.type}</h6>
+                        <h6 class="col s4 m4 l4 elementdata">${element.weight}</h6>
+                        <h6 class="col s4 m4 l4 elementdata">${element.height}</h6>
+                    </div class="row">
                       
+                    <div class="row">
+                        <h6 class="elementtitle">Debilidades</h6>
+                        <h6 class="elementdata">${element.weaknesses}</h6>
                     </div>
 
+                    <div class="row">
+                        <h6 class="col s6 m6 l6 elementtitle">Cantidad de candys</h6>
+                        <h6 class="col s6 m6 l6 elementtitle">Km huevos</h6>
+                        <h6 class="col s6 m6 l6 elementdata">${element.candy_count?element.candy_count:"Sin candys"}</h6>
+                        <h6 class="col s6 m6 l6 elementdata">${element.egg}</h6>
+
+                        <h6 class="col s6 m6 l6 elementtitle">Evolución previa</h6>
+                        <h6 class="col s6 m6 l6 elementtitle">Evolución Posterior</h6>
+                        <h6 class="col s6 m6 l6 elementdata ">${preEvolutions}</h6>
+                        <h6 class="col s6 m6 l6 elementdata">${nextEvolutions}</h6>
+                    </div>   
                 </div>
 
             </div>
