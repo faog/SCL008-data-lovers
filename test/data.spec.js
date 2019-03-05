@@ -203,4 +203,34 @@ describe('data', ()=> {
      
   })
 
+  describe ('data.computeStats', () => {
+
+    const dataCompute = [
+      {
+        num: "001", name: 'Bulbasaur',type: "Grass",
+        candy_count: "25", egg: "2 km", weaknesses:"Fire"
+  
+      },
+      {
+        num: "005", name: 'Charmeleon', type: "Fire",
+        candy_count: 100, egg: "Not in Eggs", weaknesses: "Water"
+      },
+      {
+        num: "009", name: 'Blastoise', type: "Water",
+        egg: "Not in Eggs", weaknesses: "Electric"
+      }
+
+
+    ]
+    
+    it('debería ser una función', () => {
+      assert.equal(typeof window.data.computeStats, 'function');
+    });
+
+    it('debería retornar un tipo Grass, un tipo Fire y un tipo Water', () => {
+      assert.deepEqual(window.data.computeStats(dataCompute),
+        {Water: 1, Fire: 1, Grass: 1}
+      )
+    })
+  })
 })

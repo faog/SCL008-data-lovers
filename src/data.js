@@ -27,9 +27,17 @@ window.data = {
       sortedData.reverse();
     }
     return sortedData;
-  }/*,
-  computeStats:(data) =>{
+  },
 
-  }*/
+  computeStats:(data) =>{
+    let count= new Object; 
+    count['Water']=(data.filter((pokemon) => {return pokemon.type.includes('Water')})).length;
+    count['Fire']=(data.filter((pokemon)  => {return pokemon.type.includes('Fire')})).length; 
+    count['Grass']=(data.filter((pokemon) => {return pokemon.type.includes('Grass')})).length;
+
+    return count;
+
+
+  }
 };
 

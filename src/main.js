@@ -18,7 +18,7 @@ function indexView(){
     <h3>Estadistica</h3>
     <!--Carrusel con contenido de materialize-->
     <section class="carousel carousel-slider center">
-        <div class="carousel-item red white-text center">
+        <div id="staticstype" class="carousel-item red white-text center">
             <h2>First Panel</h2>
             <p class="white-text">This is your first panel</p>
         </div>
