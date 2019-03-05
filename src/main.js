@@ -1,4 +1,4 @@
-/* global M, POKEMON*/
+/* global M, POKEMON, google*/
 const data= POKEMON.pokemon; 
 
 /*I.Declaración de vistas*/
@@ -40,6 +40,26 @@ function indexView(){
     })
     let elemsCarousel = document.querySelectorAll('.carousel');
     M.Carousel.init(elemsCarousel);
+
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      let dataType = new Array(["Tipo","Cantidad"]);
+      window.data.computeStats(POKEMON.pokemon).forEach(element => {
+        dataType.push(element);
+      });
+      let data = google.visualization.arrayToDataTable(dataType);
+
+      let options = {
+        title: 'Tipos de pokemon'
+      };
+
+      let chart = new google.visualization.PieChart(document.getElementById('staticstype'));
+
+      chart.draw(data, options);
+    
+    } 
 }
 
 /*b)Pagina tutorial*/

@@ -30,14 +30,11 @@ window.data = {
   },
 
   computeStats:(data) =>{
-    let count= new Object; 
-    count['Water']=(data.filter((pokemon) => {return pokemon.type.includes('Water')})).length;
-    count['Fire']=(data.filter((pokemon)  => {return pokemon.type.includes('Fire')})).length; 
-    count['Grass']=(data.filter((pokemon) => {return pokemon.type.includes('Grass')})).length;
-
+    let count=new Array;
+    count.push(["Water",(data.filter((pokemon)=>{return pokemon.type.includes("Water")})).length]);
+    count.push(["Fire",(data.filter((pokemon)=>{return pokemon.type.includes("Fire")})).length]);
+    count.push(["Grass",(data.filter((pokemon)=>{return pokemon.type.includes("Grass")})).length]);
     return count;
-
-
   }
 };
 

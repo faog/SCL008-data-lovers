@@ -229,8 +229,11 @@ describe('data', ()=> {
 
     it('debería retornar un tipo Grass, un tipo Fire y un tipo Water', () => {
       assert.deepEqual(window.data.computeStats(dataCompute),
-        {Water: 1, Fire: 1, Grass: 1}
-      )
+     [
+      ["Water",1],
+      ["Fire",1],
+      ["Grass",1]
+    ])
     })
   })
 })
