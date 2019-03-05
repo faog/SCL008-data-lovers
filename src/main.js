@@ -15,25 +15,16 @@ function indexView(){
             <button id="btnstart">Comenzar</button>
         </div>     
     </section>   
-    <h3>Estadistica</h3>
+    <h3>¿Sabías qué?</h3>
     <!--Carrusel con contenido de materialize-->
     <section class="carousel carousel-slider center">
-        <div id="staticstype" class="carousel-item red white-text center">
-            <h2>First Panel</h2>
-            <p class="white-text">This is your first panel</p>
+        <div id="staticstype" class="carousel-item">
+       
         </div>
-        <div class="carousel-item amber white-text center">
+        <div class="carousel-item">
             <h2>Second Panel</h2>
             <p class="white-text">This is your second panel</p>
-        </div>
-        <div class="carousel-item green white-text center">
-            <h2>Third Panel</h2>
-            <p class="white-text">This is your third panel</p>
-        </div>
-        <div class="carousel-item blue white-text center">
-            <h2>Fourth Panel</h2>
-            <p class="white-text">This is your fourth panel</p>
-        </div>        
+        </div> 
     </section>`
     document.getElementsByTagName('button')[0].addEventListener('click', () =>{
         searchView(); 
@@ -52,7 +43,7 @@ function indexView(){
       let data = google.visualization.arrayToDataTable(dataType);
 
       let options = {
-        title: 'Tipos de pokemon'
+        title: "Existen 14 tipos de Pokémon en la Región de Kanto, donde el mayor porcentaje es de los tipo Poison"
       };
 
       let chart = new google.visualization.PieChart(document.getElementById('staticstype'));
