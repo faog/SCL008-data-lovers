@@ -96,7 +96,20 @@ main #welcomeimage{
     background: rgba(27, 31, 119);
     border: 1px solid rgba(27, 31, 119);     
     font-weight: bold;  
-   
+}
+
+.carousel {
+    height:420px;
+}
+
+#staticstype{
+    width:1000px;
+    height: 500px;
+    background-color: transparent;
+}
+
+#staticstype h3{
+    z-index: 100;
 }
 
 /*b)Página tutorial*/
