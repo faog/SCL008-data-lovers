@@ -17,7 +17,7 @@ function indexView(){
     </section>   
     <h3 id="curiositytitle">¿Sabías qué?</h3>
     <h4 id="curiosity">Existen 14 tipos de Pokémon en la Región de Kanto, donde el mayor porcentaje son los tipo Poison.</h4>
-    <!--Carrusel con contenido de materialize-->
+    
     <section id="staticstype">
         
     </section>`

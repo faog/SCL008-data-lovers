@@ -192,7 +192,7 @@ main #welcomeimage{
 
 #startedpokemon{
     height: 300px;
-    width: 600px;
+    width: 100%;
     margin-top:-90px;
 }
 
@@ -306,7 +306,7 @@ main #welcomeimage{
 
 #tutorialsearchone,#tutorialsearchtwo,#tutorialsearchthree,#tutorialsearchfour {
     height: 300px;
-    width: 550px;
+    width: 100%;
     padding-top:30px;
     text-align:center;
 }
@@ -804,7 +804,7 @@ main #searchview{
     }
 
     #pokemonbox {
-       border: white 8px solid;
+       border: white 5px solid;
       
     }
 
