@@ -15,17 +15,17 @@ function indexView(){
             <button id="btnstart">Comenzar</button>
         </div>     
     </section>   
+
     <h3 id="curiositytitle">¿Sabías qué?</h3>
     <h4 id="curiosity">Existen 14 tipos de Pokémon en la Región de Kanto, donde el mayor porcentaje son los tipo Poison.</h4>
     
-    <section id="staticstype">
+    <figure id="staticstype">
         
-    </section>`
+    </figure>`
+
     document.getElementsByTagName('button')[0].addEventListener('click', () =>{
         searchView(); 
     })
-    let elemsCarousel = document.querySelectorAll('.carousel');
-    M.Carousel.init(elemsCarousel);
 
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
@@ -71,7 +71,7 @@ function tutorialView(){
     <section id="twotutorial" class="row"> 
         <h3>¡Conócelos a todos!</h3>
         <article class="col s12 m12 l6">
-            <h4>Podrás escoger entre los 151 tipos de Pokémon de la región de Kanto,  cuál es la que más 
+            <h4>Podrás escoger entre los 151 tipos de Pokémon de la región de Kanto, cuál es la que más 
             te sirve para enfrentarlo en una batalla, ¡y así convertirte en el mejor entrenador!</h4>
         </article>
         <picture class="col s12 m12 l6">
@@ -91,14 +91,14 @@ function tutorialView(){
     <article id="instructiontwo" class="row">              
         <h4 class="col s12 m12 l6">Si quisieras encontrar a los pokémon por tipo, sólo debes dar click en filtrar por tipo y seleccionar el que estás buscando, en este caso buscamos por tipo "Electric".</h4>
         <picture class="col s12 m12 l6">
-            <img src="Image/tutorial002.png" id="tutorialsearchtwo" alt="Selección de filtro "Pokémon de tipo Electric"">        
+            <img src="Image/tutorial002.png" id="tutorialsearchtwo" alt="Selección de filtro Pokémon de tipo Electric">        
         </picture>
     </article>
         
     <article id="instructionthree" class="row">
         <h4 class="col s12 m12 l6">Ahora la página te mostrará todos los pokémon que sean de tipo "Electric".</h4>
         <picture class="col s12 m12 l6">
-            <img src="Image/tutorial003.png" id="tutorialsearchthree" alt="Pokémon de tipo "Electric"">        
+            <img src="Image/tutorial003.png" id="tutorialsearchthree" alt="Pokémon de tipo Electric">        
         </picture>
     </article>    
     <article id="instructionfour" class="row">    
@@ -108,7 +108,7 @@ function tutorialView(){
         </picture> 
     </article>
     <article id="instructionfive" class="row">
-        <h4>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito. Podrás filtrar por tipo, debilidad, cantidad de candys, distancia en km para encontrar sus huevos, o bien ordenar alfabéticamente, según su número, peso o altura.</h4>    
+        <h4>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito. Podrás filtrar por tipo, debilidad, cantidad de candys, distancia en km para encontrar sus huevos, o bien ordenar alfabéticamente, número, peso o altura.</h4>    
     </article>        
     `
 }
@@ -417,12 +417,13 @@ function showPokemonList(pokemons)
                         <h6 class="col s4 m4 l4 elementdata">${element.type}</h6>
                         <h6 class="col s4 m4 l4 elementdata">${element.weight}</h6>
                         <h6 class="col s4 m4 l4 elementdata">${element.height}</h6>
-                    </div class="row">
+                    </div>
                       
                     <div class="row">
                         <h6 class="elementtitle">Debilidades</h6>
                         <h6 class="elementdata">${element.weaknesses}</h6>
                     </div>
+                    
                     <div class="row">
                         <h6 class="col s6 m6 l6 elementtitle">Cantidad de candys</h6>
                         <h6 class="col s6 m6 l6 elementtitle">Km huevos</h6>
