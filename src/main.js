@@ -15,16 +15,11 @@ function indexView(){
             <button id="btnstart">Comenzar</button>
         </div>     
     </section>   
-    <h3>¿Sabías qué?</h3>
+    <h3 id="curiositytitle">¿Sabías qué?</h3>
+    <h4 id="curiosity">Existen 14 tipos de Pokémon en la Región de Kanto, donde el mayor porcentaje son los tipo Poison.</h4>
     <!--Carrusel con contenido de materialize-->
-    <section class="carousel carousel-slider center">
-        <div id="staticstype" class="carousel-item">
-       
-        </div>
-        <div class="carousel-item">
-            <h2>Second Panel</h2>
-            <p class="white-text">This is your second panel</p>
-        </div> 
+    <section id="staticstype">
+        
     </section>`
     document.getElementsByTagName('button')[0].addEventListener('click', () =>{
         searchView(); 
@@ -43,7 +38,12 @@ function indexView(){
       let data = google.visualization.arrayToDataTable(dataType);
 
       let options = {
-        title: "Existen 14 tipos de Pokémon en la Región de Kanto, donde el mayor porcentaje es de los tipo Poison"
+        chartArea:{width:'80%',height:'80%'},
+        legend:{position: 'top', textStyle: {color: '#212F3C', fontSize: 24}},
+        is3D: true,
+        fontSize:22,
+        colors: ['#009688','#263238', '#FFA000', '#FFCA28','#FF80AB','#BCAAA4','#DD2C00','#26C6DA','#CE93D8','#4CAF50','#A1887F','#40C4FF','#FFAB91',
+        '#7E57C2','#4A148C','#6D4C41','#607D8B', '#0091EA']
       };
 
       let chart = new google.visualization.PieChart(document.getElementById('staticstype'));
@@ -68,7 +68,6 @@ function tutorialView(){
             <img src="Image/pokeballtutorial.png"  alt="Pokebola dorada">        
         </picture>       
     </section> 
-
     <section id="twotutorial" class="row"> 
         <h3>¡Conócelos a todos!</h3>
         <article class="col s12 m12 l6">
@@ -79,47 +78,38 @@ function tutorialView(){
             <img src="Image/pokemontutorial.png" id="startedpokemon" alt="Pokemon inicio">        
         </picture>       
     </section> 
-
     <section id="threetutorial" class="row"> 
         <h3>¿Cómo funciona PokeChoose?</h3>     
         <h4>Debes ingresar a la opcion "Iniciar búsqueda" y seguir los siguientes pasos:</h4>
     </section>
-
     <article id="instructionone" class="row">  
         <h4 class="col s12 m12 l6">Primero, lo primero: para encontrar al Pokémon que buscas ¡debes seleccionar tu filtro!</h4>
         <picture class="col s12 m12 l6">
             <img src="Image/tutorial001.png" id="tutorialsearchone" alt="Página de búsqueda">        
         </picture>
     </article>
-
     <article id="instructiontwo" class="row">              
-        <h4 class="col s12 m12 l6">Si quisieras encontrar a los pokémon por tipo, sólo debes dar click en filtrar por tipo y seleccionar el que estás buscando, en este caso buscamos por tipo "Electric"</h4>
+        <h4 class="col s12 m12 l6">Si quisieras encontrar a los pokémon por tipo, sólo debes dar click en filtrar por tipo y seleccionar el que estás buscando, en este caso buscamos por tipo "Electric".</h4>
         <picture class="col s12 m12 l6">
             <img src="Image/tutorial002.png" id="tutorialsearchtwo" alt="Selección de filtro "Pokémon de tipo Electric"">        
         </picture>
     </article>
         
     <article id="instructionthree" class="row">
-        <h4 class="col s12 m12 l6">Ahora la página te mostrará todos los pokémon que sean de tipo "Electric"</h4>
+        <h4 class="col s12 m12 l6">Ahora la página te mostrará todos los pokémon que sean de tipo "Electric".</h4>
         <picture class="col s12 m12 l6">
             <img src="Image/tutorial003.png" id="tutorialsearchthree" alt="Pokémon de tipo "Electric"">        
         </picture>
     </article>    
-
     <article id="instructionfour" class="row">    
-        <h4 class="col s12 m12 l6">Y si quisieras conocer las características de algún pokémon en específico sólo debes darle click en la foto del que deseas mirar y podrás ver su ficha en detalle</h4>
+        <h4 class="col s12 m12 l6">Y si quisieras conocer las características de algún pokémon en específico sólo debes darle click en la foto del que deseas mirar y podrás ver su ficha en detalle.</h4>
         <picture class="col s12 m12 l6">
             <img src="Image/tutorial004.png" id="tutorialsearchfour" alt="Ficha de Pikachu">        
         </picture> 
     </article>
-
     <article id="instructionfive" class="row">
         <h4>¡Y listo! Ahora estás preparado para encontrar y conocer a tu Pokémon favorito. Podrás filtrar por tipo, debilidad, cantidad de candys, distancia en km para encontrar sus huevos, o bien ordenar alfabéticamente, según su número, peso o altura.</h4>    
-    </article>
-
-
-        
-
+    </article>        
     `
 }
 
@@ -129,9 +119,11 @@ function searchView(){
     document.getElementById('dinamicpage').innerHTML += 
     `
     <section id="searchview" class="row"> 
-    <h3>Pokémon región de Kanto</h3>  
+    <h4 id="search" class="col s12 m12 l4 md 5">¡Este es tu buscador!</h4>
+    <h3 class="col s12 m12 l8">Pokémon región de Kanto</h3>  
+    
         <section class="col s12 m12 l4" id="sectionfilter">
-        <h5>¡Este es tu buscador! Selecciona una opción</h5>
+        <h5> Selecciona una opción</h5>
             <ul class="collapsible">
                 <li>
                     <div class="collapsible-header">Filtrar</div>
@@ -236,7 +228,6 @@ function searchView(){
             <h4 id="resulttitle">Escoge un pokémon y ¡descubre sus caracteristicas!</h4>         
             <figure id="searchresult" class="row">
             
-
             </figure>
         </section>
     </section>  
@@ -419,7 +410,6 @@ function showPokemonList(pokemons)
                     <div class="col s12 m12 l12">
                         <img class="modalimg" src="${element.img}" alt="${element.name}">
                     </div>
-
                     <div class="row">
                         <h6 class="col s4 m4 l4 elementtitle">Tipo</h6>
                         <h6 class="col s4 m4 l4 elementtitle">Peso</h6>
@@ -433,20 +423,17 @@ function showPokemonList(pokemons)
                         <h6 class="elementtitle">Debilidades</h6>
                         <h6 class="elementdata">${element.weaknesses}</h6>
                     </div>
-
                     <div class="row">
                         <h6 class="col s6 m6 l6 elementtitle">Cantidad de candys</h6>
                         <h6 class="col s6 m6 l6 elementtitle">Km huevos</h6>
                         <h6 class="col s6 m6 l6 elementdata">${element.candy_count?element.candy_count:"Sin candys"}</h6>
                         <h6 class="col s6 m6 l6 elementdata">${element.egg}</h6>
-
                         <h6 class="col s6 m6 l6 elementtitle">Evolución previa</h6>
                         <h6 class="col s6 m6 l6 elementtitle">Evolución Posterior</h6>
                         <h6 class="col s6 m6 l6 elementdata ">${preEvolutions}</h6>
                         <h6 class="col s6 m6 l6 elementdata">${nextEvolutions}</h6>
                     </div>   
                 </div>
-
             </div>
         </div>`
           
@@ -460,4 +447,3 @@ function showPokemonList(pokemons)
 function pokemonAll(){
     showPokemonList(data);
 }
-
