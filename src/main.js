@@ -1,4 +1,4 @@
-/* global M, POKEMON, google*/
+/* global POKEMON, google, $*/
 const data= POKEMON.pokemon; 
 
 /*I.Declaración de vistas*/
@@ -236,13 +236,13 @@ function searchView(){
     </section>  
     `
     pokemonAll()
-    /*Materialize elemento Collapsible*/
-    let elemsFilter = document.querySelectorAll('.collapsible');
-    M.Collapsible.init(elemsFilter);
+    /*Materialize elemento Collapsible*/  
+    $('.collapsible').collapsible();
+  
 
     /*Materialize elemento Select*/
-    let elemsSelect = document.querySelectorAll('select');
-    M.FormSelect.init(elemsSelect);
+    $('select').formSelect();
+   
   
     /*III. Filtrar*/
 
@@ -437,8 +437,7 @@ function showPokemonList(pokemons)
           
     });
     /*Materialize elemento Modal*/
-    let elemsModal = document.querySelectorAll('.modal');
-    M.Modal.init(elemsModal);
+    $('.modal').modal();
 }
 
 /*Función que imprime todos los pokémon*/

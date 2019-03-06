@@ -1,24 +1,20 @@
 //funciones complementarias a MaterializeCSS
-document.addEventListener('DOMContentLoaded', () =>{  
+ 
+$(document).ready(function(){
     //Navbar
-    /*let elemsNabvar = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(elemsNabvar);*/
-
-    $(document).ready(function(){
-        $('.sidenav').sidenav();
-    });
-     
+    $('.sidenav').sidenav();
+        
     //barra filtrar y ordenar
-    let elemsFilter = document.querySelectorAll('.collapsible');
-    M.Collapsible.init(elemsFilter);
+    $('.collapsible').collapsible();
 
     //Elemento seleccion
-    let elemsSelect = document.querySelectorAll('select');
-    M.FormSelect.init(elemsSelect);
+    $('select').formSelect();
 
     indexView();
-
 });
+
+    
+
 
 
 
