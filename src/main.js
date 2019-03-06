@@ -35,6 +35,7 @@ function indexView(){
       window.data.computeStats(POKEMON.pokemon).forEach(element => {
         dataType.push(element);
       });
+      
       let data = google.visualization.arrayToDataTable(dataType);
 
       let options = {
@@ -423,7 +424,7 @@ function showPokemonList(pokemons)
                         <h6 class="elementtitle">Debilidades</h6>
                         <h6 class="elementdata">${element.weaknesses}</h6>
                     </div>
-                    
+
                     <div class="row">
                         <h6 class="col s6 m6 l6 elementtitle">Cantidad de candys</h6>
                         <h6 class="col s6 m6 l6 elementtitle">Km huevos</h6>
