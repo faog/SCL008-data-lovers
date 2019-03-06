@@ -2,8 +2,8 @@
 const data= POKEMON.pokemon; 
 
 /*I.Declaración de vistas*/
-/*a)Pagina de inicio*/
 
+/*a)Pagina de inicio*/
 function indexView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
@@ -27,6 +27,7 @@ function indexView(){
         searchView(); 
     })
 
+    /*Inicio implementación Google Chart*/
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
 
@@ -35,7 +36,7 @@ function indexView(){
       window.data.computeStats(POKEMON.pokemon).forEach(element => {
         dataType.push(element);
       });
-      
+
       let data = google.visualization.arrayToDataTable(dataType);
 
       let options = {
@@ -52,6 +53,7 @@ function indexView(){
       chart.draw(data, options);
     
     } 
+    /*Fin implementación Google Chart*/
 }
 
 /*b)Pagina tutorial*/
@@ -114,7 +116,7 @@ function tutorialView(){
     `
 }
 
-/*c)Pagina de busqueda*/
+/*c)Pagina de búsqueda*/
 function searchView(){
     document.getElementById('dinamicpage').innerHTML = '';
     document.getElementById('dinamicpage').innerHTML += 
@@ -234,17 +236,17 @@ function searchView(){
     </section>  
     `
     pokemonAll()
-    
+    /*Materialize elemento Collapsible*/
     let elemsFilter = document.querySelectorAll('.collapsible');
     M.Collapsible.init(elemsFilter);
 
+    /*Materialize elemento Select*/
     let elemsSelect = document.querySelectorAll('select');
     M.FormSelect.init(elemsSelect);
   
     /*III. Filtrar*/
 
     /*a) Filtro por tipo de pokemon*/
-
     document.getElementById('type').addEventListener('change',()=>{
         let condition =document.getElementById('type').value;
         if(condition==='all'){
@@ -258,8 +260,7 @@ function searchView(){
         }
     });
     
-    /*b) Filtro por debilidad de pokemon*/
-    
+    /*b) Filtro por debilidad de pokemon*/    
     document.getElementById('weakness').addEventListener('change',()=>{
         let condition=document.getElementById('weakness').value; 
         if(condition==='all'){
@@ -273,8 +274,7 @@ function searchView(){
         }
     });
 
-    /*c) Filtro por cantidad de candys*/
-    
+    /*c) Filtro por cantidad de candys*/    
     document.getElementById('candycount').addEventListener('change',()=>{
         let condition=document.getElementById('candycount').value; 
         if(condition==='all'){
@@ -291,8 +291,7 @@ function searchView(){
         }
     });
 
-    /*d) Filtro por distancia para incubar huevos*/
-    
+    /*d) Filtro por distancia para incubar huevos*/    
     document.getElementById('eggs').addEventListener('change',()=>{
         let condition=document.getElementById('eggs').value; 
         if(condition==='all'){
@@ -308,31 +307,28 @@ function searchView(){
 
     /*IV. Ordenar*/
 
-    /*1) Ordenar por nombre */
+    /*a) Ordenar por nombre */
     document.getElementById('namesort').addEventListener('change',()=>{
         let sortOrder =document.getElementById('namesort').value;
         let result =window.data.sortData(data,'name',sortOrder);
         showPokemonList(result);
     });
 
-    /*2) Ordenar por numero */
-
+    /*b) Ordenar por numero */
     document.getElementById('numsort').addEventListener('change',()=>{
         let sortOrder =document.getElementById('numsort').value;
         let result =window.data.sortData(data,'num',sortOrder);
         showPokemonList(result);
     });
 
-    /*3) Ordenar por peso */
-
+    /*c) Ordenar por peso */
     document.getElementById('weightsort').addEventListener('change', ()=>{
         let sortOrder =document.getElementById('weightsort').value;
         let result =window.data.sortData(data, 'weight', sortOrder);
         showPokemonList(result);
     });
 
-    /*4) Ordenar por altura*/
-
+    /*d) Ordenar por altura*/
     document.getElementById('heightsort').addEventListener('change',()=>{
         let sortOrder =document.getElementById('heightsort').value;
         let result =window.data.sortData(data,'height',sortOrder);
@@ -348,7 +344,6 @@ document.getElementsByTagName('a')[0].addEventListener('click', () => {
 })
 
 /*b)Página Tutorial*/
-
 Array.from(document.getElementsByClassName('tutorial')).forEach(element => {
     element.addEventListener('click', () =>{
         tutorialView();
@@ -390,6 +385,7 @@ function showPokemonList(pokemons)
             nextEvolutions += "Ninguna";
         }
 
+        /*d) Impresión modal con información de cada pokémon*/
         document.getElementById('searchresult').innerHTML +=
         `
         <div id="pokemonbox" class="col s12 m6 l4">
@@ -440,12 +436,12 @@ function showPokemonList(pokemons)
         </div>`
           
     });
-    //Modales
+    /*Materialize elemento Modal*/
     let elemsModal = document.querySelectorAll('.modal');
     M.Modal.init(elemsModal);
 }
 
-/*Dibuja todos los pokemon*/
+/*Función que imprime todos los pokémon*/
 function pokemonAll(){
     showPokemonList(data);
 }
