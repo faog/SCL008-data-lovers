@@ -204,13 +204,11 @@ Se exportó el prototipo de alta fidelidad creado en [Figma](https://www.figma.c
 
 **Aspectos técnicos**
 
-* Para el desarrollo de estilos de PokeChoose se complementó el trabajo con el uso del framework [Materialize].(https://materializecss.com/)
+* Para el desarrollo de estilos de PokeChoose se complementó el trabajo con el uso del framework [Materialize](https://materializecss.com/)
 
 * Se realizó test para comprobar el funcionamiento de la aplicación, logrando los siguientes resultados: 
     - % Statements: 100 ; % Branch: 100 ; % Functions: 100 ; % Lines: 100
-   ![Coverage](image_readme/coverage.png)
-
- De esta forma se alcanza el 100% Coverage, solicitado en la Hacker edition.
+  De esta forma se alcanza el 100% Coverage, solicitado en la Hacker edition.
 
 * Además,  se logra consumir la data de forma dinámica a partir de un archivo json, cumpliendo de esta forma este punto de la Hacker edition. 
 
