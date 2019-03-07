@@ -14,7 +14,7 @@ La planificación del trabajo comienza con la elección de una amplia data de la
 
 ### Definición: ¿Quién es nuestro usuario? 
 
-Lo primero y esencial es conocer al usuario. Para ello se realizó una [encuesta](https://docs.google.com/forms/d/1tS5dteTqStz4BMEkpbQ3pghEVAidVwr08N6nTFHm-xY/edit) en la que se pudo identificar: 
+Lo primero y esencial es conocer al usuario. Para ello se realizó una [encuesta](https://docs.google.com/forms/d/1tS5dteTqStz4BMEkpbQ3pghEVAidVwr08N6nTFHm-xY/edit) en la que se pudo identificar las siguientes[respuestas](https://drive.google.com/drive/folders/1n45yZZq7DkG2BgJ1sOwZGxiJMYYE-BW_) : 
 
 * La encuesta tuvo un alcance de 84 personas
 * Rango de edad de nuestros usuarios: 70,2% tienen entre 21-30 años
@@ -23,7 +23,7 @@ Lo primero y esencial es conocer al usuario. Para ello se realizó una [encuesta
 * Qué es lo que esperan de una enciclopedia de Pokémon Go 
 * Qué tan necesario sería para ell@s añadir información explicativa del uso de la aplicación.
 
-![Fotografía-encuesta-google](image_readme/collage encuesta.jpg)
+![Fotografía-encuesta-google](image_readme/collage_encuesta.jpg)
  
 ### 1° Fase de Prototipado
 
