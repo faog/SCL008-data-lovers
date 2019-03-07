@@ -243,7 +243,7 @@ function searchView(){
         </section>           
         
         <section id="pokemonresult" class="col s12 m12 l8" >      
-            <h4 id="resulttitle">Escoge un pokémon y ¡descubre sus caracteristicas!</h4>         
+            <h4 id="resulttitle">Escoge un pokémon y ¡descubre sus características!</h4>         
             <figure id="searchresult" class="row">
             
             </figure>
