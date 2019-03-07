@@ -14,7 +14,7 @@ La planificación del trabajo comienza con la elección de una amplia data de la
 
 ### Definición: ¿Quién es nuestro usuario? 
 
-Lo primero y esencial es conocer al usuario. Para ello se realizó una [encuesta](https://docs.google.com/forms/d/1tS5dteTqStz4BMEkpbQ3pghEVAidVwr08N6nTFHm-xY/edit) en la que se pudo identificar las siguientes[respuestas](https://drive.google.com/drive/folders/1n45yZZq7DkG2BgJ1sOwZGxiJMYYE-BW_) : 
+Lo primero y esencial es conocer al usuario. Para ello se realizó una [encuesta](https://docs.google.com/forms/d/1tS5dteTqStz4BMEkpbQ3pghEVAidVwr08N6nTFHm-xY/edit) en la que se pudo identificar las siguientes [respuestas](https://drive.google.com/file/d/1nwkNuqA18Amx-N_uXer230QfavxjX2rg/view?usp=sharing) : 
 
 * La encuesta tuvo un alcance de 84 personas
 * Rango de edad de nuestros usuarios: 70,2% tienen entre 21-30 años
