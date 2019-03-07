@@ -799,8 +799,7 @@ main #searchview{
     #pokemonresult {
         padding: 0px 100px;
         padding-left:50px;
-        height: 80vh;
- 
+        height: 80vh; 
     }
 
     #pokemonbox {

@@ -39,49 +39,49 @@ A partir de la encuesta realizada nacen distintas historias de usuario (**HU**) 
 
 A medida que se desarrolló PokeChoose se encontraron nuevas HU que permitieron generar una página completa y dinámica. 
 
-1. (**HU1**): Yo como jugador principiante de Pokémon Go quiero ocupar esta aplicación desde mi computador para poder acceder a la información desde mi hogar.
+1. **HU1**: Yo como jugador principiante de Pokémon Go quiero ocupar esta aplicación desde mi computador para poder acceder a la información desde mi hogar.
 
-(**CA**): Crear esqueleto de HTML, definiendo las pantallas de la app y sus funcionalidades.
+    -**CA**: Crear esqueleto de HTML, definiendo las pantallas de la app y sus funcionalidades.
 
-2. (**HU2**): Yo como usuario principiante de Pokémon Go quiero poder ver todos los pokémon de la  región de kanto para poder saber cuáles son los que existen.
+2. **HU2**: Yo como usuario principiante de Pokémon Go quiero poder ver todos los pokémon de la  región de kanto para poder saber cuáles son los que existen.
 
-(**CA**): Cuando el usuario acceda a la pantalla para realizar la búsqueda, esta debe mostrar los 151 pokémon de la región de kanto.
+    -**CA**: Cuando el usuario acceda a la pantalla para realizar la búsqueda, esta debe mostrar los 151 pokémon de la región de kanto.
 
-3. (**HU3**): Yo como jugador principiante de Pokémon Go quiero filtrar los pokémon de tipo “planta” para escoger el indicado cuando tenga que enfrentarlo en una batalla con pokémon de tipo agua.
+3. **HU3**: Yo como jugador principiante de Pokémon Go quiero filtrar los pokémon de tipo “planta” para escoger el indicado cuando tenga que enfrentarlo en una batalla con pokémon de tipo agua.
 
-(**CA**): La página debe mostrar un selector que filtre los pokémon de acuerdo a lo que busque el usuario; en este caso que encuentre los pokémon de tipo “planta” para poder enfrentarse a los de tipo “agua”.  Este criterio nos sirve para realizar la filtración de todos los tipos.
+    -**CA**: La página debe mostrar un selector que filtre los pokémon de acuerdo a lo que busque el usuario; en este caso que encuentre los pokémon de tipo “planta” para poder enfrentarse a los de tipo “agua”.  Este criterio nos sirve para realizar la filtración de todos los tipos.
 
-4. (**HU4**): Yo como jugador principiante de Pokémon Go quiero saber que pokémon necesitan “50 candys” para poder alimentarlo y lograr su evolución (mejora). 
+4. **HU4**: Yo como jugador principiante de Pokémon Go quiero saber que pokémon necesitan “50 candys” para poder alimentarlo y lograr su evolución (mejora). 
 
-(**CA**): El jugador puede buscar a un pokémon en específico y desplegar su ficha con la información que necesita. En este caso, cuantos dulces necesita ese pokémon específicamente para evolucionar.
+    -**CA**: El jugador puede buscar a un pokémon en específico y desplegar su ficha con la información que necesita. En este caso, cuantos dulces necesita ese pokémon específicamente para evolucionar.
 
-5. (**HU5**): Yo como jugador principiante de Pokémon Go quiero saber qué pokémon tienen como debilidad el “fuego” para poder elegir aquellos que sean más fuertes que el contrincante.  
+5. **HU5**: Yo como jugador principiante de Pokémon Go quiero saber qué pokémon tienen como debilidad el “fuego” para poder elegir aquellos que sean más fuertes que el contrincante.  
 
-(**CA**): La página debe tener un filtro que le permita  al usuario escoger de acuerdo a las debilidades de cada pokémon. El jugador puede seleccionar a un pokémon en específico de los que fueron filtrados por debilidad.
+    -**CA**: La página debe tener un filtro que le permita  al usuario escoger de acuerdo a las debilidades de cada pokémon. El jugador puede seleccionar a un pokémon en específico de los que fueron filtrados por debilidad.
 
-6. (**HU6**): Yo como jugador principiante de Pokémon Go quiero que se muestren los resultados de la selección  "distancia de huevos para encubar" para poder elegir al pokémon que más me sirva de acuerdo a la distancia en km que quiera recorrer.  
+6. **HU6**: Yo como jugador principiante de Pokémon Go quiero que se muestren los resultados de la selección  "distancia de huevos para encubar" para poder elegir al pokémon que más me sirva de acuerdo a la distancia en km que quiera recorrer.  
 
-(**CA**): La página debe tener un selector que permita filtrar aquellos Pokémon  que cumplan  con la distancia que el usuario espera recorrer para encontrar  los huevos que verifiquen  la condición.  
+    -**CA**: La página debe tener un selector que permita filtrar aquellos Pokémon  que cumplan  con la distancia que el usuario espera recorrer para encontrar  los huevos que verifiquen  la condición.  
 
-7. (**HU7**): Yo como usuario principiante de Pokémon Go quiero ver la ficha del pokémon que seleccioné para poder conocer sus características.
+7. **HU7**: Yo como usuario principiante de Pokémon Go quiero ver la ficha del pokémon que seleccioné para poder conocer sus características.
 
-(**CA**): La página debe mostrar una ficha con las características del pokémon que el usuario seleccione. La ficha debe tener una imagen para identificarlo e información de su tipo, debilidades, huevos, etc.
+    -**CA**: La página debe mostrar una ficha con las características del pokémon que el usuario seleccione. La ficha debe tener una imagen para identificarlo e información de su tipo, debilidades, huevos, etc.
 
-8. (**HU8**): Yo como jugador principiante de Pokémon Go quiero conocer cuántos pokémon tipo “agua” existen en la región de Kanto para escogerlo/capturarlo y utilizarlo en una batalla frente a los que tienen como debilidad el agua.  
+8. **HU8**: Yo como jugador principiante de Pokémon Go quiero conocer cuántos pokémon tipo “agua” existen en la región de Kanto para escogerlo/capturarlo y utilizarlo en una batalla frente a los que tienen como debilidad el agua.  
 
-(**CA**): La página muestra por medio de estadísticas el porcentaje de pokémon que son de “agua” para poder escoger al que más nos sirva para ganar estratégicamente una batalla. Esta historia aplica para obtener los porcentajes de los 18 tipos de Pokémon y generar un gráfico con esta  información. 
+    -**CA**: La página muestra por medio de estadísticas el porcentaje de pokémon que son de “agua” para poder escoger al que más nos sirva para ganar estratégicamente una batalla. Esta historia aplica para obtener los porcentajes de los 18 tipos de Pokémon y generar un gráfico con esta  información. 
 
-9. (**HU9**): Yo como jugador principiante de Pokémon Go quiero ordenar los pokémon de la A a la Z  para poder encontrarlos alfabéticamente. 
+9. **HU9**: Yo como jugador principiante de Pokémon Go quiero ordenar los pokémon de la A a la Z  para poder encontrarlos alfabéticamente. 
 
-(**CA**): La página debe tener un selector que le permita  al usuario ordenar alfabéticamente (A-Z o Z-A) todos los pokémon. El jugador puede seleccionar a un pokémon en específico de los que fueron ordenados.
+    -**CA**: La página debe tener un selector que le permita  al usuario ordenar alfabéticamente (A-Z o Z-A) todos los pokémon. El jugador puede seleccionar a un pokémon en específico de los que fueron ordenados.
 
-10. (**HU10**): Yo como jugador principiante de Pokémon Go quiero ordenar los pokémon de mayor a menor por su número para poder conocer cuáles son los últimos de la lista según su número.
+10. **HU10**: Yo como jugador principiante de Pokémon Go quiero ordenar los pokémon de mayor a menor por su número para poder conocer cuáles son los últimos de la lista según su número.
 
-(**CA**): La página debe tener un selector que le permita  al usuario ordenar de forma numérica (ascendente o descendente) todos los pokémon. El jugador puede seleccionar a un pokémon en específico de los que fueron ordenados.
+    -**CA**: La página debe tener un selector que le permita  al usuario ordenar de forma numérica (ascendente o descendente) todos los pokémon. El jugador puede seleccionar a un pokémon en específico de los que fueron ordenados.
 
-11. (**HU11**): Yo como jugador principiante de Pokémon Go quiero ordenar los pokémon de menor a mayor  según el peso que tengan, para poder conocer cuáles son los más livianos de la región de Kanto. 
+11. **HU11**: Yo como jugador principiante de Pokémon Go quiero ordenar los pokémon de menor a mayor  según el peso que tengan, para poder conocer cuáles son los más livianos de la región de Kanto. 
 
-(**CA**): La página debe tener un selector que le permita  al usuario ordenar de forma ascendente o descendente todos los pokémon según su peso. El jugador puede seleccionar a un pokémon en específico de los que fueron ordenados.
+    -**CA**: La página debe tener un selector que le permita  al usuario ordenar de forma ascendente o descendente todos los pokémon según su peso. El jugador puede seleccionar a un pokémon en específico de los que fueron ordenados.
 
 ### Segunda fase de Prototipado
 ### Consideraciones en el desarrollo 

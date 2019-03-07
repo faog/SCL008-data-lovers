@@ -1,5 +1,19 @@
-/* global POKEMON, google, $*/
-const data= POKEMON.pokemon; 
+/* global google, $*/
+const urlData = 'https://faog.github.io/SCL008-data-lovers/src/data/pokemon/pokemon.json'
+
+/*Función que imprime todos los pokémon*/
+function pokemonAll(){
+    getPokemonData((data)=>{
+        showPokemonList(data.pokemon);
+    });
+}
+
+/* Funcion que procesa los datos según la función que es pasada como parametro */
+function getPokemonData(manipulationData){
+    fetch(urlData).then((response)=>{
+        return response.json();
+    }).then(manipulationData);
+}
 
 /*I.Declaración de vistas*/
 
@@ -32,26 +46,27 @@ function indexView(){
     google.charts.setOnLoadCallback(drawChart);
 
     function drawChart() {
-      let dataType = new Array(["Tipo","Cantidad"]);
-      window.data.computeStats(POKEMON.pokemon).forEach(element => {
-        dataType.push(element);
-      });
-
-      let data = google.visualization.arrayToDataTable(dataType);
-
-      let options = {
-        chartArea:{width:'80%',height:'80%'},
-        legend:{position: 'top', textStyle: {color: '#212F3C', fontSize: 24}},
-        is3D: true,
-        fontSize:22,
-        colors: ['#009688','#263238', '#FFA000', '#FFCA28','#FF80AB','#BCAAA4','#DD2C00','#26C6DA','#CE93D8','#4CAF50','#A1887F','#40C4FF','#FFAB91',
-        '#7E57C2','#4A148C','#6D4C41','#607D8B', '#0091EA']
-      };
-
-      let chart = new google.visualization.PieChart(document.getElementById('staticstype'));
-
-      chart.draw(data, options);
-    
+      getPokemonData((data)=>{
+        let dataType = new Array(["Tipo","Cantidad"]);
+        window.data.computeStats(data.pokemon).forEach(element => {
+          dataType.push(element);
+        });
+  
+        let pieData = google.visualization.arrayToDataTable(dataType);
+  
+        let options = {
+          chartArea:{width:'80%',height:'80%'},
+          legend:{position: 'top', textStyle: {color: '#212F3C', fontSize: 24}},
+          is3D: true,
+          fontSize:22,
+          colors: ['#009688','#263238', '#FFA000', '#FFCA28','#FF80AB','#BCAAA4','#DD2C00','#26C6DA','#CE93D8','#4CAF50','#A1887F','#40C4FF','#FFAB91',
+          '#7E57C2','#4A148C','#6D4C41','#607D8B', '#0091EA']
+        };
+  
+        let chart = new google.visualization.PieChart(document.getElementById('staticstype'));
+  
+        chart.draw(pieData, options);
+      })      
     } 
     /*Fin implementación Google Chart*/
 }
@@ -252,11 +267,12 @@ function searchView(){
         if(condition==='all'){
             pokemonAll();
         }else {
-            let result = window.data.filterData(data, (element)=>{
-                return element.type.includes(condition);
+            getPokemonData((data) => {
+                let result = window.data.filterData(data.pokemon, (element)=>{
+                    return element.type.includes(condition);
+                });
+                showPokemonList(result);
             });
-
-            showPokemonList(result);
         }
     });
     
@@ -266,11 +282,13 @@ function searchView(){
         if(condition==='all'){
             pokemonAll();
         }else {
-            let result = window.data.filterData(data, (element)=>{
-                return element.weaknesses.includes(condition);
-            });
-
-            showPokemonList(result);
+            getPokemonData((data)=>{
+                let result = window.data.filterData(data.pokemon, (element)=>{
+                    return element.weaknesses.includes(condition);
+                });
+                showPokemonList(result);
+            })
+            
         }
     });
 
@@ -280,14 +298,16 @@ function searchView(){
         if(condition==='all'){
             pokemonAll();
         }else {
-            let result=window.data.filterData(data,(element)=>{
-                if (condition==="notcandy"){
-                    return element.candy_count===undefined;
-                }else{
-                    return element.candy_count=== parseInt(condition);
-                }
-            });
-            showPokemonList(result);
+            getPokemonData((data)=>{
+                let result=window.data.filterData(data.pokemon,(element)=>{
+                    if (condition==="notcandy"){
+                        return element.candy_count===undefined;
+                    }else{
+                        return element.candy_count=== parseInt(condition);
+                    }
+                });
+                showPokemonList(result);
+            })
         }
     });
 
@@ -297,42 +317,54 @@ function searchView(){
         if(condition==='all'){
             pokemonAll();
         }else {
-            let result=window.data.filterData(data,(element)=>{
-                return element.egg===(condition)
-            });
-            showPokemonList(result);
+            getPokemonData((data)=>{
+                let result=window.data.filterData(data.pokemon,(element)=>{
+                    return element.egg===(condition)
+                });
+                showPokemonList(result);
+            })
+
         }
     });
-
 
     /*IV. Ordenar*/
 
     /*a) Ordenar por nombre */
     document.getElementById('namesort').addEventListener('change',()=>{
         let sortOrder =document.getElementById('namesort').value;
-        let result =window.data.sortData(data,'name',sortOrder);
-        showPokemonList(result);
+        getPokemonData((data)=>{
+            let result =window.data.sortData(data.pokemon,'name',sortOrder);
+            showPokemonList(result);
+        })
+        
     });
 
     /*b) Ordenar por numero */
     document.getElementById('numsort').addEventListener('change',()=>{
         let sortOrder =document.getElementById('numsort').value;
-        let result =window.data.sortData(data,'num',sortOrder);
-        showPokemonList(result);
+        getPokemonData((data)=>{
+            let result =window.data.sortData(data.pokemon,'num',sortOrder);
+            showPokemonList(result);
+        })
     });
 
     /*c) Ordenar por peso */
     document.getElementById('weightsort').addEventListener('change', ()=>{
         let sortOrder =document.getElementById('weightsort').value;
-        let result =window.data.sortData(data, 'weight', sortOrder);
-        showPokemonList(result);
+        getPokemonData((data)=>{
+            let result =window.data.sortData(data.pokemon, 'weight', sortOrder);
+            showPokemonList(result);
+        })
+
     });
 
     /*d) Ordenar por altura*/
     document.getElementById('heightsort').addEventListener('change',()=>{
         let sortOrder =document.getElementById('heightsort').value;
-        let result =window.data.sortData(data,'height',sortOrder);
-        showPokemonList(result);
+        getPokemonData((data)=>{
+            let result =window.data.sortData(data.pokemon,'height',sortOrder);
+            showPokemonList(result);
+        })
     });    
 }
 
@@ -360,10 +392,10 @@ Array.from(document.getElementsByClassName('search')).forEach(element => {
 });
 
 /*Dibuja la lista de pokemon dependiendo del arreglo de pokemones recibido */
-function showPokemonList(pokemons)
+function showPokemonList(jsonData)
 {
     document.getElementById('searchresult').innerHTML='';
-    pokemons.forEach(element => {
+    jsonData.forEach(element => {
         //Pre-Evoluciones
         let preEvolutions = "";
         if(element.prev_evolution){
@@ -438,9 +470,4 @@ function showPokemonList(pokemons)
     });
     /*Materialize elemento Modal*/
     $('.modal').modal();
-}
-
-/*Función que imprime todos los pokémon*/
-function pokemonAll(){
-    showPokemonList(data);
 }
