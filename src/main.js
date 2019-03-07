@@ -83,7 +83,7 @@ function tutorialView(){
             Pokémon Go que necesiten conocer en profundidad el mundo Pokémon de la Región de Kanto.</h4> 
         </article> 
         <picture id="goldpokeball" class="col s12 m12 l4">
-            <img src="Image/pokeballtutorial.png"  alt="Pokebola dorada">        
+            <img src="Image/pokeballtutorial.png"  alt="Pokebola dorada"/>        
         </picture>       
     </section> 
     <section id="twotutorial" class="row"> 
@@ -93,7 +93,7 @@ function tutorialView(){
             te sirve para enfrentarlo en una batalla, ¡y así convertirte en el mejor entrenador!</h4>
         </article>
         <picture class="col s12 m12 l6">
-            <img src="Image/pokemontutorial.png" id="startedpokemon" alt="Pokemon inicio">        
+            <img src="Image/pokemontutorial.png" id="startedpokemon" alt="Pokemon inicio"/>        
         </picture>       
     </section> 
     <section id="threetutorial" class="row"> 
@@ -103,26 +103,26 @@ function tutorialView(){
     <article id="instructionone" class="row">  
         <h4 class="col s12 m12 l6">Primero, lo primero: para encontrar al Pokémon que buscas ¡debes seleccionar tu filtro!</h4>
         <picture class="col s12 m12 l6">
-            <img src="Image/tutorial001.png" id="tutorialsearchone" alt="Página de búsqueda">        
+            <img src="Image/tutorial001.png" id="tutorialsearchone" alt="Página de búsqueda"/>        
         </picture>
     </article>
     <article id="instructiontwo" class="row">              
         <h4 class="col s12 m12 l6">Si quisieras encontrar a los pokémon por tipo, sólo debes dar click en filtrar por tipo y seleccionar el que estás buscando, en este caso buscamos por tipo "Electric".</h4>
         <picture class="col s12 m12 l6">
-            <img src="Image/tutorial002.png" id="tutorialsearchtwo" alt="Selección de filtro Pokémon de tipo Electric">        
+            <img src="Image/tutorial002.png" id="tutorialsearchtwo" alt="Selección de filtro Pokémon de tipo Electric"/>        
         </picture>
     </article>
         
     <article id="instructionthree" class="row">
         <h4 class="col s12 m12 l6">Ahora la página te mostrará todos los pokémon que sean de tipo "Electric".</h4>
         <picture class="col s12 m12 l6">
-            <img src="Image/tutorial003.png" id="tutorialsearchthree" alt="Pokémon de tipo Electric">        
+            <img src="Image/tutorial003.png" id="tutorialsearchthree" alt="Pokémon de tipo Electric"/>        
         </picture>
     </article>    
     <article id="instructionfour" class="row">    
         <h4 class="col s12 m12 l6">Y si quisieras conocer las características de algún pokémon en específico sólo debes darle click en la foto del que deseas mirar y podrás ver su ficha en detalle.</h4>
         <picture class="col s12 m12 l6">
-            <img src="Image/tutorial004.png" id="tutorialsearchfour" alt="Ficha de Pikachu">        
+            <img src="Image/tutorial004.png" id="tutorialsearchfour" alt="Ficha de Pikachu"/>        
         </picture> 
     </article>
     <article id="instructionfive" class="row">
@@ -148,7 +148,7 @@ function searchView(){
                     <div class="collapsible-body">
                         <label>Tipo</label>
                         <select id="type" class="browser-default">
-                            <option value="all" selected>Todos</option>
+                            <option value="all">Todos</option>
                             <option value="Bug">Bug</option>
                             <option value="Dark">Dark</option>
                             <option value="Dragon">Dragon</option>                            
@@ -170,7 +170,7 @@ function searchView(){
                         </select>   
                         <label>Debilidad</label>
                             <select id="weakness" class="browser-default">                             
-                            <option value="all" selected>Todos</option>
+                            <option value="all">Todos</option>
                             <option value="Bug">Bug</option>
                             <option value="Dark">Dark</option>
                             <option value="Dragon">Dragon</option>                            
@@ -192,7 +192,7 @@ function searchView(){
                         </select>     
                         <label>Cantidad de Candy</label>
                         <select id="candycount" class="browser-default">
-                            <option value="all" selected>Todos</option>
+                            <option value="all">Todos</option>
                             <option value="12">12</option>
                             <option value="25">25</option>
                             <option value="50">50</option>
@@ -202,7 +202,7 @@ function searchView(){
                         </select>
                         <label>Distancia de huevos para encubar</label>
                         <select id="eggs" class="browser-default">
-                            <option value="all" selected>Todos</option>
+                            <option value="all">Todos</option>
                             <option value="2 km">2 km</option>
                             <option value="5 km">5 km</option>
                             <option value="10 km">10 km</option>
@@ -215,25 +215,25 @@ function searchView(){
                     <div class="collapsible-body">
                         <label>Nombre</label>
                         <select class="browser-default" id="namesort">
-                            <option selected>Escoja una opción</option>                
+                            <option>Escoja una opción</option>                
                             <option value="asc">A-Z</option>
                             <option value="desc">Z-A</option>            
                         </select>  
                         <label>Número</label>
                         <select class="browser-default" id="numsort">
-                            <option selected>Escoja una opción</option>                
+                            <option>Escoja una opción</option>                
                             <option value="asc">Ascendente</option>
                             <option value="desc">Descendente</option>            
                         </select>  
                         <label>Peso</label>
                         <select class="browser-default" id="weightsort">
-                            <option selected>Escoja una opción</option>                
+                            <option>Escoja una opción</option>                
                             <option value="asc">Ascendente</option>
                             <option value="desc">Descendente</option>            
                         </select>  
                         <label>Tamaño</label>
                         <select class="browser-default" id="heightsort">
-                            <option selected>Escoja una opción</option>                
+                            <option>Escoja una opción</option>                
                             <option value="asc">Ascendente</option>
                             <option value="desc">Descendente</option>            
                         </select>  
@@ -424,7 +424,7 @@ function showPokemonList(jsonData)
             <!--Llamada al modal -->
             <a href="#modal${element.num}" class="modal-trigger">
                 <!--Información visible antes de elegir el modal-->
-                <img src="${element.img}" alt="${element.name}">
+                <img src="${element.img}" alt="${element.name}"/>
                 <h6>${element.num}</h6>
                 <h6>${element.name}</h6>
             </a>  
@@ -437,7 +437,7 @@ function showPokemonList(jsonData)
                     <h6 class="elementdatatitle">${element.num}</h6>
                     <h6 class="elementdatatitle">${element.name}</h6>
                     <div class="col s12 m12 l12">
-                        <img class="modalimg" src="${element.img}" alt="${element.name}">
+                        <img class="modalimg" src="${element.img}" alt="${element.name}"/>
                     </div>
                     <div class="row">
                         <h6 class="col s4 m4 l4 elementtitle">Tipo</h6>
@@ -465,7 +465,8 @@ function showPokemonList(jsonData)
                     </div>   
                 </div>
             </div>
-        </div>`
+        </div>
+        `
           
     });
     /*Materialize elemento Modal*/
