@@ -4,7 +4,7 @@
 
 ## ¿Qué es PokeChoose? 
 
-Nace como una aplicación web que busca simular una enciclopedia virtual. PokeChoose agrupa información de los Pokémon y  le permite al usuario adentrarse en su mundo para conocer en detalle a cada uno de la Región de Kanto.  
+Nace como una aplicación web que busca simular una enciclopedia virtual. [PokeChoose](https://faog.github.io/SCL008-data-lovers/src/index.html)  agrupa información de los Pokémon y  le permite al usuario adentrarse en su mundo para conocer en detalle a cada uno de la Región de Kanto.  
 
 Para trabajar bajo los estándares de la industria, se propone el desarrollo de un producto que se encuentre centrado en el público objetivo y que busque la adaptabilidad a sus necesidades y requerimientos. 
 
@@ -77,7 +77,7 @@ A medida que se desarrolló PokeChoose se encontraron nuevas HU que permitieron 
 
     **CA**: La página debe tener un selector que le permita  al usuario ordenar alfabéticamente (A-Z o Z-A) todos los pokémon. El jugador puede seleccionar a un pokémon en específico de los que fueron ordenados.
 
-10. **HU10**: Yo como jugador principiante de Pokémon Go quiero ordenar los pokémon de mayor a menor por su número para poder conocer cuáles son los últimos de la lista según su número.
+10. **HU10**: Yo como jugador principiante de Pokémon Go quiero ordenar los pokémon de mayor a menor por su número para poder conocer     cuáles son los últimos de la lista según su número.
 
     **CA**: La página debe tener un selector que le permita  al usuario ordenar de forma numérica (ascendente o descendente) todos los pokémon. El jugador puede seleccionar a un pokémon en específico de los que fueron ordenados.
 
@@ -208,6 +208,8 @@ Se exportó el prototipo de alta fidelidad creado en [Figma](https://www.figma.c
 
 * Se realizó test para comprobar el funcionamiento de la aplicación, logrando los siguientes resultados: 
     - % Statements: 100 ; % Branch: 100 ; % Functions: 100 ; % Lines: 100
+    ![coverage](image_readme/coverage.jpg)
+    
   De esta forma se alcanza el 100% Coverage, solicitado en la Hacker edition.
 
 * Además,  se logra consumir la data de forma dinámica a partir de un archivo json, cumpliendo de esta forma este punto de la Hacker edition. 
@@ -223,5 +225,6 @@ Se exportó el prototipo de alta fidelidad creado en [Figma](https://www.figma.c
 * Fabiola Orellana 
 * Constanza Urbina
 
-8° Generación de Laboratoria
-Marzo, 2019
+8° Generación de Laboratoria.
+
+Marzo, 2019.
